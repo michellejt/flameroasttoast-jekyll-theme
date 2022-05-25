@@ -19,6 +19,17 @@
   </header>
 
 <p>home page</p>
+
+
+<div class="card" style="width: 18rem;">
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</div> <!--card div psts-->
+
+
   <div id="pagecontainer" class="container">
 
     <div id="content">

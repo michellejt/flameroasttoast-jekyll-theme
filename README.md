@@ -4,10 +4,25 @@ Welcome to your new Jekyll theme! In this directory, you'll find the files you n
 
 To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
 
-TODO: Delete this and the text above, and describe your gem
-
-
 ## Installation
+Open your site’s Gemfile and add the following line:
+
+#adding a new remote theme
+gem 'flameroasttoast-jekyll-theme', '>= 0.1.0', :git => 'https://github.com/michellejt/flameroasttoast-jekyll-theme.git'
+
+Next, edit the theme in the _config.yml# Build settings:
+
+theme: flameroasttoast-jekyll-theme
+ 
+To install, execute the following commands in a terminal for your site:
+
+bundle install
+
+To update the theme from the source theme:
+
+bundle update flameroasttoast-jekyll-theme
+
+__________________________________________________________
 
 Add this line to your Jekyll site's `Gemfile`:
 

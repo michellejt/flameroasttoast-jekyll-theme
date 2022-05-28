@@ -1,1 +1,59 @@
-{{ content }}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+
+<body>
+
+  <header id="header">
+    <div class="wrap">
+
+      <h1 id="logo"><a href="/">{{ site.name }}</a></h1>
+
+    </div>
+  </header>
+
+<p>home page</p>
+
+
+<div class="card" style="width: 18rem;">
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</div> <!--card div psts-->
+
+
+  <div id="pagecontainer" class="container">
+
+    <div id="content">
+
+        {{ content }}
+
+    </div>
+
+
+  </div>
+
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="span5 copyright">
+        
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

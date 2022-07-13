@@ -6,3 +6,4 @@ _site
 Gemfile.lock
 build.html
 dist/css/*
+myblog/

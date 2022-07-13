@@ -67,4 +67,84 @@
       flex: 1;
     }
   }
+
+  /*frt*/
+  .jumbotron svg {
+    position: absolute;
+    margin-right: 100px;
+    margin-left: -270px;
+  }
+  
+  .nfbutton {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 2.25em 0.50em;
+    border: none;
+    border-radius: calc(0.15em + 0.15em + 0.15em);
+    background: red;
+  }
+  
+  .nfbutton .logo {
+    color: #fff;
+    padding: 0.2em 0.25em;
+    border: 0.15em solid #fff;
+    border-radius: calc(0.5em + 0.5em + 0.15em);
+  }
+  
+  .nfbutton .logo:hover span:nth-child(odd) {
+    color: transparent;
+  }
+  
+  .nfbutton .logo:hover :nth-child(n+0) {
+    color: green;
+    -webkit-transition: 5s;
+    transition: 5s;
+    top: -15px;
+  }
+  
+  .nfbutton .logo:before {
+    content: "";
+    position: absolute;
+    padding: 0em;
+    line-height: 1;
+    border-radius: calc(0em + 0.5em + 0em);
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: none;
+  }
+  
+  .nfbutton .logo span {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .nfbutton .logo span:nth-child(odd) {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    color: brown;
+    -webkit-box-shadow: 0 60px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 60px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card {
+    z-index: -1;
+  }
+  
+  .card-icon {
+    margin-bottom: -50px;
+    z-index: 10;
+  }
+  
+  .copyright {
+    background: #631912;
+  }
   

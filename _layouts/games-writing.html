@@ -1,0 +1,44 @@
+---
+layout: default
+---
+  <!-- Landing Start -->
+  <div class="container-fluid wow fadeIn hero" data-wow-delay="0.1s">
+    <div class="text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 text-white">{{ page.title }}</h1>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+</div>
+<!-- Landing End -->
+
+  <!-- Post cards Start 
+  <div class="container position-absolute wow fadeIn post-cards" data-wow-delay="0.1s">
+    <div class="row">
+      <div class="col-4 border-white">col-8</div>
+      <div class="col-8 border-white">col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-4 border-white">col-4</div>
+    <div class="col-4 border-white">col-4</div>
+    <div class="col-4 border-white">col-4</div>
+</div>
+</div>
+ Post cards End -->
+<h2>HHEHEYEYEYEY</h2>
+
+
+{% for item in collections.games-writing %}
+  <h2>{{ item.title }}</h2>
+  <p>{{ item.description }}</p>
+  <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+{% endfor %}
+
+
+
+<article class="page">
+ 
+  <div class="page-content">
+   {{ content }}
+  </div>
+</article>

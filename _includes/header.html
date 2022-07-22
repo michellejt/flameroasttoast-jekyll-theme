@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4">
               {{ site.data.navigation }}
-              {% for item in site.data.navigation %}
+              {% for item in site.data.navigation.main %}
                 <a href="{{ item.url }}" class="nav-item nav-link">{{ item.title }} </a>
               {% endfor %}    
             </div>

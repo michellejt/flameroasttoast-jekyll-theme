@@ -43,3 +43,16 @@ layout: default
    {{ content }}
   </div>
 </article>
+{% for games-writing in site.games-writing %}
+
+<!-- <a href="{{ games-writing.url | prepend: site.baseurl }}">
+  <h2>{{ games-writing.title }}</h2>
+</a> -->
+
+<a href="{{ games-writing.url }}">
+  <h2>{{ games-writing.title }}</h2>
+</a>
+
+<p class="post-excerpt">h{{ games-writing.description | truncate: 160 }}</p>
+
+{% endfor %}  

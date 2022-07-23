@@ -42,17 +42,19 @@ layout: default
   <div class="page-content">
    {{ content }}
   </div>
+
 </article>
+
+
 {% for games-writing in site.games-writing %}
-
-<!-- <a href="{{ games-writing.url | prepend: site.baseurl }}">
-  <h2>{{ games-writing.title }}</h2>
-</a> -->
-
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h2>{{ games-writing.title }}</h2>
+    <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>
+  </div>
+</div>
 <a href="{{ games-writing.url }}">
   <h2>{{ games-writing.title }}</h2>
 </a>
-
-<p class="post-excerpt">h{{ games-writing.description | truncate: 160 }}</p>
-
 {% endfor %}  

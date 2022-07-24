@@ -28,17 +28,7 @@ layout: default
  Post cards End -->
 
 
- <div style="background-color:green">please work below
-{% for collection in site.collections %}
-    {% if collection.label != 'games-writing' %}
-        <h2>{{ collection.label }}</h2>
-        {% for item in site[collection.label] %}
-            <br><a href="{{ item.url }}">{{ item.title }}</a>
-        {% endfor %}
-    {% endif %}
-{% endfor %}
-</div>
-<p>spacing</p>
+
 <article class="page">
  
   <div class="page-content">
@@ -51,7 +41,7 @@ layout: default
 {% for games-writing in site.games-writing %}
 <div class="card" style="width: 18rem;">
   <a href="{{ games-writing.url }}">
-  <img src="{{ games-writing.bannerImage }}" class="card-img-top" alt="{{ games-writing.bannerImageAlt }}" >
+  <img src="{{ relative_path}} / {{ games-writing.bannerImage }}" class="card-img-top" alt="{{ games-writing.bannerImageAlt }}" >
   <div class="card-body">
     <h2>{{ games-writing.title }}</h2>
     <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>

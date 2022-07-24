@@ -50,7 +50,7 @@ layout: default
 {% for games-writing in site.games-writing %}
 <div class="card" style="width: 18rem;">
   <a href="{{ games-writing.url }}">
-  <img src="{{page.image}}\{{ games-writing.bannerImage }}" class="card-img-top" alt="{{ games-writing.bannerImageAlt }}" >
+  <img src="{{ page.bannerImage }}/{ games-writing.bannerImage }}" class="card-img-top" alt="{{ games-writing.bannerImageAlt }}" >
   <div class="card-body">
     <h2>{{ games-writing.title }}</h2>
     <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>

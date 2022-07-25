@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+
+
   <!-- Landing Start -->
   <div class="container-fluid wow fadeIn hero" data-wow-delay="0.1s">
    <!-- <img src="{{ games-writing.bannerImage }}"> -->
@@ -10,9 +12,13 @@ layout: default
       </div>
     </div>
     <div class="hero-overlay">
+      {% for games-writing in site.games-writing %}
       <img src="{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" >
+      {% endfor %}  
     </div>
 </div>
+
+
 <!-- Landing End -->
 <article class="page">
  

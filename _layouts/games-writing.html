@@ -30,6 +30,7 @@ layout: default
 
 
 {% for games-writing in site.games-writing %}
+<div class="col-4"></div>
 <div class="card" style="width: 18rem;">
   <a href="{{ games-writing.url }}">
   <img src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" class="card-img-top" alt="{{ games-writing.bannerImageAlt }}" >
@@ -39,6 +40,8 @@ layout: default
   </div>
 </div>
 </a>
+</div>
 {% endfor %}  
+
 
 </section>  

@@ -4,17 +4,16 @@ layout: default
 
 
   <!-- Landing Start -->
+<section class="games-writing">
   <div class="container-fluid wow fadeIn hero" data-wow-delay="0.1s">
    <!-- <img src="{{ games-writing.bannerImage }}"> -->
+   <img src="{{ page.bannerImage }}" alt="{{ page.bannerImageAlt }}" >
     <div class="text-secondary px-4 py-5 text-center">
       <div class="py-5">
         <h1 class="display-5 text-white">{{ page.title }}</h1>
       </div>
     </div>
     <div class="hero-overlay">
-
-      <img src="{{ page.bannerImage }}" alt="{{ page.bannerImageAlt }}" >
-
     </div>
 </div>
 
@@ -40,3 +39,5 @@ layout: default
 </div>
 </a>
 {% endfor %}  
+
+</section>  

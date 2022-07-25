@@ -9,26 +9,11 @@ layout: default
         <h1 class="display-5 text-white">{{ page.title }}</h1>
       </div>
     </div>
-    <div class="hero-overlay"></div>
+    <div class="hero-overlay">
+      <img src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" >
+    </div>
 </div>
 <!-- Landing End -->
-
-  <!-- Post cards Start 
-  <div class="container position-absolute wow fadeIn post-cards" data-wow-delay="0.1s">
-    <div class="row">
-      <div class="col-4 border-white">col-8</div>
-      <div class="col-8 border-white">col-4</div>
-  </div>
-  <div class="row">
-    <div class="col-4 border-white">col-4</div>
-    <div class="col-4 border-white">col-4</div>
-    <div class="col-4 border-white">col-4</div>
-</div>
-</div>
- Post cards End -->
-
-
-
 <article class="page">
  
   <div class="page-content">
@@ -36,9 +21,6 @@ layout: default
   </div>
 
 </article>
-
-
-
 
 
 {% for games-writing in site.games-writing %}

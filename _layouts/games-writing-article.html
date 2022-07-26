@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+  <!-- Landing Start -->
+<section class="games-writing">
+  <div class="container-fluid wow fadeIn hero" data-wow-delay="0.1s">
+   <!-- <img src="{{ games-writing.bannerImage }}"> -->
+
+    <div class="text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 text-white">{{ page.title }}</h1>
+      </div>
+    </div>
+    <div class="hero-overlay">
+      <img src="{{ page.bannerImage }}" alt="{{ page.bannerImageAlt }}" >
+    </div>
+</div>
+
+
+<!-- Landing End -->
+<div class="container">
+  <div class="row">
+<article class="page">
+ 
+  <div class="page-content">
+   {{ content }}
+  </div>
+
+</article>
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+{% for games-writing in site.games-writing %}
+<div class="col-xs-12 col-md-4 pt-4">
+  <!-- Card -->
+  <article class="card animated fadeInLeft">
+    <div class="card category">{{ games-writing.category }}</div>
+    <a href="{{ games-writing.url }}">
+    <img class="card-img-top img-responsive" src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" />
+    <div class="card-block">
+      <h4 class="card-title">{{ games-writing.title }}</h4>
+      <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>
+      </a>
+    </div>
+  </article><!-- .end Card -->
+</div>
+{% endfor %}  
+</div>
+</div>
+
+</section>  

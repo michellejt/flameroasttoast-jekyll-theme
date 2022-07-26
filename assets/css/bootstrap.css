@@ -93,7 +93,7 @@ body {
 
 /*cards*/
 .card {
-  border: 0;
+  border: 0 !important;
 }
 .card .category {
   position: absolute;

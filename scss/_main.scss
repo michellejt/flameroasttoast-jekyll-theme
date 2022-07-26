@@ -94,3 +94,18 @@ body {
     }
   }
 
+/*cards*/
+.card {
+  border:0;
+  .category {
+    position:absolute;
+    right:1px;
+    top:10px;
+    border-radius:0;
+    padding:2px;  
+  }
+  a {
+    text-decoration: none;
+    color: #2a2a2a;
+  }
+}

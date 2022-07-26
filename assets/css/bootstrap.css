@@ -72,16 +72,16 @@ body {
  * Custom translucent site header
  */
 /*     GAMES-WRITING      */
-.games-writing .hero-overlay {
+.games-writing .hero-overlay, .games-writing-article .hero-overlay {
   height: 375px !important;
 }
-.games-writing .hero-overlay img {
+.games-writing .hero-overlay img, .games-writing-article .hero-overlay img {
   width: 100%;
   max-height: 375px;
   object-fit: cover;
   object-position: 0% 10%;
 }
-.games-writing .hero {
+.games-writing .hero, .games-writing-article .hero {
   position: relative;
   padding-top: 90px;
   padding-bottom: 0px;

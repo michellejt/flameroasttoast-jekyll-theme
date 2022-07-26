@@ -94,6 +94,22 @@ body {
     }
   }
 
+.games-writing-article {
+  .container {
+    margin-top: -175px;
+    background:#fff;
+    position:relative;
+    max-width:1020px;
+  }
+  .page-content {
+    margin: 50px;
+  }
+  .img-fluid {
+      max-width: 100%;
+      height: auto;
+  }
+}  
+
 /*cards*/
 .card {
   border:0!important;

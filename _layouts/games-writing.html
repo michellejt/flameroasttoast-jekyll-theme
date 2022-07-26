@@ -33,11 +33,11 @@ layout: default
 <div class="col-xs-12 col-md-4">
   <!-- Card -->
   <article class="card animated fadeInLeft">
+    <div class="card category">{{ games-writing.category }}</div>
     <a href="{{ games-writing.url }}">
     <img class="card-img-top img-responsive" src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" />
     <div class="card-block">
       <h4 class="card-title">{{ games-writing.title }}</h4>
-      <h6 class="text-muted">{{ games-writing.category }}</h6>
       <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>
       </a>
     </div>

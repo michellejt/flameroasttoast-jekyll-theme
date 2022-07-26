@@ -30,16 +30,18 @@ layout: default
 <div class="container">
   <div class="row">
 {% for games-writing in site.games-writing %}
-<div class="col-4">
-<div class="card" style="width: 18rem;">
-  <a href="{{ games-writing.url }}">
-  <img src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" class="card-img-top" alt="{{ games-writing.bannerImageAlt }}" >
-  <div class="card-body">
-    <h2>{{ games-writing.title }}</h2>
-    <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>
-  </div>
-</div>
-</a>
+<div class="col-xs-12 col-md-4">
+  <!-- Card -->
+  <article class="card animated fadeInLeft">
+    <a href="{{ games-writing.url }}">
+    <img class="card-img-top img-responsive" src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" />
+    <div class="card-block">
+      <h4 class="card-title">{{ games-writing.title }}</h4>
+      <h6 class="text-muted">Some Text</h6>
+      <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>
+      </a>
+    </div>
+  </article><!-- .end Card -->
 </div>
 {% endfor %}  
 </div>

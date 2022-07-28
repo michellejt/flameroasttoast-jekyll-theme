@@ -132,10 +132,6 @@ body {
   }
 }
 /*nav*/
-nav {
-  background: #555;
-}
-
-.sticky-top {
-  position:fixed!important;
+.navbar-collapse .collapse .show {
+  background: mediumvioletred;
 }

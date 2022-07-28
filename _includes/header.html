@@ -19,7 +19,7 @@
 
   <header>
        <!-- Navbar Start -->
-       <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn w-100" data-wow-delay="0.1s">
+<!--        <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn w-100" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
             <h1 class="mb-0 text-white text-uppercase">FLAME<span><b>ROAST</b></span>TOAST</h1>
         </a>
@@ -34,8 +34,32 @@
               {% endfor %}      
             </div>
         </div>
-    </nav>
+    </nav> -->
     <!-- Navbar End -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+          <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              Menu
+              <i class="fas fa-bars ms-1"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                  <li class="nav-item">
+                    {{ site.data.navigation.navigation }}
+                    {% for item in site.data.navigation.main %}
+                    <a class="{{ item.url }}" href="#services">{{ item.title }}</a>
+                    {% endfor %}    
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+
+
+
   </header>
 
 

@@ -129,6 +129,10 @@ nav {
   background: #555;
 }
 
+.sticky-top {
+  position: fixed;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

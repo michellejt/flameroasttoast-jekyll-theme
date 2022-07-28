@@ -130,7 +130,7 @@ nav {
 }
 
 .sticky-top {
-  position: fixed;
+  position: fixed !important;
 }
 
 :root {

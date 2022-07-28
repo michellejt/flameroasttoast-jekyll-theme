@@ -125,10 +125,6 @@ body {
 }
 
 /*nav*/
-.navbar-collapse .collapse .show {
-  background: mediumvioletred;
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

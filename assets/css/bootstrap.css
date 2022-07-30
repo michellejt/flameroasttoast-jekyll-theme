@@ -431,6 +431,9 @@ header.masthead .h1 {
   header.masthead .h1 {
     font-size: 3rem;
   }
+  header.masthead .hero-img {
+    margin-top: -100px;
+  }
 }
 @media (min-width: 1200px) {
   header.masthead h1, header.masthead .h1 {

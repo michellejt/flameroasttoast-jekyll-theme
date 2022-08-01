@@ -102,6 +102,7 @@ body {
 .games-writing-article img {
   max-width: 100%;
   height: auto;
+  margin-top: -75px;
 }
 
 /*cards*/

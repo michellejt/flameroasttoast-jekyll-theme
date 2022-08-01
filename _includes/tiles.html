@@ -4,14 +4,19 @@
 {% elsif 'pages' == site.tiles-source %}
 {% assign tiles = site.html_pages | where_exp: "item", "item.show_tile != false" %}
 {% endif %}
-<div class="col-4 border-white tiles">
+<div class="col-xs-12 col-md-4 pt-4">
 {% for tile in tiles limit:site.tiles-count %}
-<span class="image">
-  <img src="{{ tile.image }}" alt="{{ tile.title }}" />
-</span>
-<header class="major">
-  <h3><a href="{{ tile.url  | relative_url }}" class="link">{{ tile.title }}</a></h3>
-</header>
+
+<article class="card effect-1 animated fadeInLeft" id="card">
+    <div class="card category">{{ tile.title }}</div>
+    <a href="{{ tile.url  | relative_url }}" class="link">>
+    <img class="card-img-top img-responsive" src="{{ tile.image }}" alt="{{ tile.title }}" />
+    </a>
+  </div>
+</article>
+
 {% endfor %}
 </div>
 
+
+ 

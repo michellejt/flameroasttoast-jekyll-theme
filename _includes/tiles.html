@@ -5,8 +5,9 @@
 {% assign tiles = site.html_pages | where_exp: "item", "item.show_tile != false" %}
 {% endif %}
 
-<div class="col-xs-12 col-md-4 pt-4">
+
 {% for tile in tiles limit:site.tiles-count %}
+<div class="col-xs-12 col-md-4 pt-4"></div>
 <article class="card effect-1 animated fadeInLeft" id="card">
     <div class="card category">{{ tile.title }}</div>
     <a href="{{ tile.url  | relative_url }}">
@@ -16,8 +17,9 @@
       </a>
     </div>
   </article>
-{% endfor %}
 </div>
+{% endfor %}
+
 
 <!-- <div class="col-xs-12 col-md-4 pt-4">
     <article class="card effect-1 animated fadeInLeft" id="card">

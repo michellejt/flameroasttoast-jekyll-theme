@@ -502,7 +502,9 @@ header.masthead {
 	100% { transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
 }
 
-//testing tiles
-section#one {
-  
+
+.container {
+	.home-tiles {
+		margin-top:-150px;
+	}
 }

@@ -465,10 +465,6 @@ header.masthead .h1 {
     opacity: 1;
   }
 }
-.home-tiles {
-  margin-top: -150px;
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

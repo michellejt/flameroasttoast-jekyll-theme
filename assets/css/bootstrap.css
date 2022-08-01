@@ -445,6 +445,26 @@ header.masthead .h1 {
     font-size: 3.5rem;
   }
 }
+/* Effect 4: fall perspective */
+.card.effect-1 {
+  perspective: 1300px;
+}
+
+.card.effect-1 li {
+  transform-style: preserve-3d;
+}
+
+.card.effect-1 li.animate {
+  transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  animation: fallPerspective 0.8s ease-in-out forwards;
+}
+
+@keyframes fallPerspective {
+  100% {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

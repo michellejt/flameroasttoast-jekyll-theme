@@ -55,7 +55,7 @@ layout: default
 {% for games-writing in site.games-writing %}
 <div class="col-xs-12 col-md-4 pt-4">
   <!-- Card -->
-  <article class="card animated fadeInLeft">
+  <article class="card effect-1 animated fadeInLeft" id="card">
     <div class="card category">{{ games-writing.category }}</div>
     <a href="{{ games-writing.url }}">
     <img class="card-img-top img-responsive" src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" />

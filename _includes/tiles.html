@@ -7,7 +7,7 @@
 
 
 {% for tile in tiles limit:site.tiles-count %}
-<div class="col-xs-12 col-md-4 pt-4"></div>
+<div class="col-xs-12 col-md-4 pt-4">
 <article class="card effect-1 animated fadeInLeft" id="card">
     <div class="card category">{{ tile.title }}</div>
     <a href="{{ tile.url  | relative_url }}">

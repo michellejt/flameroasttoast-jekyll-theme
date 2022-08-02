@@ -13,7 +13,7 @@ layout: default
     <div class="container px-4 px-lg-5 h-100">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-8 align-self-end">
-                <h1 class="text-white font-weight-bold">{{ page.title }}</h1>
+                <h1 class=" animate__animated animate__fadeInDown text-white font-weight-bold">{{ page.title }}</h1>
             </div>
         <!--     <div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
@@ -55,7 +55,7 @@ layout: default
 {% for games-writing in site.games-writing %}
 <div class="col-xs-12 col-md-4 pt-4">
   <!-- Card -->
-  <article class="card animate__animated animate__fadeInDown" id="card">
+  <article class="card" id="card">
     <div class="card category">{{ games-writing.category }}</div>
     <a href="{{ games-writing.url }}">
     <img class="card-img-top img-responsive" src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" />

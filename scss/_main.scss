@@ -108,6 +108,9 @@ body {
       max-width: 100%;
       height: auto;
 	  margin-top: -75px;
+	  max-width: 100%;
+	  object-fit: cover;
+	  width: 100%;
   }
 }  
 
@@ -483,6 +486,10 @@ header.masthead {
 	}
 }
 
+.games-writing-article img {
+
+}
+
 
 .games-writing header h1 {
 	width:100%;
@@ -498,18 +505,11 @@ header.masthead {
 	margin-top:-200px;
 }
 
-/* [1] The container */
-.img-hover-zoom {
-	height: 300px; /* [1.1] Set it as per your need */
-	overflow: hidden; /* [1.2] Hide the overflowing of child elements */
-  }
-  
-  /* [2] Transition property for smooth transformation of images */
-  .img-hover-zoom img {
-	transition: transform .5s ease;
-  }
-  
-  /* [3] Finally, transforming the image when container gets hovered */
-  .img-hover-zoom:hover img {
+.card img {
+	width: 100%;
+	transition: 0.5s all ease-in-out;
+}
+
+.card:hover img {
 	transform: scale(1.5);
-  }
+}

@@ -458,6 +458,15 @@ header.masthead .h1 {
   margin: auto;
 }
 
+.home header h1, .home header .h1 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 210px;
+  margin: auto;
+}
+
 .home-tiles {
   margin-top: -200px;
 }

@@ -486,12 +486,17 @@ header.masthead {
 	}
 }
 
-.games-writing-article img {
-
-}
-
 
 .games-writing header h1 {
+	width:100%;
+ 	position: absolute;
+ 	left: 0;
+ 	right: 0;
+  	top: 210px;
+  	margin: auto;
+}
+
+.home header h1 {
 	width:100%;
  	position: absolute;
  	left: 0;

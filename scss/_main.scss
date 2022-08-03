@@ -505,11 +505,29 @@ header.masthead {
 	margin-top:-200px;
 }
 
-.card img {
+/* .card img {
 	width: 100%;
 	transition: 0.5s all ease-in-out;
 }
 
 .card:hover img {
+	transform: scale(1.5);
+}
+ */
+
+//test
+.container {
+	margin-top: 8%;
+}
+
+.inner {
+	overflow: hidden;
+}
+
+.inner img {
+	transition: all 1.5s ease;
+}
+
+.inner:hover img {
 	transform: scale(1.5);
 }

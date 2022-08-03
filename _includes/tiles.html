@@ -27,8 +27,8 @@
                     {{ site.data.navigation.navigation }}
                       {% for item in site.data.navigation.tiles %}  
 
-                      <div class="card category">{{ tile.title }}</div>
-                      <a href="{{ tile.url  | relative_url }}">
+                      <div class="card category">{{ item.title }}</div>
+                      <a href="{{ item.url  | relative_url }}">
                       <img class="card-img-top img-responsive" src="{{ item.image }}" alt="{{ item.title }}" />
                       <div class="card-block">
                         <h4 class="card-title">{{ item.title }}</h4>

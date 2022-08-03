@@ -21,11 +21,13 @@
 {% endfor %} -->
 
 <!-- Navigation-->
+
+{{ site.data.navigation.navigation }}
+{% for item in site.data.navigation.tiles %}  
 <div class="col-xs-12 col-md-6 p-0 border border-white">
   <article class="card effect-1 animated fadeInLeft" id="card">
 
-                    {{ site.data.navigation.navigation }}
-                      {% for item in site.data.navigation.tiles %}  
+
 
                       <div class="card category">{{ item.title }}</div>
                       <a href="{{ item.url  | relative_url }}">
@@ -34,9 +36,9 @@
                         <h4 class="card-title">{{ item.title }}</h4>
                         </a>
                       </div>
-                      {% endfor %}  
+          
 
 
               </article>
           </div>
-     
+          {% endfor %}  

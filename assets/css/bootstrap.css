@@ -440,9 +440,6 @@ header.masthead .h1 {
     width: 100%;
     position: relative;
   }
-  header.masthead .hero-img .hero-img {
-    background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3));
-  }
 }
 @media (min-width: 1200px) {
   header.masthead h1, header.masthead .h1 {

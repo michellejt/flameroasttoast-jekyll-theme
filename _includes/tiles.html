@@ -28,14 +28,19 @@
   <article class="card effect-1 animated fadeInLeft" id="card">
 
                       <a href="{{ item.url  | relative_url }}">
-                      <img class="card-img-top img-responsive" src="{{ item.image }}" alt="{{ item.title }}" />
+
+                      
+                      <div class="inner">
+                        <img class="card-img-top img-responsive" src="{{ item.image }}" alt="{{ item.title }}" />
+                      </div>
+
+
                       <div class="card-block">
                         <h4 class="card-title">{{ item.title }}</h4>
                         </a>
                       </div>
-          
-
 
               </article>
           </div>
           {% endfor %}  
+

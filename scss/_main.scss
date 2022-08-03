@@ -472,6 +472,9 @@ header.masthead {
 			height: 100%;
 			width: 100%;
 			position: relative;
+			.hero-img {
+				background:linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3));
+			}
 		}
 	}
 }
@@ -521,9 +524,9 @@ header.masthead {
 }
 
 .inner img {
-	transition: all 1.5s ease;
+	transition: all 4s ease;
 }
 
 .inner:hover img {
-	transform: scale(1.5);
+	transform: scale(1.1);
 }

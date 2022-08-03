@@ -540,3 +540,8 @@ header.masthead {
     margin-left: 15px;
 	font-weight:700;
 }
+
+.home-tiles:nth-child(1),
+.home-tiles:nth-child(3) {
+	display: none;
+}

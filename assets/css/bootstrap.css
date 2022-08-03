@@ -498,6 +498,11 @@ header.masthead .h1 {
   font-weight: 700;
 }
 
+.home-tiles:nth-child(1),
+.home-tiles:nth-child(3) {
+  display: none;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

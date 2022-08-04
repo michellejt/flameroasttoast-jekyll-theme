@@ -506,7 +506,7 @@ header.masthead {
 
 
 .home-tiles {
-	margin-top:-160px;
+	margin-top:-100px;
 }
 
 /* .card img {
@@ -540,7 +540,21 @@ header.masthead {
 	font-weight:700;
 }
 
-.home-tiles:nth-child(1),
-.home-tiles:nth-child(3) {
-	display: none;
+.home .card-img-top {
+    height:325px;
+    border-radius:0!important;
+
 }
+
+.home .card {
+    height:335px;
+    border: solid 10px #fff!important;
+    border-radius:0!important;
+    margin-right:-10px;
+}
+
+.home-tiles:nth-child(2), 
+.home-tiles:nth-child(3) {
+    width: 58%;
+}
+

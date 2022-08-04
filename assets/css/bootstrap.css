@@ -108,7 +108,8 @@ body {
   width: 100%;
 }
 
-.games-writing header.masthead {
+.games-writing header.masthead,
+.games-writing-article header.masthead {
   min-height: 25rem !important;
   max-height: 25rem;
 }

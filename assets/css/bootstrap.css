@@ -511,7 +511,7 @@ header.masthead .h1 {
 
 .home-tiles:nth-child(2),
 .home-tiles:nth-child(3) {
-  width: 58%;
+  width: 50%;
 }
 
 :root {

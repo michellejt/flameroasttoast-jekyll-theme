@@ -463,6 +463,16 @@ header.masthead .h1 {
   margin: auto;
 }
 
+.games-writing-article header h1, .games-writing-article header .h1 {
+  margin-top: -26px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -70px;
+  font-size: 24px;
+}
+
 .home header h1, .home header .h1 {
   width: 100%;
   position: absolute;

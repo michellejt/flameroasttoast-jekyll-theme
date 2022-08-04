@@ -115,7 +115,8 @@ body {
 }  
 
 .games-writing header.masthead {
-	min-height: 25rem!important
+	min-height: 25rem!important;
+	max-height: 25rem;
 }
 
 /*cards*/

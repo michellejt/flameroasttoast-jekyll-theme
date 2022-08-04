@@ -421,7 +421,6 @@ header.masthead .h1 {
   header.masthead {
     height: 70vh;
     min-height: 30rem;
-    padding-top: 4.5rem;
     padding-bottom: 0;
   }
   header.masthead p {

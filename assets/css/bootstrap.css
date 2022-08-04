@@ -108,8 +108,8 @@ body {
   width: 100%;
 }
 
-.games-writing .header.masthead {
-  max-height: 25rem;
+.games-writing header.masthead {
+  min-height: 25rem !important;
 }
 
 /*cards*/

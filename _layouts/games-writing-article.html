@@ -85,11 +85,13 @@ layout: default
     {% if prevPost.url %}
     <a class="prev" rel="prev" href="{{ prevPost.url }}">
         <span>&lt; {{ prevPost.title }}</span>
+        <span>&lt; {{ prevPost.image }}</span>
     </a>
     {% endif %}
     {% if nextPost.url %}
     <a class="next" rel="next" href="{{ nextPost.url }}">
         <span>{{ nextPost.title }} &gt;</span>
+        <span>{{ nextPost.image }} &gt;</span>
     </a>
     {% endif %}
 </div>

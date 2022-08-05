@@ -81,16 +81,19 @@ layout: default
   {% assign nextPost = site.games-writing[nextItemIndex] %}
 {% endif %}
 
-<div id="post-nav">
+<div id="post-nav row justify-content-between">
     {% if prevPost.url %}
+    <div class="col-4 text-start">
     <a class="prev" rel="prev" href="{{ prevPost.url }}">
         <span>&lt; {{ prevPost.title }}</span>
 <!--         <div class="prev-thumb">
           <img class="card-img-top img-responsive" src="{{ prevPost.url | replace: 'index', '' }}/{{ prevPost.bannerImage }}" alt="{{ prevPost.bannerImageAlt }}" />
         </div> -->
     </a>
+    </div>
     {% endif %}
     {% if nextPost.url %}
+    <div class="col-4 text-end">
     <a class="next" rel="next" href="{{ nextPost.url }}">
         <span>{{ nextPost.title }} &gt;</span>
 <!--  
@@ -99,14 +102,7 @@ layout: default
         </div> -->
 
     </a>
+    </div>
     {% endif %}
 </div>
 
-<div class="row justify-content-between">
-  <div class="col-4">
-    One of two columns
-  </div>
-  <div class="col-4">
-    One of two columns
-  </div>
-</div>

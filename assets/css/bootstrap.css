@@ -424,11 +424,6 @@ header.masthead .h1 {
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
     color: #f4623a;
   }
-  header.masthead {
-    height: 70vh;
-    min-height: 30rem;
-    padding-bottom: 0;
-  }
   header.masthead p {
     font-size: 1.15rem;
   }

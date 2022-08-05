@@ -472,13 +472,7 @@ header.masthead {
 		.h1 {
 			font-size: 3rem;
 		}
-		.hero-img {
-			margin-top: -100px;
-			object-fit: cover;
-			height: 100%;
-			width: 100%;
-			position: relative;
-		}
+
 	}
 }
 
@@ -486,6 +480,14 @@ header.masthead {
 height: 70vh;
 min-height: 30rem;
 padding-bottom: 0;
+}
+
+.hero-img {
+	margin-top: -100px;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	position: relative;
 }
 
 @media (min-width: 1200px) {

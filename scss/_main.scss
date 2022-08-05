@@ -604,11 +604,11 @@ padding-bottom: 0;
 }
 
 .strapline {
-	color: $blue-700;
+	color: darkblue;
 	&:before {
 		content:open-quote;
 	}
 	&:active {
 		content:close-quote;
 	}
-}
+} 

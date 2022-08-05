@@ -547,6 +547,16 @@ header.masthead {
   text-shadow: 5px 5px 10px black;
 }
 
+.strapline {
+  color: darkblue;
+}
+.strapline:before {
+  content: open-quote;
+}
+.strapline:active {
+  content: close-quote;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

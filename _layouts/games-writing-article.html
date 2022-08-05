@@ -85,13 +85,19 @@ layout: default
     {% if prevPost.url %}
     <a class="prev" rel="prev" href="{{ prevPost.url }}">
         <span>&lt; {{ prevPost.title }}</span>
-        <span>&lt; {{ prevPost.image }}</span>
+        <div class="prev-thumb">
+          <img class="card-img-top img-responsive" src="{{ prevPost.url | replace: 'index', '' }}/{{ prevPost.bannerImage }}" alt="{{ prevPost.bannerImageAlt }}" />
+        </div>
     </a>
     {% endif %}
     {% if nextPost.url %}
     <a class="next" rel="next" href="{{ nextPost.url }}">
         <span>{{ nextPost.title }} &gt;</span>
-        <span>{{ nextPost.image }} &gt;</span>
+ 
+        <div class="next-thumb">
+          <img class="card-img-top img-responsive" src="{{ nextPost.url | replace: 'index', '' }}/{{ nextPost.bannerImage }}" alt="{{ nextPost.bannerImageAlt }}" />
+        </div>
+
     </a>
     {% endif %}
 </div>

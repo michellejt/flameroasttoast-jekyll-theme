@@ -52,3 +52,69 @@ layout: default
 </div> -->
 
 </section>  
+
+{% if page.collection %}
+{% assign posts = site[page.collection]  %}
+
+{% if posts.size > 1 %}
+  {% assign prevurl = posts.last.url | remove: ".html" %}
+  {% assign nexturl = posts.first.url | remove: ".html" %}
+{% endif %}
+
+{% for links in posts %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = posts[forloop.index] %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+{% endif %}
+
+<div class="ui vertical segment left aligned episodes-segment">
+    <div class="ui text container">
+       <div class="ui header"><span class="title">Podcast</span> Episodes</div>
+
+      {% for episode in site.episodes limit:"1" %}
+      
+      <div class="ui grid recent-episode">
+          <div class="five wide column image">
+              {% if forloop.index == 1 %}
+              <img src="{{episode.episode_image}}" alt="{{episode.title}}">
+              {% endif %}
+              <ul class="buttons pagination">
+                {% if posts.size > 0 %}
+                {% if prevurl %}
+                  <li>
+                    <a class="ui button" href="{{prevurl | replace: '.html',''}}">Next Episode</a>
+                  </li>
+                  {% endif %}
+                  {% if nexturl %}
+                  
+                  <li>
+                    <a class="ui button previousEpisode {% if forloop.index == 1 %} disabled {% endif %}" href="{{nexturl | replace: '.html',''}}">Previous Episode</a>
+                  </li>
+                  
+                  {% endif %}
+                  {% endif %}
+                  <li><a class="ui button" href="{{site.url}}/pages/podcasts">View All Episodes</a></li>
+            </ul>
+          </div>
+          {% if forloop.index == 1 %}
+          <div class="eleven wide column content"> 
+            {{episode.content}}
+            {% include social_share.html %}
+            <div class="read-more-button">
+                <a href="{{episode.url}}" class="ui button read-more">Read More</a>
+              </div>
+          </div>
+          {% endif %}
+      </div>
+      
+      {% endfor %}
+    </div> 
+ </div>

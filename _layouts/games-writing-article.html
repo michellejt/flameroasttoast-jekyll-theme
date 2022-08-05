@@ -53,68 +53,59 @@ layout: default
 
 </section>  
 
-{% if page.collection %}
-{% assign posts = site[page.collection]  %}
-
-{% if posts.size > 1 %}
-  {% assign prevurl = posts.last.url | remove: ".html" %}
-  {% assign nexturl = posts.first.url | remove: ".html" %}
-{% endif %}
-
-{% for links in posts %}
-  {% if links.title == page.title %}
-    {% unless forloop.first %}
-      {% assign prevurl = prev.url %}
-    {% endunless %}
-    {% unless forloop.last %}
-      {% assign next = posts[forloop.index] %}
-      {% assign nexturl = next.url %}
-    {% endunless %}
+{% endcomment %}
+{% for c in site.your_collection %}
+{% if c.title == page.title %}
+  {% assign thisPost = c %}
+  {% if forloop.index == 1 %}
+    {% assign prevflag = 0 %}
+    {% assign nextflag = 1 %}
+  {% elsif forloop.index == forloop.length %}
+    {% assign prevflag = 1 %}
+    {% assign nextflag = 0 %}
+  {% else %}
+    {% assign prevflag = 1 %}
+    {% assign nextflag = 1 %}
   {% endif %}
-  {% assign prev = links %}
+{% endif %}
 {% endfor %}
+
+{% for c in site.your_collection %}
+  {% if c.title == page.title %}
+    {% assign prevflag = 0 %}
+  {% endif %}
+  {% if prevflag == 1 %}
+    {% assign prevPost = c %}
+    {% assign page.previous = c %}
+  {% endif %}
+{% endfor %}
+
+{% if nextflag == 1 %}
+  {% for c in site.your_collection %}
+    {% if foundPost == 1 %}
+      {% assign getNext = 1 %}
+    {% endif %}
+    {% if c.title == page.title %}
+      {% assign foundPost = 1 %}
+    {% endif %}
+    {% if getNext == 1%}
+      {% assign nextPost = c %}
+      {% assign page.next = c %}
+      {% assign foundPost = 0 %}
+      {% assign getNext = 0 %}
+    {% endif %}
+  {% endfor %}
 {% endif %}
 
-<div class="ui vertical segment left aligned episodes-segment">
-    <div class="ui text container">
-       <div class="ui header"><span class="title">Podcast</span> Episodes</div>
-
-      {% for episode in site.episodes limit:"1" %}
-      
-      <div class="ui grid recent-episode">
-          <div class="five wide column image">
-              {% if forloop.index == 1 %}
-              <img src="{{episode.episode_image}}" alt="{{episode.title}}">
-              {% endif %}
-              <ul class="buttons pagination">
-                {% if posts.size > 0 %}
-                {% if prevurl %}
-                  <li>
-                    <a class="ui button" href="{{prevurl | replace: '.html',''}}">Next Episode</a>
-                  </li>
-                  {% endif %}
-                  {% if nexturl %}
-                  
-                  <li>
-                    <a class="ui button previousEpisode {% if forloop.index == 1 %} disabled {% endif %}" href="{{nexturl | replace: '.html',''}}">Previous Episode</a>
-                  </li>
-                  
-                  {% endif %}
-                  {% endif %}
-                  <li><a class="ui button" href="{{site.url}}/pages/podcasts">View All Episodes</a></li>
-            </ul>
-          </div>
-          {% if forloop.index == 1 %}
-          <div class="eleven wide column content"> 
-            {{episode.content}}
-            {% include social_share.html %}
-            <div class="read-more-button">
-                <a href="{{episode.url}}" class="ui button read-more">Read More</a>
-              </div>
-          </div>
-          {% endif %}
-      </div>
-      
-      {% endfor %}
-    </div> 
- </div>
+<div id="post-nav">
+    {% if prevPost.url %}
+    <a class="prev" rel="prev" href="{{ prevPost.url }}">
+        <span>&lt; {{ prevPost.title }}</span>
+    </a>
+    {% endif %}
+    {% if nextPost.url %}
+    <a class="next" rel="next" href="{{ nextPost.url }}">
+        <span>{{ nextPost.title }} &gt;</span>
+    </a>
+    {% endif %}
+</div>

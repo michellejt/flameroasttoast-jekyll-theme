@@ -608,7 +608,7 @@ padding-bottom: 0;
 	&:before {
 		content:open-quote;
 	}
-	&:active {
+	&:after {
 		content:close-quote;
 	}
 } 

@@ -602,3 +602,13 @@ padding-bottom: 0;
 	letter-spacing: 1px;
 	text-shadow: 5px 5px 10px black;
 }
+
+.strapline {
+	color: $blue-700;
+	&:before {
+		content:open-quote;
+	}
+	&:active {
+		content:close-quote;
+	}
+}

@@ -569,10 +569,21 @@ header.masthead {
     margin-right:-10px;
 }
 
-.home-tiles:nth-child(2), 
-.home-tiles:nth-child(3) {
-    width: 40%;
-}
+
+@media (min-width: 767px) { 
+	.home-tiles:nth-child(2), 
+	.home-tiles:nth-child(3) {
+		width: 40%;
+		}
+	}	
+	
+	@media (max-width: 767px) { 
+	.home-tiles:nth-child(2), 
+	.home-tiles:nth-child(3) {
+		width: 100%;
+		}
+	}	
+
 
 .home-tiles .card-title {
 	position: absolute;

@@ -53,48 +53,32 @@ layout: default
 
 </section>  
 
-{% endcomment %}
-{% for c in site.games-writing %}
-{% if c.title == page.title %}
-  {% assign thisPost = c %}
-  {% if forloop.index == 1 %}
-    {% assign prevflag = 0 %}
-    {% assign nextflag = 1 %}
-  {% elsif forloop.index == forloop.length %}
-    {% assign prevflag = 1 %}
-    {% assign nextflag = 0 %}
-  {% else %}
-    {% assign prevflag = 1 %}
-    {% assign nextflag = 1 %}
-  {% endif %}
-{% endif %}
-{% endfor %}
+
+
+{% assign prevflag = 1 %}
+{% assign nextflag = 1 %}
 
 {% for c in site.games-writing %}
   {% if c.title == page.title %}
-    {% assign prevflag = 0 %}
-  {% endif %}
-  {% if prevflag == 1 %}
-    {% assign prevPost = c %}
-    {% assign page.previous = c %}
+    {% assign currentItemIndex = forloop.index0 %}
+    {% if forloop.index == 1 %}
+      {% assign prevflag = 0 %}
+      {% assign nextflag = 1 %}
+    {% elsif forloop.index == forloop.length %}
+      {% assign prevflag = 1 %}
+      {% assign nextflag = 0 %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
+{% if prevflag == 1 %}
+  {% assign prevItemIndex = currentItemIndex | minus: 1 %}
+  {% assign prevPost = site.games-writing[prevItemIndex] %}
+{% endif %}
+
 {% if nextflag == 1 %}
-  {% for c in site.games-writing %}
-    {% if foundPost == 1 %}
-      {% assign getNext = 1 %}
-    {% endif %}
-    {% if c.title == page.title %}
-      {% assign foundPost = 1 %}
-    {% endif %}
-    {% if getNext == 1%}
-      {% assign nextPost = c %}
-      {% assign page.next = c %}
-      {% assign foundPost = 0 %}
-      {% assign getNext = 0 %}
-    {% endif %}
-  {% endfor %}
+  {% assign nextItemIndex = currentItemIndex | plus: 1 %}
+  {% assign nextPost = site.games-writing[nextItemIndex] %}
 {% endif %}
 
 <div id="post-nav">

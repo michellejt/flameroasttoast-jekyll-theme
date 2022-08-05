@@ -553,7 +553,7 @@ header.masthead {
 .strapline:before {
   content: open-quote;
 }
-.strapline:active {
+.strapline:after {
   content: close-quote;
 }
 

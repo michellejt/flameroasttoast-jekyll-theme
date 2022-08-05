@@ -70,7 +70,7 @@ layout: default
 {% endif %}
 {% endfor %}
 
-{% for c in site.your_collection %}
+{% for c in site.games-writing %}
   {% if c.title == page.title %}
     {% assign prevflag = 0 %}
   {% endif %}
@@ -81,7 +81,7 @@ layout: default
 {% endfor %}
 
 {% if nextflag == 1 %}
-  {% for c in site.your_collection %}
+  {% for c in site.games-writing %}
     {% if foundPost == 1 %}
       {% assign getNext = 1 %}
     {% endif %}

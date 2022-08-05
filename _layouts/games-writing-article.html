@@ -83,28 +83,20 @@ layout: default
 
 <div id="post-nav">
     {% if prevPost.url %}
-    <div class="card mb-3" style="max-width: 150px0px;">
-      <a class="next" rel="next" href="{{ prevPost.url }}">
-      <div class="row no-gutters">
-        <div class="col-md-4">
+    <a class="prev" rel="prev" href="{{ prevPost.url }}">
+        <span>&lt; {{ prevPost.title }}</span>
+<!--         <div class="prev-thumb">
           <img class="card-img-top img-responsive" src="{{ prevPost.url | replace: 'index', '' }}/{{ prevPost.bannerImage }}" alt="{{ prevPost.bannerImageAlt }}" />
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-          </div>
-        </div>
-      </div>
+        </div> -->
     </a>
-    </div>
     {% endif %}
     {% if nextPost.url %}
     <a class="next" rel="next" href="{{ nextPost.url }}">
         <span>{{ nextPost.title }} &gt;</span>
- 
+<!--  
         <div class="next-thumb">
           <img class="card-img-top img-responsive" src="{{ nextPost.url | replace: 'index', '' }}/{{ nextPost.bannerImage }}" alt="{{ nextPost.bannerImageAlt }}" />
-        </div>
+        </div> -->
 
     </a>
     {% endif %}

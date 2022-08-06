@@ -2,15 +2,12 @@
 layout: default
 ---
 
+<div class="snippets">
+  <h1 class="snippets-heading">Articles tagged with "{{ page.tags }}"</h1>
 
-{% assign tags =  site.games-writing | map: 'tags' | join: ','  | split: ',' | uniq %}
-{% for tag in tags %}
-  <h3>{{ tag }}</h3>
-  <ul>
-  {% for games-writing in site.games-writing %}
-    {% if games-writing.tags contains tag %}
-    <li><a href="{{ site.baseurl }}{{ games-writing.url }}">{{ games-writing.title }}</a></li>
+  {% for post in site.posts %}
+    {% if post.tags contains page.tags %}
+      {% include snippet.html %}
     {% endif %}
   {% endfor %}
-  </ul>
-{% endfor %}
+</div>

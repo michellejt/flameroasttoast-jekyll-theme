@@ -20,5 +20,10 @@
 
    
   
+    {% include custom-head.html %}
 
+    {% if site.tags != "" %}
+    {% include collecttags.html %}
+    {% endif %}
+    
   </head>

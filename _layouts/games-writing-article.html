@@ -112,29 +112,4 @@ layout: default
 
 
 
-
-{% for tag in post.tags %}
-  {% assign tag_slug = tag | slugify: "raw" %}
-  <a class="tag-link"
-    href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }}
-    rel="category tag">
-    #{{ tag }}
-  </a>
-{% endfor %}
-
-<div class="all-tags">
-  All tags:
-  <ul>
-    {% assign tags = site.posts | all_tags %}
-    {% for tag in tags %}
-      {% assign tag_slug = tag['name'] | slugify: "raw" %}
-      <li>
-        <a class="tag-link"
-          href={{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }}
-          rel="category tag">
-          #{{ tag['name'] }} ({{ tag['count'] }})
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<h5><i class="icon-tags"></i> {.% for tag in post.tags %}| <a href="/tag/" title="View posts tagged with &quot;&quot;"><u>{.{ tag }}</u></a> |  {.% if forloop.last != true %} {.% endif %} {.% endfor %}</h5>

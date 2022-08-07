@@ -34,9 +34,9 @@ layout: default
   <div class="row">
 
 
-    {% assign games-writing = site.games-writing | sort: 'last_updated' | reverse %}
+    {% assign games-writing = site.games-writing | sort: 'published' | reverse %}
     {% for post in posts %}
-      <p><a href="{{ games-writing.url }}">{{ games-writing.title }}</a>
+      <p><a href="{{ games-writing.url }}">{{ games-writing.title }}</a></p>
     {% endfor %}
 
 {% for games-writing in site.games-writing %}

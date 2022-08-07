@@ -35,7 +35,7 @@ layout: default
 
 
     {% assign games-writing = site.games-writing | sort: 'published' | reverse %}
-    {% for post in posts %}
+    {% for games-writing in games-writing %}
       <p><a href="{{ games-writing.url }}">{{ games-writing.title }}</a></p>
     {% endfor %}
 

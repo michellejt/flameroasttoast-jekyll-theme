@@ -30,13 +30,16 @@ layout: default
 </div>
 </div>
 
-
-  <p><a href="{{ post.url }}">{{ post.title }}</a>
-
-
 <div class="container">
   <div class="row">
-{% for games-writing in site.games-writing | sort: 'published' | reverse %}
+
+
+    {% assign games-writing = site.games-writing | sort: 'last_updated' | reverse %}
+    {% for post in posts %}
+      <p><a href="{{ games-writing.url }}">{{ games-writing.title }}</a>
+    {% endfor %}
+
+{% for games-writing in site.games-writing %}
 <div class="col-xs-12 col-md-4 pt-4">
   <!-- Card -->
   <article class="card" id="card">

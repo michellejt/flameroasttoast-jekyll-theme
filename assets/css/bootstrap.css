@@ -509,6 +509,18 @@ header.masthead {
   transform: scale(1.1);
 }
 
+.card-block:hover {
+  color: #2a2a2a;
+}
+
+.card-block a:hover {
+  color: inherit;
+}
+
+.card.category {
+  z-index: 10;
+}
+
 .home .card-block {
   margin-top: -50px;
   margin-left: 15px;

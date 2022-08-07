@@ -39,23 +39,7 @@ layout: default
       <p><a href="{{ games-writing.url }}">{{ games-writing.title }}</a></p>
     {% endfor %}
 
-{% for games-writing in site.games-writing %}
-<div class="col-xs-12 col-md-4 pt-4">
-  <!-- Card -->
-  <article class="card" id="card">
-    <div class="card category">{{ games-writing.category }}</div>
-    <a href="{{ games-writing.url }}">
-      <div class="inner">
-        <img class="card-img-top img-responsive" src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" />
-      </div>
-    <div class="card-block">
-      <h4 class="card-title">{{ games-writing.title }}</h4>
-      <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>
-      </a>
-    </div>
-  </article><!-- .end Card -->
-</div>
-{% endfor %}  
+
 </div>
 </div>
 

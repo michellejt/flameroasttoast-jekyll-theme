@@ -590,6 +590,10 @@ article#card:focus {
   padding: 10px;
 }
 
+article#card {
+  padding: 10px;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

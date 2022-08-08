@@ -650,3 +650,9 @@ article#card:active {
  article#card {
 	padding:10px;
 }
+
+@media (max-width: 767px) {
+	.home-tiles {
+		 width: 100%!important;
+	   }
+	 }

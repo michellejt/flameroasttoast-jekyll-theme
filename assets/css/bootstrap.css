@@ -597,6 +597,7 @@ header.masthead {
 @media screen and (max-width: 992px) {
   .home .home-tiles.w-75 {
     width: 100% !important;
+    padding: 0 25px 0 25px !important;
   }
   .home .card,
 .home .inner {

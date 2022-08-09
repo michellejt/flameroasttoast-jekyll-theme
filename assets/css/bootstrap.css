@@ -609,6 +609,10 @@ header.masthead {
     bottom: 30px;
   }
 }
+.hero-img {
+  background-size: cover !important;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

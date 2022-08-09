@@ -584,18 +584,17 @@ header.masthead {
 .navbar:not(.navbar-shrink) .nav-link {
     color:#fff!important;
 } */
-article#card:focus,
-article#card:hover,
-article#card:active {
+.games-writing article#card:focus,
+.games-writing article#card:hover,
+.games-writing article#card:active {
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   padding: 10px;
 }
-
-article#card {
+.games-writing article#card {
   padding: 10px;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .home-tiles {
     width: 100% !important;
   }

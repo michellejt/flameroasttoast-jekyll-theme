@@ -601,6 +601,7 @@ header.masthead {
   .home .card,
 .home .inner {
     max-height: 200px;
+    margin-right: 0 !important;
   }
   .home .card-block {
     position: absolute;

@@ -654,3 +654,18 @@ article#card:active {
 }
 
 
+@media screen and (max-width: 992px) {
+	.home {
+		.home-tiles.w-75 {
+			width: 100% !important;
+		}
+		.card {
+			max-height: 200px;
+		}
+		.card-block {
+			position: absolute;
+			width: 100%;
+			bottom: 30px;
+		}
+	}
+}

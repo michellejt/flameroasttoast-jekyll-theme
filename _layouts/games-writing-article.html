@@ -90,7 +90,7 @@ layout: default
 
 <div class="post-nav row justify-content-between m-3">
     {% if prevPost.url %}
-    <div class="col-4 text-start">
+    <div class="col-6 text-start">
     <a class="prev" rel="prev" href="{{ prevPost.url }}">
         <span>&lt; {{ prevPost.title }}</span>
 <!--         <div class="prev-thumb">
@@ -100,7 +100,7 @@ layout: default
     </div>
     {% endif %}
     {% if nextPost.url %}
-    <div class="col-4 text-end">
+    <div class="col-6 text-end">
     <a class="next" rel="next" href="{{ nextPost.url }}">
         <span>{{ nextPost.title }} &gt;</span>
 <!--  

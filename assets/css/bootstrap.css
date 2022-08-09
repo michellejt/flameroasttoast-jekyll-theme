@@ -594,7 +594,7 @@ header.masthead {
   padding: 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .home-tiles {
     width: 100% !important;
   }

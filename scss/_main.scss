@@ -679,7 +679,7 @@ article#card:active {
 
 
 //testing
-@keyframes wipe-enter {
+/* @keyframes wipe-enter {
 	0% {
 		transform: scale(0, .025);
 	}
@@ -700,4 +700,4 @@ article#card:active {
 	.card-animation {
 	  animation: wipe-enter 1s 1;
 	}
-  }
+  } */

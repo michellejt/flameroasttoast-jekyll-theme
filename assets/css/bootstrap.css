@@ -598,7 +598,8 @@ header.masthead {
   .home .home-tiles.w-75 {
     width: 100% !important;
   }
-  .home .card {
+  .home .card,
+.home .inner {
     max-height: 200px;
   }
   .home .card-block {

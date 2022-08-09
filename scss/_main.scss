@@ -659,7 +659,8 @@ article#card:active {
 		.home-tiles.w-75 {
 			width: 100% !important;
 		}
-		.card {
+		.card,
+		.inner {
 			max-height: 200px;
 		}
 		.card-block {

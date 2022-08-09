@@ -594,11 +594,6 @@ header.masthead {
   padding: 10px;
 }
 
-@media screen and (max-width: 992px) {
-  .home-tiles {
-    width: 100% !important;
-  }
-}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

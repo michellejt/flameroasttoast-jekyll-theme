@@ -641,6 +641,26 @@ header.masthead {
   margin-left: -20px;
 }
 
+/* Effect 4: fall perspective */
+.grid.effect-4 {
+  perspective: 1300px;
+}
+
+.grid.effect-4 li {
+  transform-style: preserve-3d;
+}
+
+.grid.effect-4 li.animate {
+  transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  animation: fallPerspective 0.8s ease-in-out forwards;
+}
+
+@keyframes fallPerspective {
+  100% {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

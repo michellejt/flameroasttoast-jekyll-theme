@@ -60,27 +60,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 //tiles animation
-new AnimOnScroll( document.getElementById( 'card' ), {
+new AnimOnScroll( document.getElementById( 'grid' ), {
     minDuration : 0.4,
     maxDuration : 0.7,
     viewportFactor : 0.2
 } );
-
-
-
-//new
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const square = entry.target.querySelector('.card');
-  
-      if (entry.isIntersecting) {
-        square.classList.add('card-animation');
-        return; // if we added the class, exit the function
-      }
-  
-      // We're not intersecting, so remove the class!
-      square.classList.remove('card-animation');
-    });
-  });
-  
-  observer.observe(document.querySelector('.card-wrapper'));

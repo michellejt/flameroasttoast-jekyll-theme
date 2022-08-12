@@ -662,12 +662,12 @@ header.masthead {
   .games-writing-article .hero-img {
     background-size: cover !important;
     background-position: center !important;
-    height: 400px;
+    height: 350px;
   }
   .games-writing-article header.masthead {
     padding-bottom: 0;
     height: 100% !important;
-    max-height: 400px !important;
+    max-height: 350px !important;
   }
 }
 .games-writing-article header h1,
@@ -681,8 +681,8 @@ header.masthead {
 
 .games-writing-article header.masthead {
   padding-bottom: 0;
-  height: 390px;
-  max-height: 350px;
+  height: 400px;
+  max-height: 400px;
 }
 
 :root {

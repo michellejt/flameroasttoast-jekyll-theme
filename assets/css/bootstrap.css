@@ -730,13 +730,11 @@ header.masthead {
     transition: all 800ms;
   }
 }
-.article-details {
-  background: blue;
-}
-
 .container.article-title-block {
   background: rgba(0, 0, 0, 0) !important;
   z-index: 100;
+  margin-top: -275px;
+  margin-bottom: 90px;
 }
 
 :root {

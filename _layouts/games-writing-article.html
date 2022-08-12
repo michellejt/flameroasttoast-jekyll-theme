@@ -9,17 +9,21 @@ layout: default
   <header class="masthead">
     <div class="hero-img" style="background:linear-gradient(0deg, rgba(0,0,0,0.7934524151457458) 0%, rgba(0,0,0,0.3) 60%), url('{{ page.bannerImage }}'); background-size:cover; background-position:{{ page.bannerImageFocus }}" ></div>
     <!-- <img src="{{ page.bannerImage }}" alt="{{ page.bannerImageAlt }}" > -->
-    <div class="container article-title-block px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end article-title">
-                <h1 class="animate__animated animate__fadeInDown text-white font-weight-bold">{{ page.title }}</h1>
-                <p class="fs-4 text-center text-white article-details">{{ page.publisher }}  |  {{ page.developer }}  |  {{ page.platform }}</p>
-            </div>
-        </div>
-    </div>
+
   </header>
 
 <!-- Landing End -->
+
+<div class="container article-title-block px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 align-items-center justify-content-center text-center">
+      <div class="col-lg-8 align-self-end article-title">
+          <h1 class="animate__animated animate__fadeInDown text-white font-weight-bold">{{ page.title }}</h1>
+          <p class="fs-4 text-center text-white article-details">{{ page.publisher }}  |  {{ page.developer }}  |  {{ page.platform }}</p>
+      </div>
+  </div>
+</div>
+
+
 <div class="container p-0 page-tile">
   <div class="row">
 <article class="page">

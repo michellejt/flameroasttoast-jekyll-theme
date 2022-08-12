@@ -666,33 +666,18 @@ header.masthead {
   .games-writing-article .hero-img {
     background-size: cover !important;
     height: 350px;
+    margin-top: 45px;
   }
   .games-writing-article header.masthead {
     padding-bottom: 0;
     height: 100% !important;
     max-height: 350px !important;
   }
-  .article-title-block {
-    margin-top: -200px !important;
-  }
-  /* 
-  		.article-title  {
-  			margin-top: 0!important;
-  			background:	red;
-  			display:flex;
-  			flex-direction:row;
-  		}
-
-  	.article-title-block {
-  		margin-top:-90px!important;
-  		position:absolute!important;
-
-  		}
-  	.article-details {
-
-  	}	
-  	} */
 }
+.article-title-block {
+  margin-top: -200px !important;
+}
+
 .games-writing-article header h1,
 .games-writing-article header .h1 {
   font-size: 1.75rem !important;

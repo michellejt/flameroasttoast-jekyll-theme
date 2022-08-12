@@ -652,6 +652,11 @@ header.masthead {
   margin-top: -100px !important;
 }
 
+@media (min-width: 993px) {
+  .games-writing-article .hero-img {
+    height: 100vh;
+  }
+}
 @media (max-width: 992px) {
   .games-writing-article .hero-img {
     background-size: cover !important;

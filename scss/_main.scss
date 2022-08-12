@@ -824,9 +824,8 @@ article#card:active {
 
 		background:blue;
 	}
-	
 	.container.article-title-block {
-		background:transparent!important;
+		background: rgba(0,0,0,0) !important;
+		z-index: 100;
 	}
-
 

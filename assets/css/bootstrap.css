@@ -110,8 +110,8 @@ body {
 
 .games-writing header.masthead,
 .games-writing-article header.masthead {
-  min-height: 25rem !important;
-  max-height: 25rem;
+  /* 	min-height: 25rem!important;
+  	max-height: 25rem; */
 }
 
 /*cards*/
@@ -637,6 +637,15 @@ header.masthead {
 .navbar-collapse .nav-item {
   padding: 20px 0 15px 0;
   margin-left: -20px;
+}
+
+.card-wrapper {
+  margin-top: -20px;
+}
+
+.landing-tiles {
+  margin-top: -110px;
+  background: #FFFFFF;
 }
 
 :root {

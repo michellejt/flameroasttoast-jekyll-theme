@@ -706,6 +706,15 @@ header.masthead {
     position: fixed;
     max-height: 400px;
   }
+  .navbar-shrink + main .hero-img {
+    margin-top: 100px;
+    transform: scale(1);
+  }
+  main .hero-img {
+    margin-top: 0px;
+    transform: scale(1);
+    transition: all 800ms;
+  }
 }
 .article-details {
   margin-top: -110px;

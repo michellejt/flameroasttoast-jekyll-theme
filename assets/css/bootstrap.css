@@ -702,15 +702,15 @@ header.masthead {
 }
 
 @media (min-width: 993px) {
-  .hero-img {
+  .games-writing-article .hero-img {
     position: fixed;
     max-height: 400px;
   }
-  .navbar-shrink + main .hero-img {
+  .games-writing-article .navbar-shrink + main .hero-img {
     margin-top: 100px;
     transform: scale(1);
   }
-  main .hero-img {
+  .games-writing-article .hero-img {
     margin-top: 0px;
     transform: scale(1);
     transition: all 800ms;

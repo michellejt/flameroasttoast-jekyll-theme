@@ -667,6 +667,14 @@ header.masthead {
     max-height: 25vh;
     margin-right: 0 !important;
   }
+  .home-tiles .card-title {
+    width: 90%;
+  }
+  .home .card-block {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+  }
   .games-writing-article .hero-img {
     background-size: cover !important;
     height: 350px;

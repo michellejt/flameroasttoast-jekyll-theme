@@ -508,7 +508,7 @@ padding-bottom: 0;
   	margin: auto;
 }
 
-.games-writing-article header h1 {
+/* .games-writing-article header h1 {
 	width:100%;
  	position: absolute;
  	left: 0;
@@ -516,7 +516,7 @@ padding-bottom: 0;
   	top: -145px;
   	margin: auto;
 	font-size: 2.25rem!important;
-}
+} */
 
 .home header h1 {
 	width:100%;
@@ -640,7 +640,7 @@ padding-bottom: 0;
 article#card:focus,
 article#card:hover,
 article#card:active {
-	 box-shadow: rgba(136, 165, 191, 0.48) 0px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+	 box-shadow: rgb(136 165 191 / 48%) 0px 2px 16px 0px, rgb(255 255 255 / 80%) 0px -2px 0px 0px;
 	 padding:10px;
  }
  
@@ -744,6 +744,30 @@ article#card:active {
 		height: 100%!important;
 		max-height: 350px!important;
 	}
+
+
+	
+/* 
+		.article-title  {
+			margin-top: 0!important;
+			background:	red;
+			display:flex;
+			flex-direction:row;
+		}
+	
+	.article-title-block {
+		margin-top:-90px!important;
+		position:absolute!important;
+	   
+		}
+	.article-details {
+	
+	}	
+	} */
+
+
+
+
 		
 	}
 	
@@ -769,11 +793,11 @@ article#card:active {
 	}
 	
 	
-	.article-title  {
+/* 	.article-title  {
 		margin-top:335px!important;
 		background:red;
 		position:relative;
-	}
+	} */
 	
 	 @media (min-width: 993px) {
 		.games-writing-article .hero-img {
@@ -804,3 +828,5 @@ article#card:active {
 	.container.article-title-block {
 		background:transparent!important;
 	}
+
+

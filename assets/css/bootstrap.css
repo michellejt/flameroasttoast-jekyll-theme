@@ -652,21 +652,22 @@ header.masthead {
   margin-top: -100px !important;
 }
 
-@media (min-width: 993px) {
-  .games-writing-article .hero-img {
-    height: 100vh;
-  }
+/* @media (min-width: 993px) {
+    .games-writing-article .hero-img {
+        height:100vh;
+    }
 }
+ */
 @media (max-width: 992px) {
   .games-writing-article .hero-img {
     background-size: cover !important;
     background-position: center !important;
-    height: 350px;
+    height: 400px;
   }
   .games-writing-article header.masthead {
     padding-bottom: 0;
     height: 100% !important;
-    max-height: 350px !important;
+    max-height: 400px !important;
   }
 }
 .games-writing-article header h1,
@@ -675,7 +676,7 @@ header.masthead {
 }
 
 .games-writing-article .hero-img {
-  background-position: center !important;
+  background-position: top !important;
 }
 
 .games-writing-article header.masthead {

@@ -725,6 +725,12 @@ article#card:active {
     }
 }
  */
+ @media (min-width: 993px) {
+	.hero-img {
+		position: fixed;
+		max-height: 400px;
+		}
+	}
 
 @media (max-width: 992px) {
 	.games-writing-article .hero-img {
@@ -755,4 +761,34 @@ article#card:active {
 		padding-bottom: 0;
 		height: 400px;
 		max-height: 400px;
+	}
+
+
+
+	.article-title h1 {
+		background:red;
+	}
+	
+	
+	.article-title  {
+		margin-top:355px;
+		background:red;
+		position:relative;
+	}
+	
+	 @media (min-width: 993px) {
+		.hero-img {
+			position: fixed;
+			max-height: 400px;
+			}
+		}
+	
+	.article-details {
+		margin-top:-90px;
+		background:blue;
+		margin-bottom:50px;
+	}
+	
+	.container.article-title-block {
+		background:transparent!important;
 	}

@@ -663,6 +663,10 @@ header.masthead {
   }
 }
 @media (max-width: 992px) {
+  .home .card, .home .inner {
+    max-height: 25vh;
+    margin-right: 0 !important;
+  }
   .games-writing-article .hero-img {
     background-size: cover !important;
     height: 350px;

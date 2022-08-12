@@ -667,6 +667,7 @@ header.masthead {
     background-size: cover !important;
     height: 350px;
     margin-top: 45px;
+    background-position: center !important;
   }
   .games-writing-article header.masthead {
     padding-bottom: 0;

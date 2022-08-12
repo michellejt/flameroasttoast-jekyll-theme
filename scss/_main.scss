@@ -745,6 +745,10 @@ article#card:active {
 		max-height: 350px!important;
 	}
 
+	.article-title-block {
+		margin-top: -200px!important;
+	}
+	
 
 	
 /* 
@@ -787,12 +791,6 @@ article#card:active {
 	}
 
 
-
-	.article-title h1 {
-		background:red;
-	}
-	
-	
 /* 	.article-title  {
 		margin-top:335px!important;
 		background:red;

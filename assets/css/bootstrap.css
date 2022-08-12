@@ -673,6 +673,9 @@ header.masthead {
     height: 100% !important;
     max-height: 350px !important;
   }
+  .article-title-block {
+    margin-top: -200px !important;
+  }
   /* 
   		.article-title  {
   			margin-top: 0!important;
@@ -704,10 +707,6 @@ header.masthead {
   padding-bottom: 0;
   height: 400px;
   max-height: 400px;
-}
-
-.article-title h1, .article-title .h1 {
-  background: red;
 }
 
 /* 	.article-title  {

@@ -28,3 +28,19 @@ title: Categories
 {% for page in site.categories.editorials %}
  <li><span>{{ page.date | date_to_string }}</span> &nbsp; <a href="{{ page.url }}">{{ page.title }}</a></li>
 {% endfor %}
+
+
+
+<div>
+    <h1>Articles tagged with ""</h1>
+    <ul style='padding-top: 16px;'>
+    
+    {% for page in site.games-writing %}
+      {% if page.tags contains page.categories %}
+        <li><a href="{{ page.url }}">{{ post.title }}</a>, published {{ post.date | date: "%Y-%m-%d" }}</li>
+      {% endif %}
+    {% endfor %}
+    
+    </ul>
+  </div>
+

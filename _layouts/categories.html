@@ -16,15 +16,15 @@ title: Categories
 
     <h3 class="category-head">{{ category_name }}</h3>
     <a name="{{ category_name | slugize }}"></a>
-    {% for post in site.games-writing[category_name] %}
+    {% for page in site.games-writing[category_name] %}
     <article class="archive-item">
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+      <h4><a href="{{ site.baseurl }}{{ page.url }}">{{page.title}}</a></h4>
     </article>
     {% endfor %}
   </div>
 {% endfor %}
 </div>
 
-{% for post in site.categories.editorials %}
- <li><span>{{ page.date | date_to_string }}</span> &nbsp; <a href="{{ page.url }}">{{ post.title }}</a></li>
+{% for page in site.categories.editorials %}
+ <li><span>{{ page.date | date_to_string }}</span> &nbsp; <a href="{{ page.url }}">{{ page.title }}</a></li>
 {% endfor %}

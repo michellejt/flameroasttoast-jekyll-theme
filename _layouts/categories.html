@@ -8,7 +8,7 @@ title: Categories
 </div>
 <h2>THIS IS FROM THE CATEGORIES LAYOUT PAGE</h2>
 <div id="archives">
-{% for page in site.games-writing %}
+{% for category in site.games-writing %}
   <div class="archive-group">
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <div id="#{{ category_name | slugize }}"></div>

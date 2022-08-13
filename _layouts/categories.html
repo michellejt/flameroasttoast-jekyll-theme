@@ -6,7 +6,7 @@ layout: default
   <h1>Articles tagged with ""</h1>
   <ul style='padding-top: 16px;'>
   
-  {% for page in site.games-writing %}
+  {% for games-writing in site.games-writing %}
     {% if page.tags contains page.tag %}
       <li><a href="{{ page.url }}">{{ page.title }}</a>, published {{ page.date | date: "%Y-%m-%d" }}</li>
     {% endif %}
@@ -15,7 +15,6 @@ layout: default
   
   </ul>
 </div>
-
 
 <!-- <div>
   <h1>Articles tagged with ""</h1>

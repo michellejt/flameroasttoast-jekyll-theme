@@ -1,30 +1,30 @@
 ---
-layout: default
+layout: page
+permalink: /categories/
+title: Categories
 ---
-
-<div>
-  <h1>Articles tagged with ""</h1>
-  <ul style='padding-top: 16px;'>
-  
-  {% for games-writing in site.games-writing %}
-    {% if page.tags contains page.tag %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a>, published {{ page.date | date: "%Y-%m-%d" }}</li>
-    {% endif %}
-  {% endfor %}
-  
-  
-  </ul>
+<div class="page-content">
+    {{ content }}
 </div>
 
-<!-- <div>
-  <h1>Articles tagged with ""</h1>
-  <ul style='padding-top: 16px;'>
-  
-  {% for post in site.posts %}
-    {% if post.tags contains page.tag-name %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a>, published {{ post.date | date: "%Y-%m-%d" }}</li>
-    {% endif %}
-  {% endfor %}
-  
-  </ul>
-</div> -->
+<div id="archives">
+{% for category in site.categories %}
+  <div class="archive-group">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="#{{ category_name | slugize }}"></div>
+    <p></p>
+
+    <h3 class="category-head">{{ category_name }}</h3>
+    <a name="{{ category_name | slugize }}"></a>
+    {% for post in site.categories[category_name] %}
+    <article class="archive-item">
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+    </article>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
+
+{% for post in site.categories.editorials %}
+ <li><span>{{ page.date | date_to_string }}</span> &nbsp; <a href="{{ page.url }}">{{ post.title }}</a></li>
+{% endfor %}

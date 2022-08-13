@@ -1,29 +1,21 @@
+---
+layout: default
+---
 
-{% assign thisCollection = site.games-writing %}	
-{% assign allCats =  thisCollection | map: 'categories' | join: ','  | split: ','  | group_by: category %}
+{% assign number_of_posts = 0 %} {% for post in site.posts %} 
+{% if post.tags contains page.name or page.name == post.tags %} 
+{% assign number_of_posts = number_of_posts | plus: 1 %} 
+{% endif %} 
+{% endfor %} 
+{% if number_of_posts == 0 %}No posts{% elsif number_of_posts == 1 %}1 post
+{% else %}
+{{ number_of_posts }} posts{% endif %}
 
+{% for post in site.posts %} 
+{% if post.tags contains page.name or page.name == post.tags %} 
+{{ post.title }} {% endif %} {% endfor %}
 
-{% capture category_array %}
-  {% for eachCat in allCats %}
-    {{ eachCat.name }}|
-  {% endfor %}
-{% endcapture %}
-
-
-
-{% for eachCat in allCats %}
-  {% for post in thisCollection %}
-    
-    {% if post.categories contains eachCat.name %}
-
-      {% assign thisCat = eachCat.name | append: '|' %}
-
-      {% if category_array contains thisCat %}
-        <!-- Apply your code here to display the category list -->
-      {% endif %}
-
-      {% assign category_array = category_array | remove: thisCat %}
-    {% endif %}
-
-  {% endfor %}
-{% endfor %}
+{{ page.name }}
+{% if page.content.size > 1 %}
+{{ page.content }}
+{% endif %}

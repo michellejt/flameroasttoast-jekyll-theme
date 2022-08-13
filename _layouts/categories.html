@@ -50,9 +50,9 @@ title: Categories
 {% assign allCats =  thisCollection | map: 'categories' | join: ','  | split: ','  | group_by: category %}
 
 {% for eachCat in allCats %}
-  {% for post in thisCollection %}
+  {% for page in thisCollection %}
     
-    {% if post.categories contains eachCat.name %}
+    {% if page.categories contains eachCat.name %}
 
       {% assign thisCat = eachCat.name | append: '|' %}
 

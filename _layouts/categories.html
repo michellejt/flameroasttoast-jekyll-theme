@@ -2,20 +2,30 @@
 layout: default
 ---
 
-{% assign number_of_posts = 0 %} {% for post in site.posts %} 
-{% if post.tags contains page.name or page.name == post.tags %} 
-{% assign number_of_posts = number_of_posts | plus: 1 %} 
-{% endif %} 
-{% endfor %} 
-{% if number_of_posts == 0 %}No posts{% elsif number_of_posts == 1 %}1 post
-{% else %}
-{{ number_of_posts }} posts{% endif %}
+<div>
+  <h1>Articles tagged with ""</h1>
+  <ul style='padding-top: 16px;'>
+  
+  {% for page in site.games-writing %}
+    {% if page.tags contains page.tag %}
+      <li><a href="{{ page.url }}">{{ page.title }}</a>, published {{ page.date | date: "%Y-%m-%d" }}</li>
+    {% endif %}
+  {% endfor %}
+  
+  
+  </ul>
+</div>
 
-{% for post in site.posts %} 
-{% if post.tags contains page.name or page.name == post.tags %} 
-{{ post.title }} {% endif %} {% endfor %}
 
-{{ page.name }}
-{% if page.content.size > 1 %}
-{{ page.content }}
-{% endif %}
+<!-- <div>
+  <h1>Articles tagged with ""</h1>
+  <ul style='padding-top: 16px;'>
+  
+  {% for post in site.posts %}
+    {% if post.tags contains page.tag-name %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a>, published {{ post.date | date: "%Y-%m-%d" }}</li>
+    {% endif %}
+  {% endfor %}
+  
+  </ul>
+</div> -->

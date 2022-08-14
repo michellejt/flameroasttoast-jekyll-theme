@@ -69,14 +69,14 @@ title: Categories
 
 
 <!--new-->
----
+
 {% comment %}
 =======================
 The following part extracts all the tags from your pages and sort tags, so that you do not need to manually collect your tags to a place.
 =======================
 {% endcomment %}
 {% assign rawtags = "" %}
-{% for page in site.games-writings %}
+{% for page in site.games-writing %}
 	{% assign tags = page.tags | join:'|' | append:'|' %}
 	{% assign rawtags = rawtags | append:ttags %}
 {% endfor %}

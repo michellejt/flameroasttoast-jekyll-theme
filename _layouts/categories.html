@@ -135,3 +135,11 @@ The purpose of this snippet is to list all your pages pageed with a certain tag.
 	 {% endfor %}
 	</ul>
 {% endfor %}
+
+
+<h1>NEW</h1>
+<h2>Here is a sample</h2>
+{%- assign editorials = site.games-writing | where: 'category', 'editorials' -%}
+{% for editorials in editorials %}
+    <p>Title: {{ page.title }}</p>
+{% endfor %}

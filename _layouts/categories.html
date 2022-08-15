@@ -25,12 +25,6 @@ title: Categories
 {% endfor %}
 </div>
 
-{% for page in site.categories.editorials %}
- <li><span>{{ page.date | date_to_string }}</span> &nbsp; <a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endfor %}
-
-
-
 <div>
     <h1>Articles tagged with ""</h1>
     <ul style='padding-top: 16px;'>
@@ -73,7 +67,8 @@ title: Categories
 
 <h1>NEW</h1>
 <h2>Here is a sample</h2>
-{%- assign editorials = site.games-writing | where: 'category', 'editorials' -%}
-{% for editorials in editorials %}
-<h1 class="text-center font-weight-bold">{{ page.title }}</h1>
-{% endfor %}
+{% raw %} {% if page.tags.size > 0 %} {% for tagName in page.tags %} 
+{% capture tags_content %}{{ tags_content }} <a href='/tags?tagName={{ tagName }}'>
+  <i class='glyphicon glyphicon-tag'></i>{{ tagName }}</a> {% endcapture %} 
+  {% endfor %} {% else %} {% assign tags_content = '' %} {% endif %} 
+  {{ tags_content }} {% endraw %}

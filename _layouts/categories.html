@@ -118,7 +118,7 @@ The purpose of this snippet is to list all your pages pageed with a certain tag.
 {% for tag in tags %}
 	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
 	<ul>
-	 {% for page in site.pages %}
+	 {% for page in site.games-writing %}
 		 {% if page.tags contains tag %}
 		 <li>
 		 <h3>
@@ -141,5 +141,5 @@ The purpose of this snippet is to list all your pages pageed with a certain tag.
 <h2>Here is a sample</h2>
 {%- assign editorials = site.games-writing | where: 'category', 'editorials' -%}
 {% for editorials in editorials %}
-    <p>Title: {{ page.title }}</p>
+<h1 class="text-center font-weight-bold">{{ page.title }}</h1>
 {% endfor %}

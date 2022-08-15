@@ -36,8 +36,8 @@ title: Categories
     <ul style='padding-top: 16px;'>
     
     {% for page in site.games-writing %}
-      {% if page.tags contains page.categories %}
-        <li><a href="{{ page.url }}">{{ page.title }}</a>, published {{ page.date | date: "%Y-%m-%d" }}</li>
+      {% if page.categories contains page.categories %}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
       {% endif %}
     {% endfor %}
     
@@ -68,73 +68,7 @@ title: Categories
 {% endfor %}
 
 
-<!--new-->
 
-{% comment %}
-=======================
-The following part extracts all the tags from your pages and sort tags, so that you do not need to manually collect your tags to a place.
-=======================
-{% endcomment %}
-{% assign rawtags = "" %}
-{% for page in site.games-writing %}
-	{% assign tags = page.tags | join:'|' | append:'|' %}
-	{% assign rawtags = rawtags | append:ttags %}
-{% endfor %}
-{% assign rawtags = rawtags | split:'|' | sort %}
-
-{% comment %}
-=======================
-The following part removes dulpicated tags and invalid tags like blank tag.
-=======================
-{% endcomment %}
-{% assign tags = "" %}
-{% for tag in rawtags %}
-	{% if tag != "" %}
-		{% if tags == "" %}
-			{% assign tags = tag | split:'|' %}
-		{% endif %}
-		{% unless tags contains tag %}
-			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
-		{% endunless %}
-	{% endif %}
-{% endfor %}
-
-
-{% comment %}
-=======================
-The purpose of this snippet is to list all the tags you have in your site.
-=======================
-{% endcomment %}
-{% for editorials in tags %}
-	<a href="#{{ tag | slugify }}"> {{ tag }} </a>
-{% endfor %}
-
-
-{% comment %}
-=======================
-The purpose of this snippet is to list all your pages pageed with a certain tag.
-=======================
-{% endcomment %}
-{% for tag in tags %}
-	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
-	<ul>
-	 {% for page in site.games-writing %}
-		 {% if page.tags contains tag %}
-		 <li>
-		 <h3>
-		 <a href="{{ page.url }}">
-		 {{ page.title }}
-		 <small>{{ page.date | date_to_string }}</small>
-		 </a>
-		 {% for tag in page.tags %}
-			 <a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
-		 {% endfor %}
-		 </h3>
-		 </li>
-		 {% endif %}
-	 {% endfor %}
-	</ul>
-{% endfor %}
 
 
 <h1>NEW</h1>

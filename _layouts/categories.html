@@ -67,3 +67,56 @@ title: Categories
 
 <h1>NEW</h1>
 
+<ul class="tags">
+  {% for tag in site.games-writing %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
+    <li>{{t | downcase | replace:" ","-" }} has {{ posts | size }} posts</li>
+  {% endfor %}
+  </ul>
+  
+  {% for tag in site.games-writing %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
+  
+  {{ t | downcase }}
+  <ul>
+  {% for page in posts %}
+    {% if page.tags contains t %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+      <span class="date">{{ page.date | date: "%B %-d, %Y"  }}</span>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+  {% endfor %}
+  
+  NEW
+  
+  
+  <ul class="categories">
+  {% for tag in site.games-writing %}
+    {% assign c = category | first %}
+    {% assign posts = category | last %}
+    <li>{{c | downcase | replace:" ","-" }} has {{ posts | size }} posts</li>
+  {% endfor %}
+  </ul>
+  
+  {% for tag in site.games-writing %}
+    {% assign c = category | first %}
+    {% assign posts = category | last %}
+  
+  {{ t | downcase }}
+  <ul>
+  {% for page in posts %}
+    {% if page.category contains t %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+      <span class="date">{{ page.date | date: "%B %-d, %Y"  }}</span>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+  {% endfor %}
+  

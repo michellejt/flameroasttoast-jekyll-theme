@@ -66,9 +66,20 @@ title: Categories
 
 
 <h1>NEW</h1>
-<h2>Here is a sample</h2>
-{% raw %} {% if page.tags.size > 0 %} {% for tagName in page.tags %} 
-{% capture tags_content %}{{ tags_content }} <a href='/tags?tagName={{ tagName }}'>
-  <i class='glyphicon glyphicon-tag'></i>{{ tagName }}</a> {% endcapture %} 
-  {% endfor %} {% else %} {% assign tags_content = '' %} {% endif %} 
-  {{ tags_content }} {% endraw %}
+
+{% for tag in site.games-writing %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+
+{{ t | downcase }}
+<ul>
+{% for post in page %}
+  {% if post.tags contains t %}
+  <li>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+    <span class="date">{{ page.date | date: "%B %-d, %Y"  }}</span>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% endfor %}

@@ -67,19 +67,3 @@ title: Categories
 
 <h1>NEW</h1>
 
-{% for tag in site.games-writing %}
-  {% assign t = tag | first %}
-  {% assign posts = tag | last %}
-
-{{ t | downcase }}
-<ul>
-{% for post in page %}
-  {% if post.tags contains t %}
-  <li>
-    <a href="{{ page.url }}">{{ page.title }}</a>
-    <span class="date">{{ page.date | date: "%B %-d, %Y"  }}</span>
-  </li>
-  {% endif %}
-{% endfor %}
-</ul>
-{% endfor %}

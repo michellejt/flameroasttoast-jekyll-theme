@@ -760,6 +760,22 @@ header.masthead {
   margin: 20px;
 }
 
+.publisher:after {
+  content: " | ";
+}
+
+.developer:after {
+  content: " | ";
+}
+
+.publisher:empty {
+  visibility: hidden;
+}
+
+.developer:empty {
+  visibility: hidden;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

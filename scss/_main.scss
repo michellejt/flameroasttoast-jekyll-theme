@@ -848,3 +848,20 @@ article#card:active {
     border-radius: 5px;
     margin: 20px;
 }
+
+.publisher:after {
+    content:" | ";
+}
+
+.developer:after {
+        content:" | ";
+}
+
+
+.publisher:empty {
+    visibility:hidden;
+}
+
+.developer:empty {
+  visibility:hidden;
+}

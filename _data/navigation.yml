@@ -2,10 +2,10 @@ navigation:
 main:
 
 - title: GAMES WRITING
-  url: games-writing
+  url: /games-writing
 
 - title: COMICS AND FICTION
-  url: comics-and-fiction
+  url: /comics-and-fiction
 
 - title: ART
-  url: art
+  url: /art

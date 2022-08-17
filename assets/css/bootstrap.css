@@ -779,6 +779,16 @@ header.masthead {
   visibility: hidden;
 }
 
+.editorial {
+  background: #dd21e6;
+  color: #fff;
+}
+
+.rewiew {
+  background: #0bb587;
+  color: white;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

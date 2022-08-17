@@ -58,4 +58,5 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-$('.category:contains("editorial")').parent().addClass("editorial");
+$('.category:contains("editorial")').addClass("editorial");
+$('.category:contains("review")').addClass("review");

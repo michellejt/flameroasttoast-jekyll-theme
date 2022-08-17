@@ -779,12 +779,12 @@ header.masthead {
   visibility: hidden;
 }
 
-.editorial {
+.card.category.editorial {
   background: #dd21e6;
   color: #fff;
 }
 
-.rewiew {
+.card.category.rewiew {
   background: #0bb587;
   color: white;
 }

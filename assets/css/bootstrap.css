@@ -799,6 +799,9 @@ img + em {
   text-align: center;
   color: #fff;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: -65px;
 }
 
 :root {

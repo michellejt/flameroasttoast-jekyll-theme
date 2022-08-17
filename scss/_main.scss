@@ -878,3 +878,16 @@ article#card:active {
 	background: #0bb587;
 	color: #FFFFFF;
 }
+
+img + em {
+    font-size:1.25em;
+      left: 0; 
+      right: 0; 
+      margin-left: auto; 
+      margin-right: auto; 
+      width: 100%; 
+    text-align:center;
+    color:#fff;
+    position:absolute;
+
+}

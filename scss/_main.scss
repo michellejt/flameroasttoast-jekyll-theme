@@ -931,3 +931,52 @@ img + em {
 .home .home-tiles:nth-child(3) img {
     border: solid 1px #cecbcb;
 }
+
+//socials
+.social {
+	text-align: center;
+    &__icons {
+        color: #fff;
+        text-decoration: none;
+        font-size: 3rem;
+        padding: 1rem 1rem;
+        li {
+            display: inline-block;
+            margin: 0.15em;
+            position: relative;
+            font-size: 1.2em;
+        }
+        i {
+            color: #fff;
+            position: absolute;
+            top: 21px;
+            left: 21px;
+            transition: all 265ms ease-out;
+        }
+        a {
+            display: inline-block;
+            &:before {
+                content: " ";
+                width: 60px;
+                height: 60px;
+                display: block;
+            }
+            &:hover {
+                &:before {
+                    transform: scale(0);
+                    transition: all 265ms ease-in;
+                }
+                i {
+                    transform: scale(2.2);
+                    -ms-transform: scale(2.2);
+                    -webkit-transform: scale(2.2);
+                    color: #c06c84;
+                    background: -webkit-linear-gradient(45deg, #c06c84, #ffffff);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transition: all 265ms ease-in;
+                }
+            }
+        }
+    }
+}

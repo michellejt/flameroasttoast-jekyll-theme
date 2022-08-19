@@ -892,7 +892,7 @@ img + em {
 }
 
 .green h2 {
-    color: #ffffff;
+    color: #d4edda;
     background-color: #155724;
     margin: -21px -20px 10px -20px;
     border-radius:5px;
@@ -904,7 +904,7 @@ img + em {
 }
 
 .blue h2 {
-    color: #ffffff;
+    color: #cce5ff;
     background-color: #004085;
     margin: -21px -20px 10px -20px;
     border-radius:5px;
@@ -916,7 +916,7 @@ img + em {
 }
 
 .yellow h2 {
-    color: #ffffff;
+    color: #fff3cd;
     background-color: #856404;
     margin: -21px -20px 10px -20px;
     border-radius:5px;
@@ -925,4 +925,9 @@ img + em {
     border: solid thin #856404;
     padding: 5px 0px 5px 20px;
     font-size:1.25rem;
+}
+
+//gamepodular tile
+.home .home-tiles:nth-child(3) img {
+    border: solid 1px #cecbcb;
 }

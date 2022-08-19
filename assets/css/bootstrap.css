@@ -801,6 +801,42 @@ img + em {
   backdrop-filter: blur(10px);
 }
 
+.green h2, .green .h2 {
+  color: #ffffff;
+  background-color: #155724;
+  margin: -21px -20px 10px -20px;
+  border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border: solid thin #155724;
+  padding: 5px 0px 5px 20px;
+  font-size: 1.25rem;
+}
+
+.blue h2, .blue .h2 {
+  color: #ffffff;
+  background-color: #004085;
+  margin: -21px -20px 10px -20px;
+  border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border: solid thin #004085;
+  padding: 5px 0px 5px 20px;
+  font-size: 1.25rem;
+}
+
+.yellow h2, .yellow .h2 {
+  color: #ffffff;
+  background-color: #856404;
+  margin: -21px -20px 10px -20px;
+  border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border: solid thin #856404;
+  padding: 5px 0px 5px 20px;
+  font-size: 1.25rem;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

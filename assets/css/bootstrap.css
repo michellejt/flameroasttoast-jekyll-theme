@@ -889,6 +889,105 @@ img + em {
 }
 
 :root {
+  --color: #ff39d7;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes flicker {
+  0%, 20%, 50%, 60%, 75%, 100% {
+    opacity: 1;
+  }
+  10%, 25%, 65%, 85% {
+    opacity: 0.8;
+  }
+  12%, 22%, 67%, 90% {
+    opacity: 0.1;
+  }
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: black;
+  overflow: hidden;
+}
+
+.triangle-emitter {
+  position: relative;
+}
+
+.triangle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(-50%, -50%, 0) rotate(var(--rotation));
+  animation: triangle-emit 6s ease-in infinite;
+  opacity: 0;
+}
+
+@keyframes triangle-emit {
+  3%, 95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-300%, -50%, 0) rotate(calc(var(--rotation) + 100deg * var(--direction))) scale3d(0.666, 0.666, 1);
+  }
+}
+.triangle-container:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.triangle-container:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.triangle-container:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.triangle-container:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.triangle-container:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.triangle-container:nth-child(6) {
+  animation-delay: 5s;
+}
+
+.triangle-container:nth-child(7) {
+  animation-delay: 6s;
+}
+
+svg {
+  fill: transparent;
+  stroke: var(--color);
+  stroke-width: 5;
+  filter: drop-shadow(0 0 5px var(--color)) drop-shadow(0 0 5px var(--color));
+  overflow: visible;
+  height: 20vmin;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+  animation: draw 1s ease-out forwards, flicker 1s ease-in-out forwards 0.25s;
+}
+
+svg path:nth-child(2) {
+  stroke-width: 1px;
+  stroke: white;
+  filter: blur(1px);
+}
+
+:root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;

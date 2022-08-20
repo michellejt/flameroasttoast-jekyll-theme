@@ -38,81 +38,86 @@ layout: default
    {{ content }}
   </div>
 
+
+  {{ site.data.navigation.navigation }}
+  {% for item in site.data.navigation.author %}  
+  
+  <div class="col-4 text-center author mx-auto">
+  
+    <img class="img-fluid profile-image" src="{{ item.profile-image }}" >
+    <p>{{ item.blurb }}</p>
+   
+  
+  </div>
+  {% endfor %}  
+  
+  
+  
+  
+  </div>
+  </div>
+  
+  </section>  
+  
+  
+  
+  {% assign prevflag = 1 %}
+  {% assign nextflag = 1 %}
+  
+  {% for c in site.games-writing %}
+    {% if c.title == page.title %}
+      {% assign currentItemIndex = forloop.index0 %}
+      {% if forloop.index == 1 %}
+        {% assign prevflag = 0 %}
+        {% assign nextflag = 1 %}
+      {% elsif forloop.index == forloop.length %}
+        {% assign prevflag = 1 %}
+        {% assign nextflag = 0 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if prevflag == 1 %}
+    {% assign prevItemIndex = currentItemIndex | minus: 1 %}
+    {% assign prevPost = site.games-writing[prevItemIndex] %}
+  {% endif %}
+  
+  {% if nextflag == 1 %}
+    {% assign nextItemIndex = currentItemIndex | plus: 1 %}
+    {% assign nextPost = site.games-writing[nextItemIndex] %}
+  {% endif %}
+  
+  <div class="post-nav row justify-content-between m-3">
+      {% if prevPost.url %}
+      <div class="col-6 text-start">
+      <a class="prev" rel="prev" href="{{ prevPost.url }}">
+          <span>&lt; {{ prevPost.title }}</span>
+  <!--         <div class="prev-thumb">
+            <img class="card-img-top img-responsive" src="{{ prevPost.url | replace: 'index', '' }}/{{ prevPost.bannerImage }}" alt="{{ prevPost.bannerImageAlt }}" />
+          </div> -->
+      </a>
+      </div>
+      {% endif %}
+      {% if nextPost.url %}
+      <div class="col-6 text-end">
+      <a class="next" rel="next" href="{{ nextPost.url }}">
+          <span>{{ nextPost.title }} &gt;</span>
+  <!--  
+          <div class="next-thumb">
+            <img class="card-img-top img-responsive" src="{{ nextPost.url | replace: 'index', '' }}/{{ nextPost.bannerImage }}" alt="{{ nextPost.bannerImageAlt }}" />
+          </div> -->
+  
+      </a>
+      </div>
+      {% endif %}
+  </div>
+  
+
+
+
 </article>
 
 
-{{ site.data.navigation.navigation }}
-{% for item in site.data.navigation.author %}  
-
-<div class="col-4 text-center author mx-auto">
-
-  <img class="img-fluid profile-image" src="{{ item.profile-image }}" >
-  <p>{{ item.blurb }}</p>
- 
-
-</div>
-{% endfor %}  
-
-
-
-
-</div>
-</div>
-
-</section>  
-
-
-
-{% assign prevflag = 1 %}
-{% assign nextflag = 1 %}
-
-{% for c in site.games-writing %}
-  {% if c.title == page.title %}
-    {% assign currentItemIndex = forloop.index0 %}
-    {% if forloop.index == 1 %}
-      {% assign prevflag = 0 %}
-      {% assign nextflag = 1 %}
-    {% elsif forloop.index == forloop.length %}
-      {% assign prevflag = 1 %}
-      {% assign nextflag = 0 %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-{% if prevflag == 1 %}
-  {% assign prevItemIndex = currentItemIndex | minus: 1 %}
-  {% assign prevPost = site.games-writing[prevItemIndex] %}
-{% endif %}
-
-{% if nextflag == 1 %}
-  {% assign nextItemIndex = currentItemIndex | plus: 1 %}
-  {% assign nextPost = site.games-writing[nextItemIndex] %}
-{% endif %}
-
-<div class="post-nav row justify-content-between m-3">
-    {% if prevPost.url %}
-    <div class="col-6 text-start">
-    <a class="prev" rel="prev" href="{{ prevPost.url }}">
-        <span>&lt; {{ prevPost.title }}</span>
-<!--         <div class="prev-thumb">
-          <img class="card-img-top img-responsive" src="{{ prevPost.url | replace: 'index', '' }}/{{ prevPost.bannerImage }}" alt="{{ prevPost.bannerImageAlt }}" />
-        </div> -->
-    </a>
-    </div>
-    {% endif %}
-    {% if nextPost.url %}
-    <div class="col-6 text-end">
-    <a class="next" rel="next" href="{{ nextPost.url }}">
-        <span>{{ nextPost.title }} &gt;</span>
-<!--  
-        <div class="next-thumb">
-          <img class="card-img-top img-responsive" src="{{ nextPost.url | replace: 'index', '' }}/{{ nextPost.bannerImage }}" alt="{{ nextPost.bannerImageAlt }}" />
-        </div> -->
-
-    </a>
-    </div>
-    {% endif %}
-</div>
 
 
 

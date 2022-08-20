@@ -889,19 +889,12 @@ img + em {
 }
 
 .profile-image {
-  border-image-source: url(https://raw.githubusercontent.com/michellejt/flameroasttoast-jekyll-theme/master/assets/images/Andy.PNG);
-  border-image-slice: 20;
-  border-image-width: 20;
-  border-image-outset: 1;
-}
-
-.profile-image {
   filter: drop-shadow(-10px 0px 0 #FFF) drop-shadow(5px -4px 0 #FFF);
 }
 
 .author {
   background: red;
-  padding: 0;
+  padding: 0 !important;
 }
 
 .author p {

@@ -929,7 +929,7 @@ img + em {
 
 //gamepodular tile
 .home .home-tiles:nth-child(3) img {
-    border: solid 1px #cecbcb;
+   //https://michellejt-jekyll-blog.netlify.app/assets/images/GamePodular%20Logo.png
 }
 
 //socials
@@ -986,14 +986,14 @@ img + em {
 
 
   .profile-image {
-	filter: drop-shadow(-10px -0px 0 #FFF) 
-			drop-shadow(5px -4px  0 #FFF); 
-			-webkit-filter: drop-shadow(-10px -0px 0 #FFF) 
-							drop-shadow(5px -4px  0 #FFF);
+	filter: drop-shadow(-10px -0px 0 #000) 
+			drop-shadow(5px -4px  0 #000); 
+			-webkit-filter: drop-shadow(-10px -0px 0 #000) 
+							drop-shadow(5px -4px  0 #000);
   }
   
   .author {
-	background:red;
+	//background:red;
 	padding:0!important;
   
   }
@@ -1002,6 +1002,6 @@ img + em {
 	background:#fff;
   }
 
-  .hero-img {
+  .hero-img { 
     z-index: -1;
 }

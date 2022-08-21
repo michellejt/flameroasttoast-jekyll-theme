@@ -1006,3 +1006,14 @@ img + em {
     background-repeat:no-repeat;
    background-size: contain;
 }
+
+.profile-image {
+	border-radius: 50%;
+	margin-top:0px!important;
+	width: 150px!important;
+	height: 100%!important;
+	border-radius: 50%;
+	object-fit: cover;
+   background:red;
+	  padding-top:0px!important
+  }

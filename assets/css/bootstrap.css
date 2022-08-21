@@ -884,11 +884,6 @@ img + em {
   transition: all 265ms ease-in;
 }
 
-.profile-image {
-  filter: drop-shadow(-10px 0px 0 #000) drop-shadow(5px -4px 0 #000);
-  -webkit-filter: drop-shadow(-10px 0px 0 #000) drop-shadow(5px -4px 0 #000);
-}
-
 .author {
   padding: 0 !important;
 }

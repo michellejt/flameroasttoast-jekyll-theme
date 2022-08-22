@@ -995,7 +995,7 @@ img + em {
     z-index: -1;
 }
 
-.home .home-tiles:nth-child(3) .card:after {
+.home .home-tiles:nth-child(3) .card:before {
     content:"";
      background-image: url("https://raw.githubusercontent.com/michellejt/flameroasttoast-jekyll-theme/master/assets/images/GamePodular%20Logo.png");
      position:absolute;
@@ -1113,6 +1113,7 @@ img + em {
 	font-size: 90%;
 	line-height: 25px;
 	margin-bottom: 0;
+
   }
   
   .copyright {

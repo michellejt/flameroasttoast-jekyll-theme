@@ -995,7 +995,7 @@ img + em {
     z-index: -1;
 }
 
-.home .home-tiles:nth-child(3) .card:before {
+/* .home .home-tiles:nth-child(3) .card:before {
     content:"";
      background-image: url("https://raw.githubusercontent.com/michellejt/flameroasttoast-jekyll-theme/master/assets/images/GamePodular%20Logo.png");
      position:absolute;
@@ -1004,6 +1004,17 @@ img + em {
     background-position:center;
     background-repeat:no-repeat;
    background-size: contain;
+} */
+
+.home .home-tiles:nth-child(3) .card a .inner:before {
+    content: "";
+    background-image: url(https://raw.githubusercontent.com/michellejt/flameroasttoast-jekyll-theme/master/assets/images/GamePodular%20Logo.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .profile-image {

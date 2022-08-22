@@ -914,6 +914,10 @@ img + em {
   padding-top: 0px !important;
 }
 
+.games-writing-article p:has(img) {
+  display: flex;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

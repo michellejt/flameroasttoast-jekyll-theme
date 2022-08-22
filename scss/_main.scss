@@ -1022,3 +1022,9 @@ img + em {
   //							drop-shadow(5px -4px  0 #000);
 	  
   }
+
+  .games-writing-article {
+	p:has(img) {
+		display: flex;
+	}
+  }

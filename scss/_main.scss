@@ -1111,10 +1111,8 @@ img + em {
   
   footer .quick-links {
 	font-size: 90%;
-	line-height: 40px;
+	line-height: 25px;
 	margin-bottom: 0;
-	text-transform: none;
-	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   
   .copyright {
@@ -1125,3 +1123,9 @@ img + em {
 	color: white;
 	padding: 2rem 0;
   }
+
+  .container-fluid.copyright {
+    background: #000;
+    font-size: small;
+    text-align: right;
+}

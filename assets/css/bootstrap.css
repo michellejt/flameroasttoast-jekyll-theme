@@ -1004,10 +1004,8 @@ ul.social-buttons li a {
 
 footer .quick-links {
   font-size: 90%;
-  line-height: 40px;
+  line-height: 25px;
   margin-bottom: 0;
-  text-transform: none;
-  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .copyright {
@@ -1017,6 +1015,12 @@ footer .quick-links {
 .fa-ellipsis-h {
   color: white;
   padding: 2rem 0;
+}
+
+.container-fluid.copyright, .copyright.container-xxl, .copyright.container-xl, .copyright.container-lg, .copyright.container-md, .copyright.container-sm {
+  background: #000;
+  font-size: small;
+  text-align: right;
 }
 
 :root {

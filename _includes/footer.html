@@ -1,4 +1,4 @@
-<footer class="text-white bg-dark mt-5">
+<footer>
 
     {% if site.data.social %}
     <div class="social">
@@ -9,42 +9,75 @@
       {% endfor %}
     </div>
     {% endif %}
-    
-<!--     <div class="columns">
-      <p class="column">
-        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
-        {%- if site.author -%}
-          &nbsp;<a href="{{ site.author.url }}" target="_blank">{{ site.author.name }}</a>
-        {%- endif -%}. All rights reserved.
-      </p>
-  
-      {% if site.description %}
-      <p class="column">
-        {{ site.description }}
-      </p>
-      {% endif %}
-    </div> -->
 
-    <div class="row">
-      <div class="col-4">
-      1
-
-      </div>
-
-      <div class="col-4">
-        2
-  
+   
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">link</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">link</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-column">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <span class="footer-title">Contact</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact us</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-4">
-          3
     
+        <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
+        
+        <div class="row text-center">
+          <div class="col-md-4 box">
+            <span class="copyright quick-links">Copyright &copy; Your Website <script>document.write(new Date().getFullYear())</script>
+            </span>
           </div>
-
+          <div class="col-md-4 box">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              </li>
+            </ul>
           </div>
- 
-          <div class="row copyright"></div>
-
-  </footer>
+          <div class="col-md-4 box">
+            <ul class="list-inline quick-links">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
        <!-- Bootstrap core JS-->
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

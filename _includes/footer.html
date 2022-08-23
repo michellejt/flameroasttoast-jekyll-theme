@@ -14,14 +14,16 @@
         <div class="row">
           <div class="col-md-4 footer-column text-center text-white">
             <h3>Latest post</h3>
-           
+            {%- assign latest_post = site.games-writing [0] -%}
+
+            Latest post: <a href="{{ latest_post.url }}">{{ latest_post.title }}</a>
+
           </div>
           <div class="col-md-4 footer-column text-white">
-           <h3>Wanna by me a coffee?</h3><p>Kofi icon</p>
+           <h3>Wanna by me a coffee?</h3>
 
           <img class="img-fluid kofi" src="/assets/images/kofi-icon.png" />
 
-  <p>If you enjoy my work on this site, consider buying me a coffee!</p>
           </div>
   
           <div class="col-md-4 box text-center text-white ">

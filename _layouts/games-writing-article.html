@@ -87,7 +87,7 @@ layout: default
       {% if prevPost.url %}
       <div class="col-6 text-start">
       <a class="prev" rel="prev" href="{{ prevPost.url }}">
-          <span>&lt; {{ prevPost.title }}</span>
+          <span>{{ prevPost.title }}</span>
   <!--         <div class="prev-thumb">
             <img class="card-img-top img-responsive" src="{{ prevPost.url | replace: 'index', '' }}/{{ prevPost.bannerImage }}" alt="{{ prevPost.bannerImageAlt }}" />
           </div> -->
@@ -97,7 +97,7 @@ layout: default
       {% if nextPost.url %}
       <div class="col-6 text-end">
       <a class="next" rel="next" href="{{ nextPost.url }}">
-          <span>{{ nextPost.title }} &gt;</span>
+          <span>{{ nextPost.title }}</span>
   <!--  
           <div class="next-thumb">
             <img class="card-img-top img-responsive" src="{{ nextPost.url | replace: 'index', '' }}/{{ nextPost.bannerImage }}" alt="{{ nextPost.bannerImageAlt }}" />

@@ -1033,6 +1033,25 @@ footer .quick-links {
   text-align: right;
 }
 
+.twitter {
+  width: 90px;
+  padding: 20px;
+}
+
+.kofi {
+  width: 130px;
+  padding: 20px;
+}
+
+footer h3, footer .h3 {
+  font-size: 1em;
+}
+
+footer p {
+  font-weight: 200;
+  font-size: 0.8em;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

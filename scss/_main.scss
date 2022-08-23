@@ -1206,3 +1206,11 @@ footer p {
     text-decoration:none;
     color:#0a709e;
 }
+
+.kofi {
+	transition: transform .7s ease-in-out;
+  }
+  .kofi:hover {
+	transform: rotate(-30deg);
+	cursor: pointer;
+  }

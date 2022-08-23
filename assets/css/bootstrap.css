@@ -1098,6 +1098,15 @@ footer p {
   color: #0a709e;
 }
 
+.kofi {
+  transition: transform 0.7s ease-in-out;
+}
+
+.kofi:hover {
+  transform: rotate(-30deg);
+  cursor: pointer;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

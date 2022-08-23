@@ -1052,6 +1052,10 @@ footer p {
   font-size: 0.8em;
 }
 
+.latest img {
+  width: 200px;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

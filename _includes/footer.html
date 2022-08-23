@@ -16,7 +16,9 @@
             <h3>Latest post</h3>
             {%- assign latest_post = site.games-writing [0] -%}
 
-            Latest post: <a href="{{ latest_post.url }}">{{ latest_post.title }}</a>
+            <p>{{ latest_post.title }}</p>
+
+            <a href="{{ latest_post.url }}"><img src="{{ latest_post.url | replace: 'index', '' }}/{{ latest_post.bannerImage }}" /></a>
 
           </div>
           <div class="col-md-4 footer-column text-white">

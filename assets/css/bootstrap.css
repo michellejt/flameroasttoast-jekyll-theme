@@ -1090,6 +1090,7 @@ footer p {
   display: flex;
   align-content: stretch;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .post-nav a {

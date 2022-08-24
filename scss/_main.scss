@@ -1219,3 +1219,33 @@ footer p {
 	transform: rotate(-30deg);
 	cursor: pointer;
   }
+
+  //navboar
+
+.navbar-toggler span:nth-child(1) {
+	transform: translate(0%, 0%) rotate(0deg);
+  }
+  
+  .navbar-toggler span:nth-child(2) {
+	opacity: 1;
+  }
+  
+  .navbar-toggler span:nth-child(3) {
+	transform: translate(0%, 0%) rotate(0deg);
+  }
+  
+  .navbar-toggler span:nth-child(1) {
+	margin-top: 0.3em;
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(1) {
+	transform: translate(15%, -33%) rotate(45deg);
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(2) {
+	opacity: 0;
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(3) {
+	transform: translate(15%, 33%) rotate(-45deg);
+  }

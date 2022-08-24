@@ -886,11 +886,17 @@ img + em {
 }
 
 .author {
-  padding: 0 !important;
+  display: flex;
+  flex-direction: row-reverse;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px !important;
 }
 
 .author p {
-  background: #fff;
+  display: flex;
+  align-items: center;
+  border-left: solid;
+  margin-left: 10px;
 }
 
 .hero-img {

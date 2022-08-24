@@ -922,6 +922,7 @@ img + em {
   margin-top: 0px !important;
   width: 150px !important;
   height: 100% !important;
+  float: right;
   object-fit: cover;
   padding-top: 0px !important;
 }

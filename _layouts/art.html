@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Landing Start -->
-<section class="games-writing">
+<section class="art">
 
   <header class="masthead">
     <!--TO DO Make this be in the md for this page -->
@@ -41,20 +41,20 @@ layout: default
 
 
 
-    {% assign games-writing = site.games-writing | sort: 'published' | reverse %}
-    {% for games-writing in games-writing %}
+    {% assign art = site.art | sort: 'published' | reverse %}
+    {% for art in art %}
 
 <div class="card-wrapper col-lg-4 col-md-6 col-12 pt-4" data-aos="zoom-in-up">
   <!-- Card -->
   <article class="card card-animation" id="card">
-    <div class="card category">{{ games-writing.category }}</div>
-    <a href="{{ games-writing.url }}">
+    <div class="card category">{{ art.category }}</div>
+    <a href="{{ art.url }}">
       <div class="inner">
-        <img class="card-img-top img-responsive" src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" />
+        <img class="card-img-top img-responsive" src="{{ art.url | replace: 'index', '' }}/{{ art.bannerImage }}" alt="{{ art.bannerImageAlt }}" />
       </div>
     <div class="card-block">
-      <h4 class="card-title pt-2">{{ games-writing.title }}</h4>
-      <p class="card-text">{{ games-writing.description | truncate: 160 }}</p>
+      <h4 class="card-title pt-2">{{ art.title }}</h4>
+      <p class="card-text">{{ art.description | truncate: 160 }}</p>
       </a>
     </div>
   </article><!-- .end Card -->
@@ -65,13 +65,13 @@ layout: default
 
 
 <!--
-{% assign tags =  site.games-writing | map: 'tags' | join: ','  | split: ',' | uniq %}
+{% assign tags =  site.art | map: 'tags' | join: ','  | split: ',' | uniq %}
 {% for tag in tags %}
   <h3>{{ tag }}</h3>
   <ul>
-  {% for games-writing in site.note %}
-    {% if games-writing.tags contains tag %}
-    <li><a href="{{ site.baseurl }}{{ games-writing.url }}">{{ games-writing.title }}</a></li>
+  {% for art in site.note %}
+    {% if art.tags contains tag %}
+    <li><a href="{{ site.baseurl }}{{ art.url }}">{{ art.title }}</a></li>
     {% endif %}
   {% endfor %}
   </ul>

@@ -3,7 +3,7 @@ layout: default
 ---
 
   <!-- Landing Start -->
-<section class="games-writing-article">
+<section class="art-article">
   
  
   <header class="masthead">
@@ -66,7 +66,7 @@ layout: default
   {% assign prevflag = 1 %}
   {% assign nextflag = 1 %}
   
-  {% for c in site.games-writing %}
+  {% for c in site.art %}
     {% if c.title == page.title %}
       {% assign currentItemIndex = forloop.index0 %}
       {% if forloop.index == 1 %}
@@ -81,12 +81,12 @@ layout: default
   
   {% if prevflag == 1 %}
     {% assign prevItemIndex = currentItemIndex | minus: 1 %}
-    {% assign prevPost = site.games-writing[prevItemIndex] %}
+    {% assign prevPost = site.art[prevItemIndex] %}
   {% endif %}
   
   {% if nextflag == 1 %}
     {% assign nextItemIndex = currentItemIndex | plus: 1 %}
-    {% assign nextPost = site.games-writing[nextItemIndex] %}
+    {% assign nextPost = site.art[nextItemIndex] %}
   {% endif %}
   
   <div class="post-nav row justify-content-between m-3 pt-5">

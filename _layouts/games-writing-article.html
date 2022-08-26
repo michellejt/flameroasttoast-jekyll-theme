@@ -51,7 +51,21 @@ layout: default
   </div>
   {% endfor %}  
   
-
+  <!---------->
+  <div>
+    <h1>Articles tagged with ""</h1>
+    <ul style='padding-top: 16px;'>
+    
+      {% for category in site.games-writing %}
+      {% for post in site.games-writing | where:"category",{{category.editorial}} %}
+          <a href="{{games-writing.url}}">{{games-writing.title}}</a>
+      {% endfor %}
+    {% endfor %}
+    
+    
+    </ul>
+  </div>
+  <!------------------>
 
 
 

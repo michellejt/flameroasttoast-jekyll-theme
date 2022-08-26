@@ -72,54 +72,6 @@ body {
    */
   
 
-  /*     GAMES-WRITING      */
-  .games-writing, .games-writing-article {
-    .hero-overlay {
-      img {
-        width: 100%;
-        max-height: 375px;
-        object-fit: cover;
-        object-position: 0% 10%;
-      }
-      height: 375px !important;
-    }
-    .hero {
-      position: relative;
-      padding-top: 90px;
-      padding-bottom: 0px;
-      //top: -70px;
-      background:url("https://images.unsplash.com/photo-1585881728919-5c0ce925ad10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-      background-size: cover;
-      height:375px;
-    }
-  }
-
-.games-writing-article {
-  .container {
-    margin-top: -50px;
-    background:#fff;
-    position:relative;
-    max-width:1020px;
-  }
-  .page-content {
-    margin: 15px 50px 50px 50px;
-  }
-
-  img {
-      max-width: 100%;
-      height: auto;
-	  margin-top: -75px;
-	  max-width: 100%;
-	  object-fit: cover;
-	  width: 100%;
-  }
-}  
-
-.games-writing header.masthead,
-.games-writing-article header.masthead {
-/* 	min-height: 25rem!important;
-	max-height: 25rem; */
-}
 
 
 
@@ -499,24 +451,6 @@ padding-bottom: 0;
 }
 
 
-.games-writing header h1 {
-	width:100%;
- 	position: absolute;
- 	left: 0;
- 	right: 0;
-  	top: 150px;
-  	margin: auto;
-}
-
-/* .games-writing-article header h1 {
-	width:100%;
- 	position: absolute;
- 	left: 0;
- 	right: 0;
-  	top: -145px;
-  	margin: auto;
-	font-size: 2.25rem!important;
-} */
 
 .home header h1 {
 	width:100%;
@@ -624,9 +558,6 @@ padding-bottom: 0;
 	}
 } 
 
-.games-writing-article img {
-    padding-top:80px;
-}
 
 .helpppp {
     background:yellow;
@@ -640,18 +571,6 @@ padding-bottom: 0;
     color:#fff!important;
 } */
 
-.games-writing {
-article#card:focus,
-article#card:hover,
-article#card:active {
-	 box-shadow: rgb(136 165 191 / 48%) 0px 2px 16px 0px, rgb(255 255 255 / 80%) 0px -2px 0px 0px;
-	 padding:10px;
- }
- 
- article#card {
-	padding:10px;
-}
-}
 
 
 @media screen and (max-width: 992px) {
@@ -718,17 +637,6 @@ article#card:active {
     background:#FFFFFF;
 }
 
-.games-writing-article .page-tile {
-    margin-top:-100px!important;
-}
-
-
-/* @media (min-width: 993px) {
-    .games-writing-article .hero-img {
-        height:100vh;
-    }
-}
- */
  @media (min-width: 993px) {
 	.hero-img {
 		max-height: 400px;
@@ -752,19 +660,6 @@ article#card:active {
 		bottom:50px;
 	}
 
-
-	.games-writing-article .hero-img {
-		background-size: cover!important;
-		height:350px;
-		margin-top: 45px;
-		background-position: center!important;
-		}
-		
-	.games-writing-article header.masthead {
-		padding-bottom: 0;
-		height: 100%!important;
-		max-height: 350px!important;
-}
 	}
 
 	.article-title-block {
@@ -772,20 +667,6 @@ article#card:active {
 	}
 	
 	
-	.games-writing-article header h1, 
-	.games-writing-article header .h1 {
-		font-size: 1.75rem !important
-	}
-	
-	.games-writing-article .hero-img {
-		background-position:center;
-		}
-	
-	.games-writing-article header.masthead {
-		padding-bottom: 0;
-		height: 400px;
-		max-height: 400px;
-	}
 
 
 /* 	.article-title  {
@@ -794,23 +675,7 @@ article#card:active {
 		position:relative;
 	} */
 	
-	 @media (min-width: 993px) {
-		.games-writing-article .hero-img {
-			position: fixed;
-			max-height: 400px;
-			}
-
-			.games-writing-article .navbar-shrink + main .hero-img  {
-			   margin-top:100px;
-				transform: scale(1);
-			}
-			
-			.games-writing-article .hero-img  {
-			   margin-top:0px;
-				transform: scale(1);
-				transition: all 800ms;
-				}
-			}
+	
 
 
 
@@ -1042,12 +907,7 @@ img + em {
   //							drop-shadow(5px -4px  0 #000);
 	  
   }
-//ios display caption fix
-  .games-writing-article {
-	p:has(img) {
-		display: flex;
-	}
-  }
+/
 
   //footer
   a {

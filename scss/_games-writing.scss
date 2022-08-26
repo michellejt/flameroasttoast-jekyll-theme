@@ -1,5 +1,5 @@
- /*     art      */
- .art, .art-article {
+ /*     GAMES-WRITING      */
+ .games-writing, .games-writing-article {
     .hero-overlay {
       img {
         width: 100%;
@@ -20,7 +20,7 @@
     }
   }
 
-.art-article {
+.games-writing-article {
   .container {
     margin-top: -50px;
     background:#fff;
@@ -41,14 +41,14 @@
   }
 }  
 
-.art header.masthead,
-.art-article header.masthead {
+.games-writing header.masthead,
+.games-writing-article header.masthead {
 /* 	min-height: 25rem!important;
 	max-height: 25rem; */
 }
 
 //ios display caption fix
-.art-article {
+.games-writing-article {
 	p:has(img) {
 		display: flex;
 	}

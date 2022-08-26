@@ -58,7 +58,7 @@ layout: default
     
       {% for category in site.games-writing %}
       {% for page in site.games-writing | where:"category",{{category.editorial}} %}
-          <a href="{{games-writing.url}}">{{games-writing.title}}</a>
+          <a href="{{page.url}}">{{page.title}}</a>
       {% endfor %}
     {% endfor %}
     

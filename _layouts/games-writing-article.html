@@ -56,14 +56,18 @@ layout: default
     <h1>Article category</h1>
   
     
-      {% for category in site.games-writing %}
-      {% for page in site.games-writing | where:"category" {{category.editorial}} %}
+<!--       {% for category in site.games-writing %}
+      {% for page in site.games-writing | where:"category",{{category.editorial}} %}
           <a href="{{page.url}}">{{page.title}}</a>
       {% endfor %}
     {% endfor %}
+     -->
     
-    
-  
+    {% assign games-writing = site.games-writing | where:"category",{{category.editorial}} %}
+    {% for games-writing in games-writing %}
+    <a href="{{page.url}}">{{page.title}}</a>
+    {% endfor %}
+    {% endfor %}
   </div>
   <!------------------>
 

@@ -8,7 +8,7 @@ layout: default
   
   {% for post in site.pages %}
     {% if post.tags contains page.tag-name %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a>, published {{ post.date | date: "%Y-%m-%d" }}</li>
+      <li><a href="{{ games-writing.url }}">{{ games-writing.title }}</a>, published {{ games-writing.date | date: "%Y-%m-%d" }}</li>
     {% endif %}
   {% endfor %}
   

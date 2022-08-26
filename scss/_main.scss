@@ -1222,7 +1222,7 @@ footer p {
 	cursor: pointer;
   }
 
-  //navboar
+  //navbar
   .navbar-toggler span {
 	display: block;
 	background-color: #4f4f4f;
@@ -1236,6 +1236,15 @@ footer p {
 	transition: all 0.35s ease-out;
 	transform-origin: center left;
   }
+
+  .navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
   
   
   

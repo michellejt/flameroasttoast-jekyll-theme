@@ -8,11 +8,11 @@ $color-kofi: #ff5f5f;
   color: #fff;
 
   .tooltip {
-    background: $color;
-    color: currentColor;
+    background: $color!important;
+    color: currentColor!important;
 
     &:after {
-      border-top-color: $color;
+      border-top-color: $color!important;
     }
   }
 }

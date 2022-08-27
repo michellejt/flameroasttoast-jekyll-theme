@@ -1437,22 +1437,22 @@ p {
   color: #fff;
 }
 .social-icon--twitter .tooltip {
-  background: #2b97f1;
-  color: currentColor;
+  background: #2b97f1 !important;
+  color: currentColor !important;
 }
 .social-icon--twitter .tooltip:after {
-  border-top-color: #2b97f1;
+  border-top-color: #2b97f1 !important;
 }
 .social-icon--kofi {
   background: #ff5f5f;
   color: #fff;
 }
 .social-icon--kofi .tooltip {
-  background: #ff5f5f;
-  color: currentColor;
+  background: #ff5f5f !important;
+  color: currentColor !important;
 }
 .social-icon--kofi .tooltip:after {
-  border-top-color: #ff5f5f;
+  border-top-color: #ff5f5f !important;
 }
 .social-icon--kofi img {
   width: 50px;

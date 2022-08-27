@@ -1399,7 +1399,6 @@ p {
   display: flex;
 }
 
-/* Demo */
 /* Color Variables */
 /* Social Icon Mixin */
 /* Social Icons */
@@ -1414,7 +1413,7 @@ p {
   position: relative;
   width: 80px;
   height: 80px;
-  margin: 0 0.5rem;
+  margin: 0 0.85rem;
   border-radius: 50%;
   cursor: pointer;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;

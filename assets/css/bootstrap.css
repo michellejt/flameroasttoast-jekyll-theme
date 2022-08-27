@@ -809,10 +809,6 @@ img + em {
   padding-top: 0px !important;
 }
 
-.games-writing-article p:has(img) {
-  display: flex;
-}
-
 a {
   color: #6c757d;
 }
@@ -1041,6 +1037,10 @@ footer p {
   transform: translate(15%, 33%) rotate(-45deg);
 }
 
+p {
+  background-color: green;
+}
+
 /*     art      */
 .art .hero-overlay, .art-article .hero-overlay {
   height: 375px !important;
@@ -1216,6 +1216,10 @@ footer p {
     transition: all 800ms;
   }
 }
+.art-article p:has(img) {
+  display: flex;
+}
+
 /*     GAMES-WRITING      */
 .games-writing .hero-overlay, .games-writing-article .hero-overlay {
   height: 375px !important;
@@ -1391,6 +1395,105 @@ footer p {
     transition: all 800ms;
   }
 }
+.games-writing-article p:has(img) {
+  display: flex;
+}
+
+/* Demo */
+/* Color Variables */
+/* Social Icon Mixin */
+/* Social Icons */
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 2.5rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.social-icon:hover {
+  color: #fff;
+}
+.social-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -150%);
+}
+.social-icon:active {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+}
+.social-icon--twitter {
+  background: #2b97f1;
+  color: #fff;
+}
+.social-icon--twitter .tooltip {
+  background: #2b97f1;
+  color: currentColor;
+}
+.social-icon--twitter .tooltip:after {
+  border-top-color: #2b97f1;
+}
+.social-icon--kofi {
+  background: #ff5f5f;
+  color: #fff;
+}
+.social-icon--kofi .tooltip {
+  background: #ff5f5f;
+  color: currentColor;
+}
+.social-icon--kofi .tooltip:after {
+  border-top-color: #ff5f5f;
+}
+.social-icon--kofi img {
+  width: 50px;
+}
+.social-icon i {
+  position: relative;
+  top: 1px;
+}
+
+/* Tooltips */
+.tooltip {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.8rem 1rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.tooltip:after {
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: "";
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

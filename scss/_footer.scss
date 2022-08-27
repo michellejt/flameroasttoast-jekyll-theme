@@ -43,7 +43,7 @@ $color-kofi: #ff5f5f;
     .tooltip {
       visibility: visible;
       opacity: 1;
-      transform: translate(-50%, -150%);
+      transform: translate(-50%, -150%)!important;
     }
   }
     
@@ -66,32 +66,32 @@ $color-kofi: #ff5f5f;
 
 /* Tooltips */
 .tooltip {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  padding: 0.8rem 1rem;
-  border-radius: 40px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  opacity: 0;
-  pointer-events: none;
-  text-transform: uppercase;
-  transform: translate(-50%, -100%);
-  transition: all 0.3s ease;
-  z-index: 1;
+  display: block!important;
+  position: absolute!important;
+  top: 0!important;
+  left: 50%!important;
+  padding: 0.8rem 1rem!important;
+  border-radius: 40px!important;
+  font-size: 0.8rem!important;
+  font-weight: bold!important;
+  opacity: 0!important;
+  pointer-events: none!important;
+  text-transform: uppercase!important;
+  transform: translate(-50%, -100%)!important;
+  transition: all 0.3s ease!important;
+  z-index: 1!important;
   
   &:after {
-    display: block;
-    position: absolute;
-    bottom: 1px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    content: "";
-    border: solid;
-    border-width: 10px 10px 0 10px;
-    border-color: transparent;
-    transform: translate(-50%, 100%);
+    display: block!important;
+    position: absolute!important;
+    bottom: 1px!important;
+    left: 50%!important;
+    width: 0!important;
+    height: 0!important;
+    content: ""!important;
+    border: solid!important;
+    border-width: 10px 10px 0 10px!important;
+    border-color: transparent!important;
+    transform: translate(-50%, 100%)!important;
   }
 }

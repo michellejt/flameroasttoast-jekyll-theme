@@ -13,23 +13,24 @@
       <div class="container mt-5 py-5">
         <div class="row">
           <div class="col-md-4 footer-column text-center text-white latest">
-            <h3>Latest post</h3>
-            {%- assign latest_post = site.games-writing [0] -%}
+          
 
-            <a href="{{ latest_post.url }}"><img class="img_fluid" src="{{ latest_post.url | replace: 'index', '' }}/{{ latest_post.bannerImage }}" /></a>
-            <p>{{ latest_post.title }}</p>
+            <div class="social-icons">
 
-          </div>
-          <div class="col-md-4 footer-column text-white">
-           <h3>Wanna by me a coffee?</h3>
+              <a class="social-icon social-icon--twitter">
+                <i class="fa fa-twitter"></i>
+                <div class="tooltip">Follow me on Twitter</div>
+              </a>
+              <a class="social-icon social-icon--kofi">
+            
+                <img src="https://raw.githubusercontent.com/michellejt/flameroasttoast-jekyll-theme/master/assets/images/kofi-icon.png" />
+                <div class="tooltip">Buy me a coffee?</div>
+              </a>
+            
+            
+            </div>
 
-        <a href="https://ko-fi.com/flameroasttoast" target="_blank"> <img class="img-fluid kofi" src="/assets/images/kofi-icon.png" /> </a>
 
-          </div>
-  
-          <div class="col-md-4 box text-center text-white ">
-         <h3>Follow me on Twitter</h3>
-         <a href="https://twitter.com/FlameRoastToast" target="_blank"> <img class="img-fluid twitter" src="/assets/images/twitter-icon.png" /></a>
           </div>
         </div>
       </div>

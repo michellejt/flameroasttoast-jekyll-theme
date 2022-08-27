@@ -1425,8 +1425,8 @@ p {
   color: #fff;
 }
 .social-icon:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
+  visibility: visible !important;
+  opacity: 1 !important;
   transform: translate(-50%, -150%) !important;
 }
 .social-icon:active {

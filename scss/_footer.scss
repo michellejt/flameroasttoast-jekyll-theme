@@ -41,8 +41,8 @@ $color-kofi: #ff5f5f;
     color: #fff;
 
     .tooltip {
-      visibility: visible;
-      opacity: 1;
+      visibility: visible!important;
+      opacity: 1!important;
       transform: translate(-50%, -150%)!important;
     }
   }

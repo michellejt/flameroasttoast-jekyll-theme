@@ -1,0 +1,154 @@
+---
+layout: default
+---
+
+  <!-- Landing Start -->
+<section class="comics-and-fiction-article">
+  
+ 
+  <header class="masthead">
+    <div class="hero-img" style="background:linear-gradient(0deg, rgba(0,0,0,0.7934524151457458) 0%, rgba(0,0,0,0.3) 60%), url('{{ page.bannerImage }}'); background-size:cover; background-position:{{ page.bannerImageFocus }}!important" ></div>
+    <!-- <img src="{{ page.bannerImage }}" alt="{{ page.bannerImageAlt }}" > -->
+
+  </header>
+ 
+<!-- Landing End -->
+
+<div class="container article-title-block pb-5">
+  <div class="row  justify-content-center ">
+      <div class="col-lg-8 article-title">
+          <h1 class="text-white text-center font-weight-bold">{{ page.title }}</h1>
+          
+      </div>
+  </div>
+</div>
+
+
+<div class="container p-0 page-tile">
+  <div class="row">
+<article class="page">
+ 
+  <div class="page-content mx-md-4 mx-4">
+
+    
+    
+    <p class="fst-italic fs-2 text-center strapline">{{ page.strapline }}</p>
+
+
+   {{ content }}
+  </div>
+
+
+  {{ site.data.navigation.navigation }}
+  {% for item in site.data.navigation.author %}  
+  
+  <div class="col-12 col-md-6 author mx-auto">
+  
+    <img class="img-fluid profile-image" src="{{ item.profile-image }}" >
+    <p>{{ item.blurb }}</p>
+   
+  
+  </div>
+  {% endfor %}  
+  
+  <!---------->
+
+  <!------------------>
+
+
+
+
+  <!------------------->
+
+
+
+
+  {% assign prevflag = 1 %}
+  {% assign nextflag = 1 %}
+  
+  {% for c in site.art %}
+    {% if c.title == page.title %}
+      {% assign currentItemIndex = forloop.index0 %}
+      {% if forloop.index == 1 %}
+        {% assign prevflag = 0 %}
+        {% assign nextflag = 1 %}
+      {% elsif forloop.index == forloop.length %}
+        {% assign prevflag = 1 %}
+        {% assign nextflag = 0 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if prevflag == 1 %}
+    {% assign prevItemIndex = currentItemIndex | minus: 1 %}
+    {% assign prevPost = site.art[prevItemIndex] %}
+  {% endif %}
+  
+  {% if nextflag == 1 %}
+    {% assign nextItemIndex = currentItemIndex | plus: 1 %}
+    {% assign nextPost = site.art[nextItemIndex] %}
+  {% endif %}
+  
+  <div class="post-nav row justify-content-between m-3 pt-5">
+      {% if prevPost.url %}
+      <div class="col-6 text-start">
+      <a class="prev" rel="prev" href="{{ prevPost.url }}">
+          <span>{{ prevPost.title }}</span>
+  <!--         <div class="prev-thumb">
+            <img class="card-img-top img-responsive" src="{{ prevPost.url | replace: 'index', '' }}/{{ prevPost.bannerImage }}" alt="{{ prevPost.bannerImageAlt }}" />
+          </div> -->
+      </a>
+      </div>
+      {% endif %}
+      {% if nextPost.url %}
+      <div class="col-6 text-end">
+      <a class="next" rel="next" href="{{ nextPost.url }}">
+          <span>{{ nextPost.title }}</span>
+  <!--  
+          <div class="next-thumb">
+            <img class="card-img-top img-responsive" src="{{ nextPost.url | replace: 'index', '' }}/{{ nextPost.bannerImage }}" alt="{{ nextPost.bannerImageAlt }}" />
+          </div> -->
+  
+      </a>
+      </div>
+      {% endif %}
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+  
+  </section>  
+  
+  
+  
+
+
+
+</article>
+
+
+
+
+

@@ -214,3 +214,12 @@
 		display: flex;
 	}
   }
+
+  .comics-and-fiction .card .card-img-top {
+    height: 430px;
+    object-fit: cover;
+}
+
+.comics-and-fiction .card {
+    max-width: 900px!important;
+}

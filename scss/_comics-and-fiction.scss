@@ -1,5 +1,5 @@
- /*     art      */
- .art, .comics-and-fiction-article {
+ /*     comics-and-fiction      */
+ .comics-and-fiction, .comics-and-fiction-article {
     .hero-overlay {
       img {
         width: 100%;
@@ -41,7 +41,7 @@
   }
 }  
 
-.art header.masthead,
+.comics-and-fiction header.masthead,
 .comics-and-fiction-article header.masthead {
 /* 	min-height: 25rem!important;
 	max-height: 25rem; */
@@ -56,7 +56,7 @@
 
   
     /*     art      */
-    .art, .comics-and-fiction-article {
+    .comics-and-fiction, .comics-and-fiction-article {
       .hero-overlay {
         img {
           width: 100%;
@@ -98,14 +98,14 @@
     }
   }  
   
-  .art header.masthead,
+  .comics-and-fiction header.masthead,
   .comics-and-fiction-article header.masthead {
   /* 	min-height: 25rem!important;
     max-height: 25rem; */
   }
   
   
-.art header h1 {
+.comics-and-fiction header h1 {
 	width:100%;
  	position: absolute;
  	left: 0;
@@ -129,7 +129,7 @@
 }
 
 
-.art {
+.comics-and-fiction {
   article#card:focus,
   article#card:hover,
   article#card:active {

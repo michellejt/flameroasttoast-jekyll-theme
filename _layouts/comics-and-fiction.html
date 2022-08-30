@@ -47,14 +47,14 @@ layout: default
 <div class="card-wrapper col-lg-4 col-md-6 col-12 pt-4" data-aos="zoom-in-up">
   <!-- Card -->
   <article class="card card-animation" id="card">
-    <div class="card category">{{ art.category }}</div>
-    <a href="{{ art.url }}">
+    <div class="card category">{{ comics-and-fiction.category }}</div>
+    <a href="{{ comics-and-fiction.url }}">
       <div class="inner">
-        <img class="card-img-top img-responsive" src="{{ art.url | replace: 'index', '' }}/{{ art.bannerImage }}" alt="{{ art.bannerImageAlt }}" />
+        <img class="card-img-top img-responsive" src="{{ comics-and-fiction.url | replace: 'index', '' }}/{{ comics-and-fiction.bannerImage }}" alt="{{ comics-and-fiction.bannerImageAlt }}" />
       </div>
     <div class="card-block">
-      <h4 class="card-title pt-2">{{ art.title }}</h4>
-      <p class="card-text">{{ art.description | truncate: 160 }}</p>
+      <h4 class="card-title pt-2">{{ comics-and-fiction.title }}</h4>
+      <p class="card-text">{{ comics-and-fiction.description | truncate: 160 }}</p>
       </a>
     </div>
   </article><!-- .end Card -->

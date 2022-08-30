@@ -44,8 +44,7 @@ layout: default
     {% assign comics-and-fiction = site.comics-and-fiction | sort: 'published' | reverse %}
     {% for comics-and-fiction in comics-and-fiction %}
 
-<div class="card-wrapper col-lg-4 col-md-6 col-12 pt-4" data-aos="zoom-in-up">
-  <!-- Card -->
+<!-- <div class="card-wrapper col-lg-4 col-md-6 col-12 pt-4" data-aos="zoom-in-up">
   <article class="card card-animation" id="card">
     <div class="card category">{{ comics-and-fiction.category }}</div>
     <a href="{{ comics-and-fiction.url }}">
@@ -57,9 +56,29 @@ layout: default
       <p class="card-text">{{ comics-and-fiction.description | truncate: 160 }}</p>
       </a>
     </div>
-  </article><!-- .end Card -->
+  </article>
+</div> -->
+
+
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{ comics-and-fiction.url | replace: 'index', '' }}/{{ comics-and-fiction.bannerImage }}" class="card-img-top img-responsive" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ comics-and-fiction.title }}</h5>
+        <p class="card-text">{{ comics-and-fiction.description | truncate: 160 }}</p>
+      </div>
+    </div>
+  </div>
 </div>
 {% endfor %}  
+
+
+
+
 </div>
 </div>
 

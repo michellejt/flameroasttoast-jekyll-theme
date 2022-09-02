@@ -1604,6 +1604,12 @@ footer p {
   object-fit: contain;
 }
 
+@media only screen and (max-width: 991px) {
+  .comics-and-fiction .card .card-img-top {
+    height: inherit;
+    object-fit: contain;
+  }
+}
 .comics-and-fiction .card {
   max-width: 750px !important;
 }

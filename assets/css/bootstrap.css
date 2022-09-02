@@ -665,18 +665,6 @@ header.masthead {
   color: #FFFFFF;
 }
 
-img + em {
-  left: 0;
-  right: 0;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 5px 15px 10px 15px;
-  margin: 5px 25px 10px 25px;
-  backdrop-filter: blur(10px);
-}
-
 .green h2, .green .h2 {
   color: #d4edda;
   background-color: #155724;
@@ -1215,6 +1203,17 @@ footer p {
 .art-article p:has(img) {
   display: flex;
 }
+.art-article img + em {
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 15px 10px 15px;
+  margin: 5px 25px 10px 25px;
+  backdrop-filter: blur(10px);
+}
 
 /*     GAMES-WRITING      */
 .games-writing .hero-overlay, .games-writing-article .hero-overlay {
@@ -1393,6 +1392,17 @@ footer p {
 }
 .games-writing-article p:has(img) {
   display: flex;
+}
+.games-writing-article img + em {
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 15px 10px 15px;
+  margin: 5px 25px 10px 25px;
+  backdrop-filter: blur(10px);
 }
 
 /*     comics-and-fiction      */

@@ -1215,6 +1215,10 @@ footer p {
   backdrop-filter: blur(10px);
 }
 
+.art-article .article-title-block {
+  margin-bottom: 129px;
+}
+
 /*     GAMES-WRITING      */
 .games-writing .hero-overlay, .games-writing-article .hero-overlay {
   height: 375px !important;

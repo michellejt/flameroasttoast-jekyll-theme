@@ -1051,6 +1051,10 @@ footer p {
   transform: translate(15%, 33%) rotate(-45deg);
 }
 
+ol li, ul li {
+  margin-bottom: 1rem;
+}
+
 /*     art      */
 .art .hero-overlay, .art-article .hero-overlay {
   height: 375px !important;

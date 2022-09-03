@@ -60,3 +60,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 $('.category:contains("editorial")').addClass("editorial");
 $('.category:contains("review")').addClass("review");
+
+$('.category:contains("Editorial")').addClass("Editorial");
+$('.category:contains("Review")').addClass("Review");
+$('.category:contains("Guide")').addClass("Guide");

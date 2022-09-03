@@ -175,9 +175,9 @@
 	}
 
   
-	.art-article header h1, 
-	.art-article header .h1 {
-		font-size: 1.75rem !important
+	.art header h1, 
+	.art header .h1 {
+        text-transform: capitalize;
 	}
 	
 	.art-article .hero-img {

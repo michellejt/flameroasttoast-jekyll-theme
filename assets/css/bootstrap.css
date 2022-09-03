@@ -665,6 +665,11 @@ header.masthead {
   color: #FFFFFF;
 }
 
+.card.category.guide {
+  background: #004085;
+  color: #FFFFFF;
+}
+
 .green h2, .green .h2 {
   color: #d4edda;
   background-color: #155724;

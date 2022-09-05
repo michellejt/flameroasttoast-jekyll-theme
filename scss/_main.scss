@@ -7,6 +7,11 @@ $color:#fff;
     font-family: 'Noto Sans', sans-serif;
 }
 
+
+h1 {
+	font-size:2rem;
+}
+
 .bg-dark {
   background: $primary-color!important;
 }
@@ -549,7 +554,7 @@ padding-bottom: 0;
 }
 
 .strapline {
-	color: darkblue;
+	color: #2a2a2a;
 	&:before {
 		content:open-quote;
 	}

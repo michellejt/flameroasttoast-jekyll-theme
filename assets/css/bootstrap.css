@@ -9,6 +9,10 @@
   font-family: "Noto Sans", sans-serif;
 }
 
+h1, .h1 {
+  font-size: 2rem;
+}
+
 .bg-dark {
   background: #2a2a2a !important;
 }
@@ -500,7 +504,7 @@ header.masthead {
 }
 
 .strapline {
-  color: darkblue;
+  color: #2a2a2a;
 }
 .strapline:before {
   content: open-quote;

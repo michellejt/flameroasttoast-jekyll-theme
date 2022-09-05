@@ -761,7 +761,12 @@ padding-bottom: 0;
 }
 
 
-	.red h2 {
+	.red h1,
+	.red h2,
+	.red h3,
+	.red h4,
+	.red h5
+	{
 		color: #f5c6cb;
 		background-color: #721c24;
 		margin: -21px -20px 10px -20px;
@@ -773,7 +778,12 @@ padding-bottom: 0;
 		font-size:1.25rem;
 	}
 
-.green h2 {
+.green h1,
+.green h2,
+.green h3,
+.green h4,
+.green h5
+ {
     color: #d4edda;
     background-color: #155724;
     margin: -21px -20px 10px -20px;
@@ -785,7 +795,11 @@ padding-bottom: 0;
     font-size:1.25rem;
 }
 
-.blue h2 {
+.blue h1,
+.blue h2,
+.blue h3,
+.blue h4,
+.blue h5 {
     color: #cce5ff;
     background-color: #004085;
     margin: -21px -20px 10px -20px;
@@ -797,7 +811,12 @@ padding-bottom: 0;
     font-size:1.25rem;
 }
 
-.yellow h2 {
+.yellow h1,
+.yellow h2,
+.yellow h3,
+.yellow h4,
+.yellow h5
+		 {
     color: #fff3cd;
     background-color: #856404;
     margin: -21px -20px 10px -20px;

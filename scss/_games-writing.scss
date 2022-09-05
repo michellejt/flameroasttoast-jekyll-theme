@@ -223,3 +223,12 @@
 	backdrop-filter: blur(10px);
 }
   }
+
+
+  .card {
+    @for $i from 1 through 100 {
+      &:nth-child(#{$i}) {
+    border: solid thick red!important;
+        }
+      }
+    }

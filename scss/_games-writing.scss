@@ -229,6 +229,7 @@
     @for $i from 1 through 100 {
       &:nth-child(#{$i}) {
     border: solid thick red!important;
+    background: hsl(random(360), 100%, 50%)!important;
         }
       }
     }

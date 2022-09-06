@@ -223,3 +223,7 @@
 	backdrop-filter: blur(10px);
 }
   }
+
+  p > img {
+		width:inherit!important;
+	}

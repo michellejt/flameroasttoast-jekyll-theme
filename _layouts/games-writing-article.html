@@ -98,7 +98,7 @@ layout: default
 
 
 
-{% assign items = site.collection | sort: 'date' %}
+{% assign items = site.games-writing | sort: 'date' %}
 {% for item in items limit:4 %}
     <li>
         <a href="{{ item.url }}">

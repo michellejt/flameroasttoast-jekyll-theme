@@ -1292,6 +1292,10 @@ li ul li {
   margin-bottom: 129px;
 }
 
+p > img {
+  width: inherit !important;
+}
+
 /*     GAMES-WRITING      */
 .games-writing .hero-overlay, .games-writing-article .hero-overlay {
   height: 375px !important;
@@ -1480,6 +1484,10 @@ li ul li {
   padding: 5px 15px 10px 15px;
   margin: 5px 36px 0px 36px;
   backdrop-filter: blur(10px);
+}
+
+p > img {
+  width: inherit !important;
 }
 
 /*     comics-and-fiction      */
@@ -1685,6 +1693,10 @@ li ul li {
 }
 .comics-and-fiction .card {
   max-width: 750px !important;
+}
+
+p > img {
+  width: inherit !important;
 }
 
 /* Color Variables */

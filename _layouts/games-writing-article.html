@@ -112,8 +112,3 @@ layout: default
         </ul>
     {% endunless%}
 {% endfor %}
-
-{% assign sorted = site.games-writing | sort: 'date' | reverse  %}
-<p>{{ item.title }}</p>
-
-{% for project in sorted limit: 12 %}

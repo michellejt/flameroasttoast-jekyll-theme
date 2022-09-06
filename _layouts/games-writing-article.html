@@ -102,7 +102,7 @@ layout: default
     {% unless collection.label == "posts" %}
         {{ collection.label }}
         <ul>
-        {%- for c in collection.docs limit 3%}
+        {%- for c in collection.docs > 4 %}
               <li>
                    <a href="{{ c.url | relative_url }}">
                        {{ c.title }}

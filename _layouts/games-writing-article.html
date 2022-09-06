@@ -99,10 +99,10 @@ layout: default
 
 
 {% for collection in site.collections %}
-    {% unless collection.label == "posts" %}
+    {% unless collection.label == "pages" %}
         {{ collection.label }}
         <ul>
-        {%- for c in collection.docs > 4 %}
+        {%- for c in collection.docs limit 3%}
               <li>
                    <a href="{{ c.url | relative_url }}">
                        {{ c.title }}

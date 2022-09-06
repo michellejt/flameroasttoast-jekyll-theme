@@ -1699,6 +1699,11 @@ p > img {
   width: inherit !important;
 }
 
+.card a {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
 /* Color Variables */
 /* Social Icon Mixin */
 /* Social Icons */

@@ -99,7 +99,7 @@ layout: default
 
 
 {% for collection in site.collections %}
-    {% unless collection.label == "pages" %}
+    {% unless collection.label == "posts" %}
         {{ collection.label }}
         <ul>
         {%- for c in collection.docs limit 3%}
@@ -112,3 +112,8 @@ layout: default
         </ul>
     {% endunless%}
 {% endfor %}
+
+{% assign sorted = site.games-writing | sort: 'date' | reverse  %}
+<p>{{ item.title }}</p>
+
+{% for project in sorted limit: 12 %}

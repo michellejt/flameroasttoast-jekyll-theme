@@ -97,15 +97,17 @@ layout: default
 
 
 
-<div class = "row">
+<div class = "row">    
+  {% assign items = site.games-writing | sort: 'date' %}
+  {% for item in items limit:4 %}
   <div class = "col-sm-6 col-md-3">
-    {% assign items = site.games-writing | sort: 'date' %}
-    {% for item in items limit:4 %}
+
      <a href = "{{ item.url }}" class = "thumbnail">
 
         <img src = "{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}">
 
      </a>
-     {% endfor %}
+
   </div>
+  {% endfor %}
 </div>

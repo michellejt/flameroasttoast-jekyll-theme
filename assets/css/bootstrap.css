@@ -1103,6 +1103,15 @@ li ul li {
   text-decoration: none;
 }
 
+.spinner-border {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+}
+
 /*     art      */
 .art .hero-overlay, .art-article .hero-overlay {
   height: 375px !important;

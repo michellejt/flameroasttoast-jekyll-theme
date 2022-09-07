@@ -102,9 +102,9 @@ layout: default
   {% for item in items limit:4 %}
   <div class = "col-sm-6 col-md-3">
 
-     <a href = "{{ item.url }}" class = "img-fluid thumbnail">
+     <a href = "{{ item.url }}" class = "thumbnail">
 
-        <img src = "{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}">
+        <img src = "{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
 
      </a>
 

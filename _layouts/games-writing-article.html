@@ -71,7 +71,7 @@ layout: default
 
      <a href = "{{ item.url }}" class = "thumbnail">
 
-        <img src = "{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
+        <img src = "{{ item.url | replace: 'index', '' }}/{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
 
      </a>
 

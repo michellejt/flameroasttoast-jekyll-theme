@@ -56,62 +56,28 @@ layout: default
   <!------------------>
 
 
-
+  <div class = "row related-items p-4 mb-5">   
+    <a href="/"><i class="fa-solid fa-circle-arrow-left"></i> Back to Art</a>
+     {% assign items = site.art | sort: 'date' %}
+     {% for item in items limit:4 %}
+     <div class = "col-sm-6 col-md-3">
+   
+        <a href = "{{ item.url }}" class = "thumbnail">
+   
+           <img src = "{{ item.url | replace: 'index', '' }}/{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
+           <p>{{ item.title }}</p>
+        </a>
+   
+     </div>
+     {% endfor %}
+   </div>
+   
+   
 
   <!------------------->
 
-
-
-
-  {% assign prevflag = 1 %}
-  {% assign nextflag = 1 %}
-  
-  {% for c in site.art %}
-    {% if c.title == page.title %}
-      {% assign currentItemIndex = forloop.index0 %}
-      {% if forloop.index == 1 %}
-        {% assign prevflag = 0 %}
-        {% assign nextflag = 1 %}
-      {% elsif forloop.index == forloop.length %}
-        {% assign prevflag = 1 %}
-        {% assign nextflag = 0 %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-  
-  {% if prevflag == 1 %}
-    {% assign prevItemIndex = currentItemIndex | minus: 1 %}
-    {% assign prevPost = site.art[prevItemIndex] %}
-  {% endif %}
-  
-  {% if nextflag == 1 %}
-    {% assign nextItemIndex = currentItemIndex | plus: 1 %}
-    {% assign nextPost = site.art[nextItemIndex] %}
-  {% endif %}
-  
-  <div class="post-nav row justify-content-between m-3 pt-5">
-      {% if prevPost.url %}
-      <div class="col-6 text-start">
-      <a class="prev" rel="prev" href="{{ prevPost.url }}">
-          <span>{{ prevPost.title }}</span>
-  <!--         <div class="prev-thumb">
-            <img class="card-img-top img-responsive" src="{{ prevPost.url | replace: 'index', '' }}/{{ prevPost.bannerImage }}" alt="{{ prevPost.bannerImageAlt }}" />
-          </div> -->
-      </a>
       </div>
-      {% endif %}
-      {% if nextPost.url %}
-      <div class="col-6 text-end">
-      <a class="next" rel="next" href="{{ nextPost.url }}">
-          <span>{{ nextPost.title }}</span>
-  <!--  
-          <div class="next-thumb">
-            <img class="card-img-top img-responsive" src="{{ nextPost.url | replace: 'index', '' }}/{{ nextPost.bannerImage }}" alt="{{ nextPost.bannerImageAlt }}" />
-          </div> -->
-  
-      </a>
-      </div>
-      {% endif %}
+
   </div>
   
 

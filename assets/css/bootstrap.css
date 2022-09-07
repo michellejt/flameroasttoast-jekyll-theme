@@ -1495,6 +1495,15 @@ p > img {
   width: inherit !important;
 }
 
+.related-items img {
+  height: 210px;
+}
+
+.related-items a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /*     comics-and-fiction      */
 .comics-and-fiction .hero-overlay, .comics-and-fiction-article .hero-overlay {
   height: 375px !important;

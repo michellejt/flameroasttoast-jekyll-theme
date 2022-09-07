@@ -1504,6 +1504,10 @@ p > img {
   text-decoration: none;
 }
 
+.related-items p {
+  font-size: 0.85rem;
+}
+
 /*     comics-and-fiction      */
 .comics-and-fiction .hero-overlay, .comics-and-fiction-article .hero-overlay {
   height: 375px !important;

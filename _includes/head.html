@@ -5,9 +5,9 @@
     {% if page.title %}<meta property="og:title" content="{{ page.title }}">{% endif %}
     {% if page.url %}<meta property="og:url" content="{{ page.url }}">{% endif %}
     {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
-    {% if page.bannerImage %}<meta property="og:image" content="{{ page.bannerImage }}">{% endif %}
+    {% if page.bannerImage %}<meta property="og:image" content="{{ page.url | replace: 'index', '' }}/{{ page.bannerImage }}">{% endif %}
 
-
+    
 
 
       <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">

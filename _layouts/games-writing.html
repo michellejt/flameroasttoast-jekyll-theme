@@ -38,12 +38,6 @@ layout: default
 <div class="container landing-tiles">
   <div class="row">
 
-
-    <img src="{{ games-writing.url | replace: 'index', '' }}/{{ page.image1 }}" /> 
-
-    
-    {{ "{% thumbnail path/to/image.jpg 50x50 " }}%}
-
     {% assign games-writing = site.games-writing | sort: 'published' | reverse %}
     {% for games-writing in games-writing %}
 
@@ -53,11 +47,6 @@ layout: default
     <div class="card category">{{ games-writing.category }}</div>
     <a href="{{ games-writing.url }}">
       <div class="inner">
-
-        
-
-        <img class="card-img-top img-responsive" src="{{ "{% thumbnail {{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }} 50x50 " }}%}" alt="{{ games-writing.bannerImageAlt }}" />
-
         <img class="card-img-top img-responsive" src="{{ games-writing.url | replace: 'index', '' }}/{{ games-writing.bannerImage }}" alt="{{ games-writing.bannerImageAlt }}" />
       </div>
     <div class="card-block">

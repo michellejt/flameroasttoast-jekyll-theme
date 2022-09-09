@@ -8,12 +8,11 @@
     {% if page.bannerImage %}<meta property="og:image" content="{{ site.rooturl }}{{ page.url | replace: 'index', '' }}{{ page.bannerImage }}">{% endif %}
     <meta property="og:type" content="website" />
 
-    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@">
-    <meta name="twitter:title" content="Why I’ve played more Tetris 99 than Tetris Effect">
-    <meta name="twitter:description" content="Andy chats about exactly why he's played more of Tetris 99 than its prettier, more critically lauded cousin, Tetris Effect.">
-    <meta name="twitter:image" content="https://michellejt-jekyll-blog.netlify.app/games-writing/why-i-played-more-tetris99-than-tetris-effect/tetris991.jpeg">
+    {% if page.title %}<meta name="twitter:title" content="{{ page.title }}">{% endif %}
+    {% if page.description %}<meta name="twitter:description" content="{{ page.description }}">{% endif %}
+    {% if page.bannerImage %}<meta name="twitter:image" content="{{ site.rooturl }}{{ page.url | replace: 'index', '' }}{{ page.bannerImage }}">{% endif %}
 
 
    

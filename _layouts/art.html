@@ -52,7 +52,7 @@ layout: default
     <!-- <div class="card category">{{ art.category }}</div> -->
     <a href="{{ art.url }}">
       <div class="inner">
-        <img class="card-img-top img-responsive lazy" data-src="{{ art.url | replace: '.png', '.webp' }}/{{ art.bannerImage }}" alt="{{ art.bannerImageAlt }}" />
+        <img class="card-img-top img-responsive lazy" data-src="{{ art.url | replace: 'art', '_art' | replace: 'index', '' }}/{{ art.bannerImage }}" alt="{{ art.bannerImageAlt }}" />
       </div>
     <div class="card-block">
       <h4 class="card-title pt-2">{{ art.title }}</h4>

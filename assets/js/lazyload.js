@@ -1,10 +1,10 @@
 const loadImages = document.querySelectorAll('inner img')
 
-const observer = new IntersectionObserver(obserberHandler)
+const observer = new IntersectionObserver(observerHandler)
 
-function obserberHandler(entries, observer) {
+function observerHandler(entries, observer) {
     for (const entry of entries) {
-        if (entry.IntersectionObserver > 0) {
+        if (entry.intersectionRatio > 0) {
             console.log("hiii")
             entry.target.src = entry.target.dataset.src
         }

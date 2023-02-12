@@ -75,6 +75,13 @@ h1, .h1 {
 /*
  * Custom translucent site header
  */
+/*placeholder for lazy load images*/
+.card:has(.lazy) {
+  box-shadow: rgba(136, 165, 191, 0.48) 0px 2px 16px 0px, rgba(255, 255, 255, 0.8) 0px -2px 0px 0px;
+  background: lightgrey;
+  margin-top: 10px;
+}
+
 /*cards*/
 .card {
   border: 0 !important;

@@ -1,14 +1,13 @@
-const loadImages = document.querySelectorAll('.inner img')
+const loadImages = document.querySelectorAll('img.lazy')
 
 const observer = new IntersectionObserver(observerHandler)
-  
 
 function observerHandler(entries, observer) {
-    for (const entry of entries) {
-        if (entry.intersectionRatio > 0) {
-            //console.log("hiii")
-            entry.target.src = entry.target.dataset.src
-        }
-    }
+  entries.forEach((entry) => {
+     if (entry.intersectionRatio > 0) {
+       entry.target.classList.remove('lazy')
+       entry.target.src = entry.target.dataset.src
+     } 
+  });
 }
 loadImages.forEach(img => observer.observe(img))

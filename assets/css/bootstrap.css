@@ -1337,6 +1337,10 @@ p > img {
   object-fit: cover;
 }
 
+.art .card-block {
+  padding: 10px 10px;
+}
+
 /*     GAMES-WRITING      */
 .games-writing .hero-overlay, .games-writing-article .hero-overlay {
   height: 375px !important;

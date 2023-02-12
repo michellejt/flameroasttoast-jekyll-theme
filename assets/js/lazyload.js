@@ -13,3 +13,8 @@ function observerHandler(entries, observer) {
   });
 }
 loadImages.forEach(img => observer.observe(img))
+
+//now we need to point to our webp generated files
+var content = document.getElementById('webp').innerHTML;
+    content = content.replace("jpg", "webp");
+document.getElementById('webp').innerHTML = content;

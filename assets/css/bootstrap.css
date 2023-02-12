@@ -81,6 +81,20 @@ h1, .h1 {
   margin-top: 10px;
 }
 
+.card:before {
+  box-shadow: rgba(136, 165, 191, 0.48) 0px 2px 16px 0px, rgba(255, 255, 255, 0.8) 0px -2px 0px 0px;
+  background: lightgrey;
+  content: "loading...";
+  position: absolute;
+  z-index: 1;
+}
+
+.card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  z-index: 20;
+}
+
 /*cards*/
 .card {
   border: 0 !important;

@@ -86,9 +86,13 @@ h1 {
 
 .card:before {
 	box-shadow: rgb(136 165 191 / 48%) 0px 2px 16px 0px, rgb(255 255 255 / 80%) 0px -2px 0px 0px;
-    content:"loading...";
-    position:absolute;
-    z-index:1
+    content: "loading...";
+    position: absolute;
+    z-index: 1;
+    width: 95%;
+    height: 99%;
+    background: grey;
+    opacity: 0.4;
 }
 
 .card .card-img-top {

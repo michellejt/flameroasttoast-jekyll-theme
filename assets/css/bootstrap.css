@@ -83,12 +83,12 @@ h1, .h1 {
 
 .inner:before {
   box-shadow: rgba(136, 165, 191, 0.48) 0px 2px 16px 0px, rgba(255, 255, 255, 0.8) 0px -2px 0px 0px;
-  content: "loading...";
+  content: " loading...";
   position: absolute;
   z-index: 1;
   width: 95%;
   min-height: 250px;
-  background: gray;
+  background: lightgrey;
   opacity: 0.4;
 }
 

@@ -87,12 +87,12 @@ h1 {
 //placeholder image for lazy loading
 .inner:before {
     box-shadow: rgb(136 165 191 / 48%) 0px 2px 16px 0px, rgb(255 255 255 / 80%) 0px -2px 0px 0px;
-    content: "loading...";
+    content: " loading...";
     position: absolute;
     z-index: 1;
     width: 95%;
     min-height: 250px;
-    background: gray;
+    background: lightgrey;
     opacity: .4;
 }
 

@@ -83,7 +83,6 @@ h1, .h1 {
 
 .card:before {
   box-shadow: rgba(136, 165, 191, 0.48) 0px 2px 16px 0px, rgba(255, 255, 255, 0.8) 0px -2px 0px 0px;
-  background: lightgrey;
   content: "loading...";
   position: absolute;
   z-index: 1;
@@ -93,6 +92,7 @@ h1, .h1 {
   height: 250px;
   object-fit: cover;
   z-index: 20;
+  position: relative;
 }
 
 /*cards*/

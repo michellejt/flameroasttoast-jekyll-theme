@@ -10,4 +10,4 @@ function obserberHandler(entries, observer) {
         }
     }
 }
-images.forEach(img => observer.observe(img))
+loadImages.forEach(img => observer.observe(img))

@@ -1,4 +1,4 @@
-const images = document.querySelectorAll('inner image')
+const loadImages = document.querySelectorAll('inner img')
 
 const observer = new IntersectionObserver(obserberHandler)
 

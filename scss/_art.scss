@@ -233,3 +233,8 @@
 p > img {
   width:inherit!important;
 }
+
+.art .card-img-top {
+  height: 300px;
+  object-fit: cover;
+}

@@ -9,7 +9,7 @@ const observer = new IntersectionObserver(observerHandler,{
 function observerHandler(entries, observer) {
     for (const entry of entries) {
         if (entry.intersectionRatio > 0) {
-            console.log("hiii")
+            //console.log("hiii")
             entry.target.src = entry.target.dataset.src
         }
     }

@@ -1,6 +1,10 @@
 const loadImages = document.querySelectorAll('.inner img')
 
-const observer = new IntersectionObserver(observerHandler)
+const observer = new IntersectionObserver(observerHandler,{
+    //do not load until 100% is available
+    threshold: 0.5,
+  })
+  
 
 function observerHandler(entries, observer) {
     for (const entry of entries) {

@@ -780,16 +780,19 @@ padding-bottom: 0;
 .card.category.editorial {
     background: #dd21e6;
     color:#FFFFFF;
+	z-index: 120;
 }
 
 .card.category.review {
 	background: #0bb587;
 	color: #FFFFFF;
+	z-index: 120;
 }
 
 .card.category.guide {
     background: #004085;
     color:#FFFFFF;
+	z-index: 120;
 }
 
 

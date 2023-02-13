@@ -524,6 +524,7 @@ header.masthead {
   letter-spacing: 1px;
   text-shadow: 5px 5px 10px black;
   bottom: 0;
+  z-index: 100;
 }
 
 .strapline {
@@ -618,6 +619,7 @@ header.masthead {
   .home-tiles .card-title {
     width: 90%;
     bottom: -60px;
+    z-index: 100;
   }
   .home .card-block {
     position: absolute;

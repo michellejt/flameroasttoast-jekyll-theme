@@ -52,13 +52,16 @@ layout: default
     <!-- <div class="card category">{{ art.category }}</div> -->
     <a href="{{ art.url }}">
       <div class="inner" id="webp">
-        <img class="card-img-top img-responsive lazy"  data-src="{{ art.url | replace: 'art', '_art' | replace: 'index', '' }}/{{ art.bannerImage | replace: 'png', 'webp' | replace: 'jpg', 'webp' | replace: 'jpeg', 'webp' }}" alt="{{ art.bannerImageAlt }}" />
+
         <div class="loading">
           <div class="dot one"></div>
           <div class="dot two"></div>
           <div class="dot three"></div>
           <div class="dot four"></div>
         </div>
+        
+        <img class="card-img-top img-responsive lazy"  data-src="{{ art.url | replace: 'art', '_art' | replace: 'index', '' }}/{{ art.bannerImage | replace: 'png', 'webp' | replace: 'jpg', 'webp' | replace: 'jpeg', 'webp' }}" alt="{{ art.bannerImageAlt }}" />
+
       </div>
     <div class="card-block">
       <h4 class="card-title pt-2">{{ art.title }}</h4>

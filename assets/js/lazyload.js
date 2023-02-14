@@ -1,5 +1,5 @@
 const loadImages = document.querySelectorAll('img.lazy')
-const loading = document.getElementsByClassName('loading');
+
 const observer = new IntersectionObserver(observerHandler, {
     threshold: 1.0
 })
@@ -9,6 +9,7 @@ function observerHandler(entries, observer) {
      if (entry.intersectionRatio > 0) {
        entry.target.src = entry.target.dataset.src
        entry.target.classList.remove('lazy')
+       var loading = document.getElementsByClassName('loading');
        loading.remove(); 
      } 
   });

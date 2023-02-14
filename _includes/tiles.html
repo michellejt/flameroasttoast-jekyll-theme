@@ -28,7 +28,12 @@
   <article class="card" id="card">
 
                       <a href="{{ item.url  | relative_url }}">
-
+                        <div class="loading">
+                          <div class="dot one"></div>
+                          <div class="dot two"></div>
+                          <div class="dot three"></div>
+                          <div class="dot four"></div>
+                        </div>
                       
                       <div class="inner">
                         <img class="card-img-top img-responsive lazy" data-src="{{ item.image }}" alt="{{ item.title }}" />

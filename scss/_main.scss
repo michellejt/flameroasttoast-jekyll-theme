@@ -1228,8 +1228,10 @@ li ul li {
   //loading
   .loading {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
   }
   .loading .dot {
 	width: 15px;

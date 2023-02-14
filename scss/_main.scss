@@ -1300,7 +1300,7 @@ img {
   }
   
   img:after {  
-	content: "\f127" " Broken Image of " attr(alt);
+	content: attr(alt);
 	display: block;
 	font-size: 16px;
 	font-style: normal;

@@ -1,5 +1,5 @@
 const loadImages = document.querySelectorAll('img.lazy')
-
+const loading = document.getElementsByClassName('loading');
 const observer = new IntersectionObserver(observerHandler, {
     threshold: 1.0
 })
@@ -9,6 +9,7 @@ function observerHandler(entries, observer) {
      if (entry.intersectionRatio > 0) {
        entry.target.src = entry.target.dataset.src
        entry.target.classList.remove('lazy')
+       loading.remove(); 
      } 
   });
 }
@@ -18,3 +19,5 @@ loadImages.forEach(img => observer.observe(img))
 /* var content = document.getElementById('webp').innerHTML;
     content = content.replace("jpg", "webp");
 document.getElementById('webp').innerHTML = content; */
+
+

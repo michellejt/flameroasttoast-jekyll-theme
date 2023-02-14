@@ -1210,6 +1210,7 @@ img:before {
   left: 0;
   height: calc(100% + 10px);
   width: 100%;
+  background-color: #fff;
 }
 
 img:after {

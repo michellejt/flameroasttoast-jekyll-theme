@@ -1194,7 +1194,7 @@ li ul li {
 img {
   font-family: "Helvetica";
   font-weight: 300;
-  line-height: 2;
+  line-height: 10;
   text-align: center;
   width: 100%;
   height: auto;
@@ -1210,13 +1210,10 @@ img:before {
   left: 0;
   height: calc(100% + 10px);
   width: 100%;
-  background-color: rgb(230, 230, 230);
-  border: 2px dotted rgb(200, 200, 200);
-  border-radius: 5px;
 }
 
 img:after {
-  content: attr(alt);
+  content: "\f127" " " attr(alt);
   display: block;
   font-size: 16px;
   font-style: normal;

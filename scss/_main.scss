@@ -80,7 +80,7 @@ h1 {
 /*placeholder for lazy load images*/
 .card:has(.lazy) {
 	//box-shadow: rgb(136 165 191 / 48%) 0px 2px 16px 0px, rgb(255 255 255 / 80%) 0px -2px 0px 0px;
-	background:lightgrey;
+	//background:lightgrey;
 	margin-top:10px;
 }
 
@@ -90,9 +90,6 @@ h1 {
     content: " loading...";
     position: absolute;
     z-index: 1;
-    width: 95%;
-    min-height: 250px;
-    background: lightgrey;
 }
 
 .card .card-img-top {
@@ -1226,4 +1223,49 @@ li ul li {
 	margin-left: auto; 
 	margin-right: auto; 
 	margin-top:120px!important; 
+  }
+
+  //loading
+  .loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  .loading .dot {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	margin: 5px;
+	background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+	animation: loading-bounce 1.5s 0.5s linear infinite;
+  }
+  .loading .one {
+	background-color: #ecb215;
+  }
+  .loading .two {
+	background-color: #dd21e6;
+	animation-delay: 0.1s;
+  }
+  .loading .three {
+	background-color: #0bb587;
+	animation-delay: 0.2s;
+  }
+  .loading .four {
+	background-color: #004085;
+	animation-delay: 0.3s;
+  }
+  
+  @keyframes loading-bounce {
+	0%, 50%, 100% {
+	  transform: scale(1);
+	  filter: blur(0px);
+	}
+	25% {
+	  transform: scale(0.6);
+	  filter: blur(2px);
+	}
+	75% {
+	  transform: scale(1.2);
+	  filter: blur(2px);
+	}
   }

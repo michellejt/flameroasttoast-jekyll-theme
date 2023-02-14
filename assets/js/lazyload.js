@@ -9,8 +9,6 @@ function observerHandler(entries, observer) {
      if (entry.intersectionRatio > 0) {
        entry.target.src = entry.target.dataset.src
        entry.target.classList.remove('lazy')
-       var loading = document.getElementsByClassName('loading');
-       loading.remove(); 
      } 
   });
 }

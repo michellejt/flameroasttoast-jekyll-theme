@@ -1,7 +1,7 @@
 const loadImages = document.querySelectorAll('img.lazy')
 
 const observer = new IntersectionObserver(observerHandler, {
-    threshold: 0.2
+    threshold: 0.1
 })
 
 function observerHandler(entries, observer) {

@@ -1,0 +1,120 @@
+---
+layout: default
+---
+
+  <!-- Landing Start -->
+<section class="blog-article">
+  
+ 
+  <header class="masthead">
+    <div class="hero-img" style="background:linear-gradient(0deg, rgba(0,0,0,0.7934524151457458) 0%, rgba(0,0,0,0.3) 60%), url('{{ page.bannerImage }}'); background-size:cover; background-position:{{ page.bannerImageFocus }}!important" ></div>
+    <!-- <img src="{{ page.bannerImage }}" alt="{{ page.bannerImageAlt }}" > -->
+
+  </header>
+ 
+<!-- Landing End -->
+
+<div class="container article-title-block pb-5">
+  <div class="row  justify-content-center ">
+      <div class="col-lg-8 article-title">
+          <h1 class="text-white text-center font-weight-bold">{{ page.title }}</h1>
+          
+      </div>
+  </div>
+</div>
+
+
+<div class="container p-0 page-tile">
+  <div class="row m-0">
+<article class="page">
+ 
+  <div class="page-content mx-md-4 mx-4">
+
+    
+    
+    <p class="fst-italic fs-2 text-center strapline">{{ page.strapline }}</p>
+
+
+   {{ content }}
+  </div>
+
+
+  {{ site.data.navigation.navigation }}
+  {% for item in site.data.navigation.author %}  
+  
+  <div class="col-12 col-md-6 author mx-auto">
+  
+    <img class="img-fluid profile-image" src="{{ item.profile-image }}" >
+    <p>{{ item.blurb }}</p>
+   
+  
+  </div>
+  {% endfor %}  
+  
+  <!---------->
+
+  <!------------------>
+
+
+  <div class = "row related-items p-4 mb-5">   
+    <a href="/"><i class="fa-solid fa-circle-arrow-left"></i> Back to Art</a>
+     {% assign items = site.art | sort: 'date' %}
+     {% for item in items limit:4 %}
+     <div class = "col-sm-6 col-md-3">
+   
+        <a href = "{{ item.url }}" class = "thumbnail">
+   
+           <img src = "{{ item.url | replace: 'index', '' }}/{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
+           <p>{{ item.title }}</p>
+        </a>
+   
+     </div>
+     {% endfor %}
+   </div>
+   
+   
+
+  <!------------------->
+
+      </div>
+
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+  
+  </section>  
+  
+  
+  
+
+
+
+</article>
+
+
+
+
+

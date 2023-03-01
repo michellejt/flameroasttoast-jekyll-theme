@@ -17,51 +17,11 @@ layout: default
     </div>
   </header>
 
-<!-- Landing End -->
-<div class="container">
-<div class="row">
-<article class="page">
  
   <div class="page-content">
    {{ content }}
   </div>
 
-</article>
-</div>
-</div>
-
-<div class="container landing-tiles">
-  <div class="row">
 
 
-<!--     {% assign blog = site.blog | sort: 'published' | reverse %}
-    {% for blog in blog %} -->
-
-<div class="card-wrapper col-lg-4 col-md-6 col-12 pt-4" data-aos="zoom-in-up">
-  <!-- Card -->
-  <article class="card card-animation" id="card">
-    <!-- <div class="card category">{{ blog.category }}</div> -->
-    <a href="{{ blog.url }}">
-      <div class="inner" id="webp">
-
-        <div class="loading">
-          <div class="dot one"></div>
-          <div class="dot two"></div>
-          <div class="dot three"></div>
-          <div class="dot four"></div>
-        </div>
-        
-        <img class="card-img-top img-responsive lazy"  data-src="{{ blog.url | replace: 'blog', '_blog' | replace: 'index', '' }}/{{ blog.bannerImage | replace: 'png', 'webp' | replace: 'jpg', 'webp' | replace: 'jpeg', 'webp' }}" alt="{{ blog.bannerImageAlt }}" />
-
-      </div>
-    <div class="card-block">
-      <h4 class="card-title pt-2">{{ blog.title }}</h4>
-      <p class="card-text">{{ blog.description | truncate: 160 }}</p>
-      </a>
-    </div>
-  </article><!-- .end Card -->
-</div>
-{% endfor %}  
-</div>
-</div>
-
+</section>

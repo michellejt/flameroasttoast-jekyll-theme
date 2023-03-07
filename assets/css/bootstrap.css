@@ -1654,8 +1654,9 @@ p > img {
 }
 
 .blog .hero-img {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7934524151) 0%, rgba(0, 0, 0, 0.3) 60%), url(https://source.unsplash.com/random/900×700/?fruit) !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7934524151) 0%, rgba(0, 0, 0, 0.3) 60%), url(https://source.unsplash.com/random/900×700/?abstract) !important;
   background-position-y: center !important;
+  background-size: cover !important;
 }
 
 /*     GAMES-WRITING      */

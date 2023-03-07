@@ -3,22 +3,22 @@ layout: default
 ---
 
   <!-- Landing Start -->
-<section class="art-article">
-  
+<section class="blog-article">
+
  
   <header class="masthead">
-    <div class="hero-img" style="background:linear-gradient(0deg, rgba(0,0,0,0.7934524151457458) 0%, rgba(0,0,0,0.3) 60%), url('{{ page.bannerImage }}'); background-size:cover; background-position:{{ page.bannerImageFocus }}!important" ></div>
+    <div class="hero-img" ></div>
     <!-- <img src="{{ page.bannerImage }}" alt="{{ page.bannerImageAlt }}" > -->
 
   </header>
  
 <!-- Landing End -->
 
-<div class="container article-title-block pb-5">
+<div class="container article-title-block">
   <div class="row  justify-content-center ">
       <div class="col-lg-8 article-title">
           <h1 class="text-white text-center font-weight-bold">{{ page.title }}</h1>
-          
+          <p class="text-center text-white article-details"><span class="publisher">{{ page.publisher }}</span><span class="developer">{{ page.developer }}</span><span class="platform">{{ page.platform }}</span></p>
       </div>
   </div>
 </div>
@@ -56,30 +56,31 @@ layout: default
   <!------------------>
 
 
-  <div class = "row related-items p-4 mb-5">   
-    <a href="/art.html"><i class="fa-solid fa-circle-arrow-left"></i> Back to Art</a>
-     {% assign items = site.art | sort: 'date' %}
-     {% for item in items limit:4 %}
-     <div class = "col-sm-6 col-md-3">
-   
-        <a href = "{{ item.url }}" class = "thumbnail">
-   
-           <img src = "{{ item.url | replace: 'index', '' }}/{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
-           <p>{{ item.title }}</p>
-        </a>
-   
-     </div>
-     {% endfor %}
-   </div>
-   
-   
+
 
   <!------------------->
 
-      </div>
+
+
+<!--  -->
+
+<div class = "row related-items p-4 mb-5">   
+ <a href="/blog.html"><i class="fa-solid fa-circle-arrow-left"></i> Back to Blog</a>
+
+
+  {% assign items = site.blog | sort: 'date' %}
+  {% for item in items limit:4 %}
+  <div class = "col-sm-6 col-md-3">
+
+     <a href = "{{ item.url }}" class = "thumbnail">
+
+        <img src = "{{ item.url | replace: 'index', '' }}/{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
+        <p>{{ item.title }}</p>
+     </a>
 
   </div>
-  
+  {% endfor %}
+</div>
 
 
 
@@ -107,13 +108,8 @@ layout: default
   
   </section>  
   
-  
-  
-
-
 
 </article>
-
 
 
 

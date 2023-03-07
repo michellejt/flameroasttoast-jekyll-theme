@@ -1635,6 +1635,7 @@ p > img {
 .related-items a {
   color: inherit;
   text-decoration: none;
+  z-index: 100;
 }
 
 .related-items p {

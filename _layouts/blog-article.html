@@ -7,7 +7,7 @@ layout: default
   
  
   <header class="masthead">
-    <div class="hero-img" style="background:linear-gradient(0deg, rgba(0,0,0,0.7934524151457458) 0%, rgba(0,0,0,0.3) 60%), url('{{ page.bannerImage }}'); background-size:cover; background-position:{{ page.bannerImageFocus }}!important" ></div>
+    <div class="hero-img" style="background:linear-gradient(0deg, rgba(0,0,0,0.7934524151457458) 0%, rgba(0,0,0,0.3) 60%), url('https://source.unsplash.com/random/2000%C3%97400/?abstract'); background-size:cover; background-position:{{ page.bannerImageFocus }}!important" ></div>
     <!-- <img src="{{ page.bannerImage }}" alt="{{ page.bannerImageAlt }}" > -->
 
   </header>
@@ -58,7 +58,7 @@ layout: default
 
   <div class = "row related-items p-4 mb-5">   
     <a href="/"><i class="fa-solid fa-circle-arrow-left"></i> Back to Art</a>
-     {% assign items = site.art | sort: 'date' %}
+     {% assign items = site.blog | sort: 'date' %}
      {% for item in items limit:4 %}
      <div class = "col-sm-6 col-md-3">
    

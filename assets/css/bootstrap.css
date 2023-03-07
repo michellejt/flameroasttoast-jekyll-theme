@@ -1440,6 +1440,219 @@ p > img {
   z-index: 100;
 }
 
+/*     blog      */
+.blog .hero-overlay, .blog-article .hero-overlay {
+  height: 375px !important;
+}
+.blog .hero-overlay img, .blog-article .hero-overlay img {
+  width: 100%;
+  max-height: 375px;
+  object-fit: cover;
+  object-position: 0% 10%;
+}
+.blog .hero, .blog-article .hero {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 0px;
+  background: url("https://images.unsplash.com/photo-1585881728919-5c0ce925ad10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  height: 375px;
+}
+
+.blog-article .container {
+  margin-top: -50px;
+  background: #fff;
+  position: relative;
+  max-width: 1020px;
+}
+.blog-article .page-content {
+  margin: 15px 50px 50px 50px;
+}
+.blog-article img {
+  max-width: 100%;
+  height: auto;
+  margin-top: -75px;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blog header.masthead,
+.blog-article header.masthead {
+  /* 	min-height: 25rem!important;
+  	max-height: 25rem; */
+}
+
+.blog-article p:has(img) {
+  display: flex;
+}
+
+/*     blog      */
+.blog .hero-overlay, .blog-article .hero-overlay {
+  height: 375px !important;
+}
+.blog .hero-overlay img, .blog-article .hero-overlay img {
+  width: 100%;
+  max-height: 375px;
+  object-fit: cover;
+  object-position: 0% 10%;
+}
+.blog .hero, .blog-article .hero {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 0px;
+  background: url("https://images.unsplash.com/photo-1585881728919-5c0ce925ad10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  height: 375px;
+}
+
+.blog-article .container {
+  margin-top: -50px;
+  background: #fff;
+  position: relative;
+  max-width: 1020px;
+}
+.blog-article .page-content {
+  margin: 15px 50px 50px 50px;
+}
+.blog-article img {
+  max-width: 100%;
+  height: auto;
+  margin-top: -75px;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blog header.masthead,
+.blog-article header.masthead {
+  /* 	min-height: 25rem!important;
+    max-height: 25rem; */
+}
+
+.blog header h1, .blog header .h1 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  margin: auto;
+}
+
+/* .blog-article header h1 {
+	width:100%;
+ 	position: absolute;
+ 	left: 0;
+ 	right: 0;
+  	top: -145px;
+  	margin: auto;
+	font-size: 2.25rem!important;
+} */
+.blog-article img {
+  padding-top: 80px;
+}
+
+.blog article#card:focus,
+.blog article#card:hover,
+.blog article#card:active {
+  box-shadow: rgba(136, 165, 191, 0.48) 0px 2px 16px 0px, rgba(255, 255, 255, 0.8) 0px -2px 0px 0px;
+  padding: 10px;
+}
+.blog article#card {
+  padding: 10px;
+}
+
+.blog-article .page-tile {
+  margin-top: -100px !important;
+}
+
+/* @media (min-width: 993px) {
+  .blog-article .hero-img {
+      height:100vh;
+  }
+}
+*/
+@media (max-width: 992px) {
+  .blog-article .hero-img {
+    background-size: cover !important;
+    height: 350px;
+    margin-top: 45px;
+    background-position: center !important;
+  }
+  .blog-article header.masthead {
+    padding-bottom: 0;
+    height: 100% !important;
+    max-height: 350px !important;
+  }
+}
+.blog header h1,
+.blog header .h1 {
+  text-transform: capitalize;
+}
+
+.blog-article .hero-img {
+  background-position: center;
+}
+
+.blog-article header.masthead {
+  padding-bottom: 0;
+  height: 400px;
+  max-height: 400px;
+}
+
+@media (min-width: 993px) {
+  .blog-article .hero-img {
+    position: fixed;
+    max-height: 400px;
+  }
+  .blog-article .navbar-shrink + main .hero-img {
+    margin-top: 100px;
+    transform: scale(1);
+  }
+  .blog-article .hero-img {
+    margin-top: 0px;
+    transform: scale(1);
+    transition: all 800ms;
+  }
+}
+.blog-article p:has(img) {
+  display: flex;
+}
+.blog-article img + em {
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 15px 10px 15px;
+  margin: 5px 36px 0px 36px;
+  backdrop-filter: blur(10px);
+}
+
+.blog-article .article-title-block {
+  margin-bottom: 129px;
+}
+
+p > img {
+  width: inherit !important;
+}
+
+.blog .card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.blog .card-block {
+  padding: 10px 10px;
+}
+
+.related-items a {
+  color: inherit;
+  text-decoration: none;
+  z-index: 100;
+}
+
 /*     GAMES-WRITING      */
 .games-writing .hero-overlay, .games-writing-article .hero-overlay {
   height: 375px !important;

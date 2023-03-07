@@ -1434,6 +1434,12 @@ p > img {
   padding: 10px 10px;
 }
 
+.related-items a {
+  color: inherit;
+  text-decoration: none;
+  z-index: 100;
+}
+
 /*     GAMES-WRITING      */
 .games-writing .hero-overlay, .games-writing-article .hero-overlay {
   height: 375px !important;

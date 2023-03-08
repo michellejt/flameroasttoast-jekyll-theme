@@ -8,3 +8,5 @@ build.html
 
 myblog/
 michelleblog/
+# Local Netlify folder
+.netlify

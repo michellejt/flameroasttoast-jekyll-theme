@@ -13,6 +13,11 @@ layout: default
   </header>
  
  
+  {{ site.url | replace: 'art', '_art' | replace: 'index', '' }}/{{ page.bannerImage }}
+  {{ page.url | replace: 'art', '_art' | replace: 'index', '' }}/{{ page.bannerImage }}
+  {{ art.url | replace: 'art', '_art' | replace: 'index', '' }}/{{ page.bannerImage }}
+
+
 <!-- Landing End -->
 
 <div class="container article-title-block">

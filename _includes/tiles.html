@@ -25,7 +25,7 @@
 {{ site.data.navigation.navigation }}
 {% for item in site.data.navigation.tiles %}  
 <div class="col-xs-12 col-md-7 p-0 home-tiles">
-  <article class="card" id="card" class="{{ item.class }}">
+  <article class="card" id="card" class="">
 
                       <a href="{{ item.url  | relative_url }}">
                         <div class="loading">
@@ -39,7 +39,7 @@
                         <img class="card-img-top img-responsive lazy" data-src="{{ item.image }}" alt="{{ item.title }}" />
                       </div>
                       <div class="card-block">
-                        <h4 class="card-title">{{ item.title }}</h4>
+                        <h4 class="card-title">{{ item.title }} {{ item.class }}</h4>
                         </a>
                       </div>
 

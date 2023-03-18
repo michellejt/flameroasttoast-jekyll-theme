@@ -74,7 +74,7 @@ layout: default
 
      <a href = "{{ item.url }}" class = "thumbnail">
 
-        <img src = "{{ item.url | replace: 'index', '' }}/{{ item.bannerImage }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
+        <img src = "{{ item.url | replace: 'games-writing', '_games_writing' | replace: 'index', '' }}/{{ item.bannerImage | replace: 'png', 'webp' | replace: 'jpg', 'webp' | replace: 'jpeg', 'webp' }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
         <p>{{ item.title }}</p>
      </a>
     

@@ -1152,6 +1152,16 @@ padding-bottom: 0;
    filter: invert(100%);
 }
 
+  .social-icon--linktree .tooltip {
+	background: #43e660 !important;
+	color: currentColor !important;
+  }
+  .social-icon--linktree .tooltip:after {
+	border-top-color: #43e660 !important;
+  }
+
+
+
 footer h3 {
     font-size:1em;
 }

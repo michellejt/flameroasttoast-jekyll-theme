@@ -37,7 +37,14 @@ layout: default
     <p class="fst-italic fs-2 text-center strapline">{{ page.strapline }}</p>
 
 
+   
+
+
+   <img src = "{{ item.url | replace: 'art', '_art' | replace: 'index', '' }}/{{ item.bannerImage | replace: 'png', 'webp' | replace: 'jpg', 'webp' | replace: 'jpeg', 'webp' }}" alt = "{{ item.bannerImageAlt }}" class = "img-fluid">
+
+
    {{ content }}
+
   </div>
 
 

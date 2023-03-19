@@ -1041,9 +1041,13 @@ footer .quick-links {
   filter: invert(100%);
 }
 
+.social-icon--linktree a {
+  color: #FFF !important;
+}
+
 .social-icon--linktree .tooltip {
   background: #43e660 !important;
-  color: currentColor !important;
+  color: #FFF !important;
 }
 
 .social-icon--linktree .tooltip:after {

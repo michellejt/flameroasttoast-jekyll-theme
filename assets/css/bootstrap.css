@@ -1032,6 +1032,11 @@ footer .quick-links {
   padding: 15px;
 }
 
+.social-icon--kofi .tooltip {
+  width: 83px;
+  text-align: center;
+}
+
 .social-icon--linktree {
   background: #43e660;
 }
@@ -1047,7 +1052,9 @@ footer .quick-links {
 
 .social-icon--linktree .tooltip {
   background: #43e660 !important;
-  color: #FFF !important;
+  color: #fff !important;
+  width: 83px;
+  text-align: center;
 }
 
 .social-icon--linktree .tooltip:after {

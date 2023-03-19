@@ -1141,6 +1141,11 @@ padding-bottom: 0;
     padding: 15px;
 }
 
+.social-icon--kofi .tooltip {
+    width: 83px;
+    text-align: center;
+}
+
 
 .social-icon--linktree {
     //background: #94080e;
@@ -1157,9 +1162,12 @@ padding-bottom: 0;
 }
 
   .social-icon--linktree .tooltip {
-	background: #43e660 !important;
-	color: #FFF!important;
-  }
+    background: #43e660 !important;
+    color: #fff !important;
+    width: 83px;
+    text-align: center;
+}
+
   .social-icon--linktree .tooltip:after {
 	border-top-color: #43e660 !important;
   }

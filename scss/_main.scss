@@ -1141,6 +1141,17 @@ padding-bottom: 0;
     padding: 15px;
 }
 
+
+.social-icon--linktree {
+    //background: #94080e;
+    background:#43e660
+}
+
+.social-icon--linktree img {
+   width:50%;
+   filter: invert(100%);
+}
+
 footer h3 {
     font-size:1em;
 }

@@ -525,6 +525,37 @@ header.masthead {
   z-index: 100;
 }
 
+.home .card.half-t,
+.half-t .card-img-top {
+  height: 157.5px !important;
+  margin-bottom: 10px;
+}
+
+.home .card.half-b,
+.home .half-b .card-img-top {
+  height: 157.5px !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .home .card {
+    max-height: inherit !important;
+  }
+  .home .card.half-t,
+  .half-t .card-img-top {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .home .card,
+  .home .card-img-top {
+    height: 157.5px !important;
+    margin-bottom: 10px;
+  }
+  .home .card.half-t,
+  .half-t .card-img-top {
+    margin-bottom: 10px;
+  }
+}
 .strapline {
   color: #2a2a2a;
 }

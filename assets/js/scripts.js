@@ -64,3 +64,10 @@ $('.category:contains("review")').addClass("review");
 $('.category:contains("Editorial")').addClass("editorial");
 $('.category:contains("Review")').addClass("review");
 $('.category:contains("Guide")').addClass("guide");
+
+//this is to move the blog tile into the gamepodular tile
+const moveTile = document.querySelector(".half-b");
+const findParentTile = document.querySelector(".half-t");
+const parentTile = findParentTile.parentNode;
+parentTile.classList.add("half-tile");
+parentTile.appendChild(moveTile);

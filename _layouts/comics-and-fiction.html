@@ -32,9 +32,10 @@ layout: default
 
   <div class="container landing-tiles">
     <div class="row justify-content-center">
-      {% assign comics-and-fiction = site.comics-and-fiction |
-      where:"tile-nav","yes" | sort: 'published' | reverse %} {% for
-      comics-and-fiction in comics-and-fiction %}
+      {% for page in site.pages %} {% unless page.exclude %} {% if page.title %}
+      {% assign comics-and-fiction = site.comics-and-fiction | sort: 'published'
+      | reverse %} {% for comics-and-fiction in comics-and-fiction %} {% endif
+      %} {% endunless %} {% endfor %}
 
       <!-- <div class="card-wrapper col-lg-4 col-md-6 col-12 pt-4" data-aos="zoom-in-up">
   <article class="card card-animation" id="card">

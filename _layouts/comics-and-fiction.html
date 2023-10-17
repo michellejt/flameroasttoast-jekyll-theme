@@ -32,11 +32,9 @@ layout: default
 
   <div class="container landing-tiles">
     <div class="row justify-content-center">
-      {% for page in site.pages %} {% unless page.exclude %} {% assign
-      comics-and-fiction = site.comics-and-fiction | sort: 'published' | reverse
-      %} {% for comics-and-fiction in comics-and-fiction %} {% endunless %} {%
-      endfor %}
-
+      {% assign comics-and-fiction = site.comics-and-fiction | where:
+      "category", "comics" | sort: 'published' | reverse %} {% for
+      comics-and-fiction in comics-and-fiction %}
       <!-- <div class="card-wrapper col-lg-4 col-md-6 col-12 pt-4" data-aos="zoom-in-up">
   <article class="card card-animation" id="card">
     <div class="card category">{{ comics-and-fiction.category }}</div>

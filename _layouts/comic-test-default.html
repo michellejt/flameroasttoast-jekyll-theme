@@ -407,5 +407,135 @@ border-radius:50%;
   
   <body>
     <div class="wrapper">{{ content }}</div>
+    <script>
+//create an array with all the images we want to use in the modal
+var images = ["panel-1.webp"];
+for (var i = 1; i <= 33; i++) {
+images.push("panel-" + i + ".webp");
+}
+
+// Create an array of image objects
+var preloadedImages = [];
+
+// Loop through the image URLs
+for (var i = 0; i < images.length; i++) {
+// Create a new image object
+var img = new Image();
+// Set the src attribute to the image URL
+img.src = images[i];
+// Push the image object to the array
+preloadedImages.push(img);
+}
+
+// Get the modal element
+var modal = document.getElementsByClassName("modal")[0];
+
+// Get the image element inside the modal
+var modalImg = document.getElementById("img01");
+
+// Get all the panel divs
+var panels = document.getElementsByClassName("panel");
+
+var pageNavigation = document.querySelector(".page-navigation")
+
+console.log(pageNavigation)
+
+// Get the left and right arrow elements
+var leftArrow = document.querySelector("#left-arrow");
+var rightArrow = document.querySelector("#right-arrow");
+
+// Loop through the panel divs and add a click event listener to each one
+for (var i = 0; i < panels.length; i++) {
+panels[i].addEventListener("click", function() {
+// Make page nav controls visible
+pageNavigation.classList.add("active")  
+// Show the modal element
+modal.classList.add("show");
+// Get the image name from the class name of the div
+var imageName = this.className.split(" ")[1] + ".webp";
+// Set the image source to the matching image name from the array
+modalImg.src = images[images.indexOf(imageName)];
+// Set the current image index to the matching image index from the array
+currentImageIndex = images.indexOf(imageName);
+});
+}
+
+// Get the close button
+var span = document.getElementsByClassName("close")[0];
+
+// Add a click event listener to the close button
+span.onclick = function() {
+// Hide the modal element
+modal.classList.remove("show");
+}
+
+// Add a click event listener to the window
+window.onclick = function(event) {
+// If the user clicks anywhere inside the modal or the modal image, hide the modal element
+if (event.target == modal || event.target == modalImg) {
+modal.classList.remove("show");
+}
+}
+// Define a variable to store the current image index
+var currentImageIndex = 0;
+
+// Loop through the panel divs and add a click event listener to each one
+for (var i = 0; i < panels.length; i++) {
+panels[i].addEventListener("click", function() {
+// Make page nav controls visible
+pageNavigation.classList.add("active")  
+// Show the modal element
+modal.classList.add("show");
+// Get the image name from the class name of the div
+var imageName = this.className.split(" ")[1] + ".webp";
+// Set the image source to the matching image name from the array
+modalImg.src = images[images.indexOf(imageName)];
+// Set the current image index to the matching image index from the array
+currentImageIndex = images.indexOf(imageName);
+});
+}
+
+// Define a function to show the next image
+function showNextImage() {
+if (currentImageIndex < images.length - 1) { // Check if there is a next image
+currentImageIndex++; // Increment the current image index
+modalImg.src = images[currentImageIndex]; // Set the modal content source to the next image
+}
+}
+
+// Define a function to show the previous image
+function showPrevImage() {
+if (currentImageIndex > 0) { // Check if there is a previous image
+currentImageIndex--; // Decrement the current image index
+modalImg.src = images[currentImageIndex]; // Set the modal content source to the previous image
+}
+}
+
+// Add a click event listener to the right arrow element
+rightArrow.addEventListener("click", showNextImage);
+
+// Add a click event listener to the left arrow element
+leftArrow.addEventListener("click", showPrevImage);
+
+
+const observerOptions = {
+  root: null,
+  threshold: 0,
+  rootMargin: "0px 0px -50px 0px",
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("in-view", entry.isIntersecting);
+  });
+}, observerOptions);
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  const articles = Array.from(document.querySelectorAll(".container"));
+  for (let article of articles) {
+    observer.observe(article);
+  }
+});
+</script>
   </body>
 </html>

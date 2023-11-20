@@ -3,539 +3,668 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }}</title>
 
-<head>
-<style>
-html {
-  scroll-behavior: smooth;
-  -webkit-backface-visibility: hidden;
-}
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-backface-visibility: hidden;
+      }
 
+      /* target firefox*/
+      @supports (-moz-appearance: none) {
+        .page {
+          max-width: 855px;
+          place-self: center;
+          height: 98vh;
+          scroll-snap-align: start;
+          padding-top: 0px !important;
+        }
+      }
 
-/* target firefox*/
-@supports (-moz-appearance:none) {
-    .page {
-    max-width: 855px;
-    place-self: center;
-    height: 98vh;
-    scroll-snap-align: start;
-    padding-top: 0px!important;
-    }
-}
+      ::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+      }
 
-::-webkit-scrollbar {
-     display: none;
-    /* Safari and Chrome */
-}
+      .masthead,
+      #mainNav,
+      .card-wrapper,
+      footer {
+        display: none;
+      }
 
-.masthead, #mainNav, .card-wrapper, footer {
-display: none;
-}
+      .fadein img {
+        /* transform: rotateY(15deg); */
+        opacity: 0;
+        transition-property: transform, opacity;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+      }
+      .in-view img {
+        transform: none;
+        opacity: 1;
+      }
 
- .fadein img {
-     /* transform: rotateY(15deg); */
-     opacity: 0;
-     transition-property: transform, opacity;
-     transition-duration: 1s;
-     transition-timing-function:ease-out;
-}
- .in-view img {
-     transform: none;
-     opacity: 1;
-}
+      .panel img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
 
+      .wrapper {
+        display: grid;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+      }
 
-.panel img {
-  margin-left: auto;
-margin-right: auto;
-width: 100%;
-height: 100%; 
-object-fit: contain;
-object-position: center;
-}
+      .page {
+        place-self: center;
+        height: 98vh;
+        scroll-snap-align: start;
+        padding-top: 15px;
+      }
 
-.wrapper {
-  display: grid;
-    height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-}
+      .container {
+        height: inherit;
+        display: flex;
+        justify-content: center;
+      }
 
-.page {
-    place-self: center;
-    height: 98vh;
-    scroll-snap-align: start;
-    padding-top: 15px;
-}
-
-.container {
-  height: inherit;
-  display: flex;
-  justify-content: center;
-}
-
-.container-page-1 {
-display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 8.5fr 11fr 16fr;
-  aspect-ratio: 0.65/1;
-  gap: 3px 3px;
-  grid-auto-flow: row;
-  grid-auto-rows: minmax(500px, auto);
-  grid-template-areas:
-"panel-1 panel-1 panel-1 panel-1" 
-"panel-2 panel-2 panel-2 panel-2" 
-"panel-3 panel-3 panel-4 panel-4";
-  margin: auto;
-}
-
-.fadein {
-  width: 100%;
-  height: 100vh;
-}
-
-
-.panel {
-  background: var(--panel-image);
-  background-size: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: solid black 3px;
-  will-change: transform; /* add this line */
-}
-.panel-1 { 
-  grid-area: panel-1; 
-}
-.panel-2 { grid-area: panel-2; }
-.panel-3 { grid-area: panel-3; }
-.panel-4 { grid-area: panel-4; }
-
-.container-page-2 {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 32fr [oa] 31fr 14fr;
-  gap: 3px 3px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "panel-5 panel-6 panel-7"
-    "panel-8 panel-8 panel-8"
-    "panel-9 panel-9 panel-9";
-    aspect-ratio: 0.65/1;
-  gap: 3px 3px;
-  grid-auto-flow: row;
-  grid-auto-rows: minmax(500px, auto);
-  margin: auto;
-}
-
-.panel-5 { grid-area: panel-5; }
-.panel-6 { grid-area: panel-6; }
-.panel-7 { grid-area: panel-7; }
-.panel-8 { grid-area: panel-8; }
-.panel-9 { grid-area: panel-9; }
-
-.container-page-3 {  display: grid;
-      grid-template-columns: 0fr 3fr 1fr 2fr;
-    grid-template-rows: 17fr [oa] 28fr 16fr 16fr 18fr;
-    grid-template-areas: 
-    "panel-10 panel-10 panel-10 panel-10"
-    "panel-11 panel-11 panel-12 panel-12"
-    "panel-13 panel-13 panel-13 panel-16"
-    "panel-14 panel-14 panel-14 panel-16"
-    "panel-15 panel-15 panel-15 panel-16"; 
+      .container-page-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 8.5fr 11fr 16fr;
         aspect-ratio: 0.65/1;
-  gap: 3px 3px;
-  grid-auto-flow: row;
-  grid-auto-rows: minmax(500px, auto);
-  margin: auto;
-}
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        grid-auto-rows: minmax(500px, auto);
+        grid-template-areas:
+          "panel-1 panel-1 panel-1 panel-1"
+          "panel-2 panel-2 panel-2 panel-2"
+          "panel-3 panel-3 panel-4 panel-4";
+        margin: auto;
+      }
 
-.panel-10 { grid-area: panel-10; }
-.panel-11 { grid-area: panel-11; }
-.panel-12 { grid-area: panel-12; }
-.panel-13 { grid-area: panel-13; }
-.panel-14 { grid-area: panel-14; }
-.panel-15 { grid-area: panel-15; }
-.panel-16 { grid-area: panel-16; }
+      .fadein {
+        width: 100%;
+        height: 100vh;
+      }
 
+      .panel {
+        background: var(--panel-image);
+        background-size: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: solid black 3px;
+        will-change: transform; /* add this line */
+      }
+      .panel-1 {
+        grid-area: panel-1;
+      }
+      .panel-2 {
+        grid-area: panel-2;
+      }
+      .panel-3 {
+        grid-area: panel-3;
+      }
+      .panel-4 {
+        grid-area: panel-4;
+      }
 
-.container-page-4 {  display: grid;
-  grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.7fr 0.3fr;
-  grid-template-rows: 4fr [oa] 1.5fr;
-  gap: 3px 3px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "panel-17 panel-17 panel-17 panel-17 panel-17 panel-17"
-    ". panel-18 panel-18 panel-18 panel-18 .";
-  aspect-ratio: 0.65/1;
-  grid-auto-rows: minmax(500px, auto);
-  margin: auto;
-}
+      .container-page-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 32fr [oa] 31fr 14fr;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "panel-5 panel-6 panel-7"
+          "panel-8 panel-8 panel-8"
+          "panel-9 panel-9 panel-9";
+        aspect-ratio: 0.65/1;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        grid-auto-rows: minmax(500px, auto);
+        margin: auto;
+      }
 
-.panel-17 { grid-area: panel-17;
-border: none;
- }
-.panel-18 { grid-area: panel-18; }
+      .panel-5 {
+        grid-area: panel-5;
+      }
+      .panel-6 {
+        grid-area: panel-6;
+      }
+      .panel-7 {
+        grid-area: panel-7;
+      }
+      .panel-8 {
+        grid-area: panel-8;
+      }
+      .panel-9 {
+        grid-area: panel-9;
+      }
 
-.container-page-5 {  display: grid;
-  grid-template-columns: 1fr 1fr 0.4fr 1fr;
-  grid-template-rows: 1fr [oa] 0.9fr 1fr;
-  gap: 3px 3px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "panel-19 panel-19 panel-20 panel-20"
-    "panel-21 panel-21 panel-21 panel-21"
-    "panel-22 panel-22 panel-22 panel-22";
-      aspect-ratio: 0.65/1;
-  grid-auto-rows: minmax(500px, auto);
-  margin: auto;
-}
+      .container-page-3 {
+        display: grid;
+        grid-template-columns: 0fr 3fr 1fr 2fr;
+        grid-template-rows: 17fr [oa] 28fr 16fr 16fr 18fr;
+        grid-template-areas:
+          "panel-10 panel-10 panel-10 panel-10"
+          "panel-11 panel-11 panel-12 panel-12"
+          "panel-13 panel-13 panel-13 panel-16"
+          "panel-14 panel-14 panel-14 panel-16"
+          "panel-15 panel-15 panel-15 panel-16";
+        aspect-ratio: 0.65/1;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        grid-auto-rows: minmax(500px, auto);
+        margin: auto;
+      }
 
-.panel-19 { grid-area: panel-19; }
-.panel-20 { grid-area: panel-20; }
-.panel-21 { grid-area: panel-21; }
-.panel-22 { grid-area: panel-22; }
+      .panel-10 {
+        grid-area: panel-10;
+      }
+      .panel-11 {
+        grid-area: panel-11;
+      }
+      .panel-12 {
+        grid-area: panel-12;
+      }
+      .panel-13 {
+        grid-area: panel-13;
+      }
+      .panel-14 {
+        grid-area: panel-14;
+      }
+      .panel-15 {
+        grid-area: panel-15;
+      }
+      .panel-16 {
+        grid-area: panel-16;
+      }
 
-.container-page-6 {  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 0.23fr 0.6fr 2fr 1.4fr; 
-  gap: 3px 3px;
-  grid-auto-flow: row;
-  aspect-ratio: 0.65/1;
-  grid-auto-rows: minmax(500px, auto);
-  margin: auto;
-}
+      .container-page-4 {
+        display: grid;
+        grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.7fr 0.3fr;
+        grid-template-rows: 4fr [oa] 1.5fr;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "panel-17 panel-17 panel-17 panel-17 panel-17 panel-17"
+          ". panel-18 panel-18 panel-18 panel-18 .";
+        aspect-ratio: 0.65/1;
+        grid-auto-rows: minmax(500px, auto);
+        margin: auto;
+      }
 
-.panel-23 { grid-area: 1 / 2 / 3 / 4; z-index: 1; }
-.panel-24 { grid-area: 2 / 1 / 4 / 3; }
-.panel-25 { grid-area: 2 / 3 / 4 / 5; }
-.panel-26 { grid-area: 4 / 1 / 5 / 5; }
+      .panel-17 {
+        grid-area: panel-17;
+        border: none;
+      }
+      .panel-18 {
+        grid-area: panel-18;
+      }
 
-.container-page-6 .panel {
-  border: 0;
-}
+      .container-page-5 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.4fr 1fr;
+        grid-template-rows: 1fr [oa] 0.9fr 1fr;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "panel-19 panel-19 panel-20 panel-20"
+          "panel-21 panel-21 panel-21 panel-21"
+          "panel-22 panel-22 panel-22 panel-22";
+        aspect-ratio: 0.65/1;
+        grid-auto-rows: minmax(500px, auto);
+        margin: auto;
+      }
 
-.container-page-7  {
-  display: grid; 
-  grid-template-columns: 0.1fr 1.5fr 1.5fr 1.5fr 0.1fr;
-  grid-template-rows: 1.2fr [oa] 3fr;
-  gap: 8px 3px;
-  grid-template-areas: 
-    "panel-28 panel-28 panel-28 panel-28 panel-28"
-    ". panel-29 panel-30 panel-31 ."; 
-  aspect-ratio: 0.65/1;
-  grid-auto-rows: minmax(500px, auto);
-  margin: auto;
-}
+      .panel-19 {
+        grid-area: panel-19;
+      }
+      .panel-20 {
+        grid-area: panel-20;
+      }
+      .panel-21 {
+        grid-area: panel-21;
+      }
+      .panel-22 {
+        grid-area: panel-22;
+      }
 
-.panel-27 { grid-area: panel-28; 
-border: none;
-}
-.panel-28 { grid-area: panel-29; }
-.panel-29 { grid-area: panel-30; }
-.panel-30 { grid-area: panel-31; }
+      .container-page-6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.23fr 0.6fr 2fr 1.4fr;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        aspect-ratio: 0.65/1;
+        grid-auto-rows: minmax(500px, auto);
+        margin: auto;
+      }
 
-.container-page-8 {
-  display: grid;
-  grid-template-columns: 0.2fr 0.8fr 2.9fr 0.9fr 0.2fr;
-  grid-template-rows: 1.2fr 1fr 0.29fr 1.75fr;
-  grid-auto-columns: 1fr; 
-  gap: 3px 3px;
-  grid-auto-flow: row;
-  aspect-ratio: 0.65/1;
-  grid-auto-rows: minmax(500px, auto);
-  margin: auto;
-}
+      .panel-23 {
+        grid-area: 1 / 2 / 3 / 4;
+        z-index: 1;
+      }
+      .panel-24 {
+        grid-area: 2 / 1 / 4 / 3;
+      }
+      .panel-25 {
+        grid-area: 2 / 3 / 4 / 5;
+      }
+      .panel-26 {
+        grid-area: 4 / 1 / 5 / 5;
+      }
 
-.panel-31 { grid-area: 1 / 2 / 2 / 5; }
-.panel-32 { grid-area: 2 / 2 / 4 / 5; 
-z-index: 1}
-.panel-33 { grid-area: 3 / 1 / 5 / 6; 
-border: none;
-border-top: solid;
-}
+      .container-page-6 .panel {
+        border: 0;
+      }
 
+      .container-page-7 {
+        display: grid;
+        grid-template-columns: 0.1fr 1.5fr 1.5fr 1.5fr 0.1fr;
+        grid-template-rows: 1.2fr [oa] 3fr;
+        gap: 8px 3px;
+        grid-template-areas:
+          "panel-28 panel-28 panel-28 panel-28 panel-28"
+          ". panel-29 panel-30 panel-31 .";
+        aspect-ratio: 0.65/1;
+        grid-auto-rows: minmax(500px, auto);
+        margin: auto;
+      }
 
-/*modal*/
-.modal {
-visibility: hidden;
-position: fixed; 
-z-index: 1; 
-left: 0;
-top: 0;
-width: 100%; 
-height: 100%; 
-overflow: auto; 
-background-color: rgb(0,0,0); 
-background-color: rgba(0,0,0,0.9); 
-opacity: 0;
-transition: opacity 0.5s ease-in-out, visibility 0s ease-in-out 0.5s;
-}
+      .panel-27 {
+        grid-area: panel-28;
+        border: none;
+      }
+      .panel-28 {
+        grid-area: panel-29;
+      }
+      .panel-29 {
+        grid-area: panel-30;
+      }
+      .panel-30 {
+        grid-area: panel-31;
+      }
 
-/* Style the modal content (image) */
-.modal-content {
-margin: auto;
-display: block;
-opacity: 0; 
-transition: opacity 0.5s ease-in-out; 
-max-height:100%;
-/* Center it horizontally */
-margin-left: auto;
-margin-right: auto;
-/* Set the maximum width and height to fit the screen */
-max-width: 100%;
-max-height: 100%;
-/* Center it horizontally and vertically */
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-position: absolute;
-}
+      .container-page-8 {
+        display: grid;
+        grid-template-columns: 0.2fr 0.8fr 2.9fr 0.9fr 0.2fr;
+        grid-template-rows: 1.2fr 1fr 0.29fr 1.75fr;
+        grid-auto-columns: 1fr;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        aspect-ratio: 0.65/1;
+        grid-auto-rows: minmax(500px, auto);
+        margin: auto;
+      }
 
-/* Show the modal element when it is opened */
-.modal.show {
-visibility: visible;
-opacity: 1;
-transition-delay: 0s;
-}
+      .panel-31 {
+        grid-area: 1 / 2 / 2 / 5;
+      }
+      .panel-32 {
+        grid-area: 2 / 2 / 4 / 5;
+        z-index: 1;
+      }
+      .panel-33 {
+        grid-area: 3 / 1 / 5 / 6;
+        border: none;
+        border-top: solid;
+      }
 
-/* Show the modal content when it is opened */
-.modal.show .modal-content {
-opacity: 1;
-}
+      /*modal*/
+      .modal {
+        visibility: hidden;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, visibility 0s ease-in-out 0.5s;
+      }
 
-/* Style the close button */
-.close {
-position: absolute;
-top: 15px;
-right: 35px;
-color: #f1f1f1;
-font-size: 40px;
-font-weight: bold;
-transition: 0.3s;
-}
+      /* Style the modal content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        max-height: 100%;
+        /* Center it horizontally */
+        margin-left: auto;
+        margin-right: auto;
+        /* Set the maximum width and height to fit the screen */
+        max-width: 100%;
+        max-height: 100%;
+        /* Center it horizontally and vertically */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
 
-.close:hover,
-.close:focus {
-color: #bbb;
-text-decoration: none;
-cursor: pointer;
-}
+      /* Show the modal element when it is opened */
+      .modal.show {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s;
+      }
 
-.page-navigation {
-  opacity:0;
-    transition: opacity 0.5s linear 0.5s;
-}
+      /* Show the modal content when it is opened */
+      .modal.show .modal-content {
+        opacity: 1;
+      }
 
-.page-navigation.active {
-  opacity:1;
-  transition: opacity 0.5s linear 0.5s;
-}
+      /* Style the close button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
 
-.page-navigation.active #right-arrow {
-  right: 0!important;
-}
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
 
-.page-navigation.active #left-arrow {
-  left: 0!important;
-}
+      .page-navigation {
+        opacity: 0;
+        transition: opacity 0.5s linear 0.5s;
+      }
 
+      .page-navigation.active {
+        opacity: 1;
+        transition: opacity 0.5s linear 0.5s;
+      }
 
-#left-arrow {
-position: absolute;
-top: 50%;
-width: 50px;
-height: 50px;
-color: white;
-font-size: 40px;
-text-align: center;
-line-height: 50px;
-border: 2px solid white;
-border-radius: 50%;
-}
+      .page-navigation.active #right-arrow {
+        right: 0 !important;
+      }
 
-#right-arrow {
-position: absolute;
-right: 0%;
-top:50%;
-width:50px;
-height:50px;
-color:white;
-font-size:40px;
-text-align:center;
-line-height:50px;
-border:2px solid white;
-border-radius:50%;
-}
+      .page-navigation.active #left-arrow {
+        left: 0 !important;
+      }
 
-.page-navigation.active  {
-    opacity:1;
-    z-index: 10;
-}
-.page-navigation.active div:hover {
-    cursor:pointer;
-    background: rgba(212, 31, 59, .4) ;
-    transition: background-color 0.5s ease;
-}
+      #left-arrow {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        line-height: 50px;
+        border: 2px solid white;
+        border-radius: 50%;
+      }
 
-/* 1284×2778 pixels at 458ppi */
-@media only screen and (-webkit-min-device-pixel-ratio: 3) {
- .wrapper {
- height: unset;
-  overflow: auto;
-    scroll-snap-type: unset;
-    -ms-overflow-style: unset;
-    scrollbar-width: unset;
-    scroll-behavior: smooth;
-}
-          .page {
-            max-width: unset!important;
-            place-self: center;
-            height: auto;
-            width: 100%;
-            scroll-snap-align: none!important;
-            padding-top: 0px;
-            padding-bottom: 15px;
-  } 
-  .container {
-    height: unset!important;
-  }
-}
+      #right-arrow {
+        position: absolute;
+        right: 0%;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        color: white;
+        font-size: 40px;
+        text-align: center;
+        line-height: 50px;
+        border: 2px solid white;
+        border-radius: 50%;
+      }
 
-</style>
-</head>
-  
+      .page-navigation.active {
+        opacity: 1;
+        z-index: 10;
+      }
+      .page-navigation.active div:hover {
+        cursor: pointer;
+        background: rgba(212, 31, 59, 0.4);
+        transition: background-color 0.5s ease;
+      }
+
+      /* 1284×2778 pixels at 458ppi */
+      @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+        .wrapper {
+          height: unset;
+          overflow: auto;
+          scroll-snap-type: unset;
+          -ms-overflow-style: unset;
+          scrollbar-width: unset;
+          scroll-behavior: smooth;
+        }
+        .page {
+          max-width: unset !important;
+          place-self: center;
+          height: auto;
+          width: 100%;
+          scroll-snap-align: none !important;
+          padding-top: 0px;
+          padding-bottom: 15px;
+        }
+        .container {
+          height: unset !important;
+        }
+        .front-cover.page {
+          height: 100vh;
+        }
+      }
+      .logo img {
+        object-position: 10% 90%;
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+      }
+
+      .logo {
+        height: inherit;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .front-cover {
+        background: url(front-cover.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 35%;
+        height: 100%;
+      }
+
+      .cover {
+        height: inherit;
+      }
+      .container:has(.front-cover) {
+        display: unset;
+      }
+      .page {
+        padding-top: 0 !important;
+      }
+
+      .ball {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-image: url(football.png);
+        animation: bounce 0.5s;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+        animation-iteration-count: infinite;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: auto;
+      }
+
+      @keyframes bounce {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        to {
+          transform: translate3d(0, 200px, 0);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ball {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+
   <body>
     <div class="wrapper">{{ content }}</div>
     <script>
-//create an array with all the images we want to use in the modal
-var images = ["panel-1.webp"];
-for (var i = 1; i <= 33; i++) {
-images.push("panel-" + i + ".webp");
-}
+      //create an array with all the images we want to use in the modal
+      var images = ["panel-1.webp"];
+      for (var i = 1; i <= 33; i++) {
+        images.push("panel-" + i + ".webp");
+      }
 
-// Create an array of image objects
-var preloadedImages = [];
+      // Create an array of image objects
+      var preloadedImages = [];
 
-// Loop through the image URLs
-for (var i = 0; i < images.length; i++) {
-// Create a new image object
-var img = new Image();
-// Set the src attribute to the image URL
-img.src = images[i];
-// Push the image object to the array
-preloadedImages.push(img);
-}
+      // Loop through the image URLs
+      for (var i = 0; i < images.length; i++) {
+        // Create a new image object
+        var img = new Image();
+        // Set the src attribute to the image URL
+        img.src = images[i];
+        // Push the image object to the array
+        preloadedImages.push(img);
+      }
 
-// Get the modal element
-var modal = document.getElementsByClassName("modal")[0];
+      // Get the modal element
+      var modal = document.getElementsByClassName("modal")[0];
 
-// Get the image element inside the modal
-var modalImg = document.getElementById("img01");
+      // Get the image element inside the modal
+      var modalImg = document.getElementById("img01");
 
-// Get all the panel divs
-var panels = document.getElementsByClassName("panel");
+      // Get all the panel divs
+      var panels = document.getElementsByClassName("panel");
 
-var pageNavigation = document.querySelector(".page-navigation")
+      var pageNavigation = document.querySelector(".page-navigation");
 
-console.log(pageNavigation)
+      console.log(pageNavigation);
 
-// Get the left and right arrow elements
-var leftArrow = document.querySelector("#left-arrow");
-var rightArrow = document.querySelector("#right-arrow");
+      // Get the left and right arrow elements
+      var leftArrow = document.querySelector("#left-arrow");
+      var rightArrow = document.querySelector("#right-arrow");
 
-// Loop through the panel divs and add a click event listener to each one
-for (var i = 0; i < panels.length; i++) {
-panels[i].addEventListener("click", function() {
-// Make page nav controls visible
-pageNavigation.classList.add("active")  
-// Show the modal element
-modal.classList.add("show");
-// Get the image name from the class name of the div
-var imageName = this.className.split(" ")[1] + ".webp";
-// Set the image source to the matching image name from the array
-modalImg.src = images[images.indexOf(imageName)];
-// Set the current image index to the matching image index from the array
-currentImageIndex = images.indexOf(imageName);
-});
-}
+      // Loop through the panel divs and add a click event listener to each one
+      for (var i = 0; i < panels.length; i++) {
+        panels[i].addEventListener("click", function () {
+          // Make page nav controls visible
+          pageNavigation.classList.add("active");
+          // Show the modal element
+          modal.classList.add("show");
+          // Get the image name from the class name of the div
+          var imageName = this.className.split(" ")[1] + ".webp";
+          // Set the image source to the matching image name from the array
+          modalImg.src = images[images.indexOf(imageName)];
+          // Set the current image index to the matching image index from the array
+          currentImageIndex = images.indexOf(imageName);
+        });
+      }
 
-// Get the close button
-var span = document.getElementsByClassName("close")[0];
+      // Get the close button
+      var span = document.getElementsByClassName("close")[0];
 
-// Add a click event listener to the close button
-span.onclick = function() {
-// Hide the modal element
-modal.classList.remove("show");
-}
+      // Add a click event listener to the close button
+      span.onclick = function () {
+        // Hide the modal element
+        modal.classList.remove("show");
+      };
 
-// Add a click event listener to the window
-window.onclick = function(event) {
-// If the user clicks anywhere inside the modal or the modal image, hide the modal element
-if (event.target == modal || event.target == modalImg) {
-modal.classList.remove("show");
-}
-}
-// Define a variable to store the current image index
-var currentImageIndex = 0;
+      // Add a click event listener to the window
+      window.onclick = function (event) {
+        // If the user clicks anywhere inside the modal or the modal image, hide the modal element
+        if (event.target == modal || event.target == modalImg) {
+          modal.classList.remove("show");
+        }
+      };
+      // Define a variable to store the current image index
+      var currentImageIndex = 0;
 
-// Loop through the panel divs and add a click event listener to each one
-for (var i = 0; i < panels.length; i++) {
-panels[i].addEventListener("click", function() {
-// Make page nav controls visible
-pageNavigation.classList.add("active")  
-// Show the modal element
-modal.classList.add("show");
-// Get the image name from the class name of the div
-var imageName = this.className.split(" ")[1] + ".webp";
-// Set the image source to the matching image name from the array
-modalImg.src = images[images.indexOf(imageName)];
-// Set the current image index to the matching image index from the array
-currentImageIndex = images.indexOf(imageName);
-});
-}
+      // Loop through the panel divs and add a click event listener to each one
+      for (var i = 0; i < panels.length; i++) {
+        panels[i].addEventListener("click", function () {
+          // Make page nav controls visible
+          pageNavigation.classList.add("active");
+          // Show the modal element
+          modal.classList.add("show");
+          // Get the image name from the class name of the div
+          var imageName = this.className.split(" ")[1] + ".webp";
+          // Set the image source to the matching image name from the array
+          modalImg.src = images[images.indexOf(imageName)];
+          // Set the current image index to the matching image index from the array
+          currentImageIndex = images.indexOf(imageName);
+        });
+      }
 
-// Define a function to show the next image
-function showNextImage() {
-if (currentImageIndex < images.length - 1) { // Check if there is a next image
-currentImageIndex++; // Increment the current image index
-modalImg.src = images[currentImageIndex]; // Set the modal content source to the next image
-}
-}
+      // Define a function to show the next image
+      function showNextImage() {
+        if (currentImageIndex < images.length - 1) {
+          // Check if there is a next image
+          currentImageIndex++; // Increment the current image index
+          modalImg.src = images[currentImageIndex]; // Set the modal content source to the next image
+        }
+      }
 
-// Define a function to show the previous image
-function showPrevImage() {
-if (currentImageIndex > 0) { // Check if there is a previous image
-currentImageIndex--; // Decrement the current image index
-modalImg.src = images[currentImageIndex]; // Set the modal content source to the previous image
-}
-}
+      // Define a function to show the previous image
+      function showPrevImage() {
+        if (currentImageIndex > 0) {
+          // Check if there is a previous image
+          currentImageIndex--; // Decrement the current image index
+          modalImg.src = images[currentImageIndex]; // Set the modal content source to the previous image
+        }
+      }
 
-// Add a click event listener to the right arrow element
-rightArrow.addEventListener("click", showNextImage);
+      // Add a click event listener to the right arrow element
+      rightArrow.addEventListener("click", showNextImage);
 
-// Add a click event listener to the left arrow element
-leftArrow.addEventListener("click", showPrevImage);
+      // Add a click event listener to the left arrow element
+      leftArrow.addEventListener("click", showPrevImage);
 
+      const observerOptions = {
+        root: null,
+        threshold: 0,
+        rootMargin: "0px 0px -50px 0px",
+      };
 
-const observerOptions = {
-  root: null,
-  threshold: 0,
-  rootMargin: "0px 0px -50px 0px",
-};
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("in-view", entry.isIntersecting);
+        });
+      }, observerOptions);
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    entry.target.classList.toggle("in-view", entry.isIntersecting);
-  });
-}, observerOptions);
-
-window.addEventListener("DOMContentLoaded", (event) => {
-  const articles = Array.from(document.querySelectorAll(".container"));
-  for (let article of articles) {
-    observer.observe(article);
-  }
-});
-</script>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        const articles = Array.from(document.querySelectorAll(".container"));
+        for (let article of articles) {
+          observer.observe(article);
+        }
+      });
+    </script>
   </body>
 </html>

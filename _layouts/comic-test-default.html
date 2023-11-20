@@ -78,6 +78,11 @@
         height: inherit;
         display: flex;
         justify-content: center;
+        background: url(bg1.webp), url(bg2.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0% 0%, 100% 0%;
+        background-attachment: fixed;
       }
 
       .container-page-1 {
@@ -498,6 +503,7 @@
       }
       .container:has(.front-cover) {
         display: unset;
+        background: none;
       }
       .page {
         padding-top: 0 !important;

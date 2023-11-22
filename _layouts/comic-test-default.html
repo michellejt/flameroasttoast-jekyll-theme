@@ -73,6 +73,9 @@
         opacity: 0;
         transition: opacity 1s;
       }
+      .panel:hover, .modal img:hover {
+        cursor:pointer;
+      }
 
       .container.in-view .panel {
         opacity: 1;
@@ -531,8 +534,6 @@
       }
 
       .logo {
-        height: inherit;
-        height: 500px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -547,6 +548,10 @@
         background-repeat: no-repeat;
         background-position: 0 35%;
         animation: fade-in 3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100vh;
       }
 
       @keyframes fade-in {
@@ -557,9 +562,12 @@
           opacity: 1;
         }
       }
-
+   
       .cover {
         height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
       }
       .container:has(.front-cover) {
         display: unset;

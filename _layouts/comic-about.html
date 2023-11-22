@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.description }}</title>
+
+  <head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/comics-and-fiction/strangers-on-a-train/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/comics-and-fiction/strangers-on-a-train/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/comics-and-fiction/strangers-on-a-train/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="/comics-and-fiction/strangers-on-a-train/site.webmanifest"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-backface-visibility: hidden;
+      }
+
+      /* target firefox*/
+      @supports (-moz-appearance: none) {
+        .page {
+          max-width: 855px;
+          place-self: center;
+          height: 98vh;
+          scroll-snap-align: start;
+          padding-top: 0px !important;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+      }
+
+      .masthead,
+      #mainNav,
+      .card-wrapper,
+      footer {
+        display: none;
+      }
+
+      .fadein img {
+        /* transform: rotateY(15deg); */
+        opacity: 0;
+        transition-property: transform, opacity;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+      }
+      .in-view img {
+        transform: none;
+        opacity: 1;
+      }
+
+      .panel {
+        opacity: 0;
+        transition: opacity 1s;
+      }
+
+      .container.in-view .panel {
+        opacity: 1;
+      }
+
+      .panel img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .wrapper {
+        display: grid;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+      }
+
+      .page {
+        place-self: center;
+        height: 98vh;
+        scroll-snap-align: start;
+        padding-top: 15px;
+      }
+
+      .container {
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        background: url(bg1.webp), url(bg2.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0% 0%, 100% 0%;
+        background-attachment: fixed;
+      }
+
+      /*modal*/
+      .modal {
+        visibility: hidden;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, visibility 0s ease-in-out 0.5s;
+      }
+
+      /* Style the modal content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        max-height: 100%;
+        /* Center it horizontally */
+        margin-left: auto;
+        margin-right: auto;
+        /* Set the maximum width and height to fit the screen */
+        max-width: 100%;
+        max-height: 100%;
+        /* Center it horizontally and vertically */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+
+      /* Show the modal element when it is opened */
+      .modal.show {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s;
+      }
+
+      /* Show the modal content when it is opened */
+      .modal.show .modal-content {
+        opacity: 1;
+      }
+
+      /* Style the close button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* 1284×2778 pixels at 458ppi */
+      @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+        .wrapper {
+          height: unset;
+          overflow: auto;
+          scroll-snap-type: unset;
+          -ms-overflow-style: unset;
+          scrollbar-width: unset;
+          scroll-behavior: smooth;
+        }
+        .page {
+          max-width: unset !important;
+          place-self: center;
+          height: auto;
+          width: 100%;
+          scroll-snap-align: none !important;
+          padding-top: 0px;
+          padding-bottom: 15px;
+        }
+        .container {
+          height: unset !important;
+        }
+        .front-cover.page {
+          height: 100vh;
+        }
+        .front-cover {
+          animation: none;
+        }
+      }
+      .logo img {
+        object-position: 10% 90%;
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+      }
+
+      .logo {
+        height: inherit;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+      }
+      .front-cover.page {
+        height: 100vh;
+      }
+      .front-cover {
+        background: url(front-cover.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 35%;
+        animation: fade-in 3s;
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .cover {
+        height: inherit;
+      }
+      .container:has(.front-cover) {
+        display: unset;
+        background: none;
+      }
+      .page {
+        padding-top: 0 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="front-cover page">
+          <div class="cover">{{ content }}</div>
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>

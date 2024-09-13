@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.description }}</title>
+
+  <head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/comics-and-fiction/strangers-on-a-train/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/comics-and-fiction/strangers-on-a-train/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/comics-and-fiction/strangers-on-a-train/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="/comics-and-fiction/strangers-on-a-train/site.webmanifest"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 200vh; /* Make the page tall enough to scroll */
+      }
+
+      .content {
+        text-align: center;
+        padding: 50px;
+      }
+
+      .spacer {
+        height: 100vh; /* Space to scroll before the image appears */
+      }
+
+      .scroll-image {
+        width: 100%;
+        max-width: 600px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .scroll-image.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">{{ content }}</div>
+    <script>
+      let lastScrollTop = 0;
+
+      document.addEventListener("scroll", function () {
+        const image = document.querySelector(".scroll-image");
+        const imagePosition = image.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        const currentScrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (imagePosition < screenPosition) {
+          if (currentScrollTop > lastScrollTop) {
+            // Scrolling down
+            image.classList.add("visible");
+          } else {
+            // Scrolling up
+            image.classList.remove("visible");
+          }
+        }
+
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
+      });
+    </script>
+  </body>
+</html>

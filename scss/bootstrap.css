@@ -1298,6 +1298,10 @@ img:after {
   width: 33%;
 }
 
+.test {
+  background-color: red;
+}
+
 /*     art      */
 .art .hero-overlay, .art-article .hero-overlay {
   height: 375px !important;

@@ -574,10 +574,6 @@ header.masthead {
   .home-tiles:nth-child(3) {
     width: 100%;
   }
-
-  .home-tiles:has(.card.third) {
-    width: 33%;
-  }
 }
 
 .home-tiles .card-title {

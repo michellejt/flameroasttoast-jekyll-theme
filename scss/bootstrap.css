@@ -1302,6 +1302,10 @@ img:after {
   display: none;
 }
 
+.michelle {
+  display: none;
+}
+
 /*     art      */
 .art .hero-overlay, .art-article .hero-overlay {
   height: 375px !important;

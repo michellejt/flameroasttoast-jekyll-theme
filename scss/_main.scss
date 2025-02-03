@@ -1379,3 +1379,7 @@ img:after {
   width: 100%;
   text-align: center;
 }
+
+.home-tiles:has(.card.third) {
+  width: 33%;
+}

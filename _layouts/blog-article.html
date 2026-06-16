@@ -65,12 +65,14 @@ layout: default
         <a href = "{{ item.url }}" class = "thumbnail">
    
    <!-- <img src="https://source.unsplash.com/random/900×700/?abstract" alt="" loading="lazy" class = "img-fluid"> -->
+
 <img
-  src={`https://picsum.photos/900/700?random=${Math.random()}`}
+  src="https://picsum.photos/seed/{{ forloop.index }}/900/700"
   loading="lazy"
-  class = "img-fluid"
+  class="img-fluid"
   alt=""
-/>
+>
+          
           
            <p>{{ item.title }}</p>
         </a>

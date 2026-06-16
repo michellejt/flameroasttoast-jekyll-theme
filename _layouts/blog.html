@@ -60,7 +60,14 @@ layout: default
           <div class="dot four"></div>
         </div>
         
-        <img class="card-img-top img-responsive"  src="https://source.unsplash.com/random/900×700/?abstract" alt="" loading="lazy" />
+<!-- <img class="card-img-top img-responsive"  src="https://source.unsplash.com/random/900×700/?abstract" alt="" loading="lazy" />  -->
+
+<img
+  class="card-img-top img-responsive"
+  src="https://picsum.photos/seed/{{ blog.url | slugify }}/900/700"
+  alt=""
+  loading="lazy"
+/>
        
       </div>
     <div class="card-block">
